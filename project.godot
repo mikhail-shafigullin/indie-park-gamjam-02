@@ -18,12 +18,17 @@ config/icon="res://icon.svg"
 [autoload]
 
 MainEventBus="*uid://ci3tpwj4uurlp"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=480
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

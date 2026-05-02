@@ -36,3 +36,4 @@ mono_crash.*.
 
 # Tests ignores
 /gdunit4_testadapter
+CLAUDE.md

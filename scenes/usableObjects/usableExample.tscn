@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://doo6itsbamqno"]
+
+[ext_resource type="Script" uid="uid://p7vabvua3iat" path="res://scenes/usableObjects/UsableExample.gd" id="1_t33u0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2lhc"]
+size = Vector2(16, 16)
+
+[node name="UsableExample" type="Node2D" unique_id=442146003]
+script = ExtResource("1_t33u0")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1529649738]
+unique_name_in_owner = true
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(1, 0.24624708, 0.18872753, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=436760744]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=177011816]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_b2lhc")

@@ -2,6 +2,8 @@ extends Node
 
 signal level_changed();
 
-signal object_can_be_used(usable_object: Node2D);
+signal usable_object_is_hovered(usable_object: Node2D);
+signal usable_object_is_unhovered(usable_object: Node2D);
 
-signal object_can_be_grabed(grabable_object: Node2D);
+signal grabable_object_is_hovered(grabable_object: Node2D);
+signal grabable_object_is_unhovered(grabable_object: Node2D);

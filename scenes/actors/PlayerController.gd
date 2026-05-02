@@ -43,14 +43,38 @@ func updateRaycast() -> void:
 	rayCast.target_position = lastDirection.normalized() * INTERACT_DISTANCE
 
 func checkRaycast() -> void:
-	var collider := rayCast.get_collider() if rayCast.is_colliding() else null
+	var collider = rayCast.get_collider() if rayCast.is_colliding() else null
 	if collider == lastInteractTarget:
 		return
+	var prevTarget := lastInteractTarget
 	lastInteractTarget = collider
-	if not collider:
-		return
-	var layer: int = collider.collision_layer
-	if layer & 4:
-		MainEventBus.object_can_be_used.emit(collider)
-	elif layer & 8:
-		MainEventBus.object_can_be_grabed.emit(collider)
+	checkRaycastUsable(prevTarget, collider)
+	checkRaycastGrabable(prevTarget, collider)
+
+func checkRaycastUsable(prevTarget: Node, collider: Node) -> void:
+	if prevTarget and prevTarget.collision_layer & 4:
+		unhoverUsableObject(prevTarget)
+	if collider and collider.collision_layer & 4:
+		hoverUsableObject(collider)
+
+func checkRaycastGrabable(prevTarget: Node, collider: Node) -> void:
+	if prevTarget and prevTarget.collision_layer & 8:
+		unhoverGrabableObject(prevTarget)
+	if collider and collider.collision_layer & 8:
+		hoverGrabableObject(collider)
+
+func hoverUsableObject(collider: Node2D) -> void:
+	MainEventBus.usable_object_is_hovered.emit(collider)
+
+func unhoverUsableObject(collider: Node2D) -> void:
+	MainEventBus.usable_object_is_unhovered.emit(collider)
+
+func hoverGrabableObject(collider: Node2D) -> void:
+	MainEventBus.grabable_object_is_hovered.emit(collider)
+
+func unhoverGrabableObject(collider: Node2D) -> void:
+	MainEventBus.grabable_object_is_unhovered.emit(collider)
+
+func useObject(collider: Node2D) -> void:
+	var usableObject: Usable = collider.get_parent();
+	usableObject.useObject();

@@ -29,6 +29,9 @@ func _process(_delta: float) -> void:
 	updateRaycast()
 	checkRaycast()
 
+	if Input.is_action_just_pressed("use") and lastInteractTarget and lastInteractTarget.collision_layer & 4:
+		useObject(lastInteractTarget)
+
 func updateAnimation() -> void:
 	var prefix := "walk_" if state == State.WALK else "idle_"
 	sprite.play(prefix + directionName())

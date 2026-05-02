@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cu60mhxu0kpqe"]
 
+[ext_resource type="Script" uid="uid://cl0wdmc521fmg" path="res://scenes/staticObjects/GrabableExample.gd" id="1_grex"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_objww"]
 size = Vector2(32, 32)
 
 [node name="GrabableObj" type="Node2D" unique_id=1303292790]
+script = ExtResource("1_grex")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1638614721]
 offset_right = 32.0

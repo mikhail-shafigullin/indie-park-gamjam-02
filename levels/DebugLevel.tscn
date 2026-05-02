@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cacxjbpkqncsc" path="res://scenes/actors/Player.tscn" id="1_22q4k"]
 [ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/usableExample.tscn" id="2_gs5g8"]
-[ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/grabableExample.tscn" id="3_b2lhc"]
+[ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/GrabableExample.tscn" id="3_b2lhc"]
 [ext_resource type="Script" uid="uid://bf8uau5xloki1" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
 [ext_resource type="Resource" uid="uid://cyuhk5j81mydt" path="res://dialogues/testDebug.dialogue" id="5_618h7"]
 
@@ -68,9 +68,6 @@ shape = SubResource("RectangleShape2D_gs5g8")
 [node name="UsableExample" parent="." unique_id=442146003 instance=ExtResource("2_gs5g8")]
 position = Vector2(112, 192)
 
-[node name="GrabableObj" parent="." unique_id=1303292790 instance=ExtResource("3_b2lhc")]
-position = Vector2(112, 224)
-
 [node name="DialogueStarterObj" type="Node2D" parent="." unique_id=68385085]
 position = Vector2(112, 272)
 script = ExtResource("4_objww")
@@ -88,3 +85,9 @@ collision_layer = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueStarterObj/StaticBody2D" unique_id=1872030387]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_b2lhc")
+
+[node name="GrabableObj" parent="." unique_id=1303292790 instance=ExtResource("3_b2lhc")]
+position = Vector2(80, 224)
+
+[node name="GrabableObj2" parent="." unique_id=951807779 instance=ExtResource("3_b2lhc")]
+position = Vector2(208, 336)

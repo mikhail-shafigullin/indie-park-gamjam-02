@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cacxjbpkqncsc" path="res://scenes/actors/Player.tscn" id="1_22q4k"]
 [ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/usableExample.tscn" id="2_gs5g8"]
+[ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/grabableExample.tscn" id="3_b2lhc"]
+[ext_resource type="Script" uid="uid://bf8uau5xloki1" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
+[ext_resource type="Resource" uid="uid://cyuhk5j81mydt" path="res://dialogues/testDebug.dialogue" id="5_618h7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22q4k"]
 size = Vector2(192, 16)
@@ -65,24 +68,13 @@ shape = SubResource("RectangleShape2D_gs5g8")
 [node name="UsableExample" parent="." unique_id=442146003 instance=ExtResource("2_gs5g8")]
 position = Vector2(112, 192)
 
-[node name="GrabableObj" type="Node2D" parent="." unique_id=1799076388]
+[node name="GrabableObj" parent="." unique_id=1303292790 instance=ExtResource("3_b2lhc")]
 position = Vector2(112, 224)
-metadata/_edit_group_ = true
-
-[node name="ColorRect" type="ColorRect" parent="GrabableObj" unique_id=1627856851]
-offset_right = 16.0
-offset_bottom = 16.0
-color = Color(0.43719542, 0.516746, 1, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="GrabableObj" unique_id=858409783]
-collision_layer = 11
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabableObj/StaticBody2D" unique_id=2015644345]
-position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_b2lhc")
 
 [node name="DialogueStarterObj" type="Node2D" parent="." unique_id=68385085]
-position = Vector2(112, 256)
+position = Vector2(112, 272)
+script = ExtResource("4_objww")
+dialogueRes = ExtResource("5_618h7")
 metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="DialogueStarterObj" unique_id=373490155]

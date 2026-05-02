@@ -4,18 +4,24 @@ extends Node
 func _ready() -> void:
 	var bus := MainEventBus
 
-	var base_signals := {}
+	var baseSignals := {}
 	for sig in ClassDB.class_get_signal_list("Node", false):
-		base_signals[sig["name"]] = true
+		baseSignals[sig["name"]] = true
 
 	for sig in bus.get_signal_list():
-		var sig_name: String = sig["name"]
-		if base_signals.has(sig_name):
+		var sigName: String = sig["name"]
+		if baseSignals.has(sigName):
 			continue
-		var arg_count: int = sig["args"].size()
-		var signal_object: Signal = bus[sig_name]
-		signal_object.connect(_log.bind(sig_name))
+		var argCount: int = sig["args"].size()
+		var signalObject: Signal = bus[sigName]
+		if argCount == 0:
+			signalObject.connect(logEvent.bind(sigName))
+		else:
+			signalObject.connect(logEventWithArg.bind(sigName))
 
 
-func _log(event_name: String) -> void:
-	print("[EventLogger] %s" % event_name)
+func logEvent(eventName: String) -> void:
+	print("[EventLogger] %s" % eventName)
+
+func logEventWithArg(_arg: Variant, eventName: String) -> void:
+	print("[EventLogger] %s" % eventName)

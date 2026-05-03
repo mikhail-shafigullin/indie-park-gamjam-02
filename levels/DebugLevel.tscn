@@ -4,8 +4,9 @@
 [ext_resource type="TileSet" uid="uid://2w2xs5t5sdq5" path="res://assets/tilesets/test_tile_set.tres" id="1_54tx4"]
 [ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/usableExample.tscn" id="2_gs5g8"]
 [ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/GrabableExample.tscn" id="3_b2lhc"]
-[ext_resource type="Script" uid="uid://bf8uau5xloki1" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
+[ext_resource type="Script" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
 [ext_resource type="Resource" uid="uid://cyuhk5j81mydt" path="res://dialogues/testDebug.dialogue" id="5_618h7"]
+[ext_resource type="Script" uid="uid://dgiff2ch4cy7o" path="res://scenes/usableObjects/ShowImageUsable.gd" id="7_exmg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22q4k"]
 size = Vector2(192, 16)
@@ -109,3 +110,7 @@ position = Vector2(400, 256)
 
 [node name="GrabableObj2" parent="." unique_id=951807779 instance=ExtResource("3_b2lhc")]
 position = Vector2(208, 288)
+
+[node name="ShowImageUsableExample" parent="." unique_id=1701779779 instance=ExtResource("2_gs5g8")]
+position = Vector2(96, 224)
+script = ExtResource("7_exmg7")

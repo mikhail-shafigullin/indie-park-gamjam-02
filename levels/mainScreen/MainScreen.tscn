@@ -3,10 +3,15 @@
 [ext_resource type="Script" uid="uid://tafj77oq3s3t" path="res://levels/mainScreen/MainScreen.gd" id="1_qbxu0"]
 [ext_resource type="Script" uid="uid://btun8i3w30tji" path="res://src/EventLogger.gd" id="1_uoskf"]
 [ext_resource type="PackedScene" uid="uid://0oe7olk4j1sr" path="res://levels/DebugLevel.tscn" id="2_av7ef"]
+[ext_resource type="PackedScene" uid="uid://5ncw2w2wilbg" path="res://levels/mainScreen/FadeInFadeOut.tscn" id="3_p5eba"]
 
 [node name="MainScreen" type="Node2D" unique_id=806331985]
 script = ExtResource("1_qbxu0")
 starterScene = ExtResource("2_av7ef")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1545383457]
+
+[node name="FadeInFadeOut" parent="CanvasLayer" unique_id=1112765752 instance=ExtResource("3_p5eba")]
 
 [node name="Location" type="Node2D" parent="." unique_id=1610091088]
 unique_name_in_owner = true

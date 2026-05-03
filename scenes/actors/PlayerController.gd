@@ -15,11 +15,29 @@ var grabbedNode: Grabable = null
 var grabOffset: Vector2 = Vector2.ZERO
 var grabExtraCollision: CollisionShape2D = null
 var animationDirection = Vector2.DOWN
+var controlsEnabled = true
 
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var rayCast: RayCast2D = %RayCast
 
+func _ready() -> void:
+	MainEventBus.image_layer_show_image.connect(disableControls)
+	MainEventBus.image_layer_hidden.connect(enableControls)
+
+func disableControls(_image: Texture2D) -> void:
+	controlsEnabled = false
+	velocity = Vector2.ZERO
+	state = State.IDLE
+
+func enableControls() -> void:
+	controlsEnabled = true
+
 func _process(_delta: float) -> void:
+	if not controlsEnabled:
+		move_and_slide()
+		updateAnimation()
+		return
+
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if direction != Vector2.ZERO:

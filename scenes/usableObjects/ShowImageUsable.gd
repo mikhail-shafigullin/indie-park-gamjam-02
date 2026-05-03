@@ -1,4 +1,6 @@
 extends Usable
 
+@export var image: Texture2D
+
 func useObject(): 
-	MainEventBus.animation_fade_in_to_object.emit(self);
+	MainEventBus.image_layer_show_image.emit(image)

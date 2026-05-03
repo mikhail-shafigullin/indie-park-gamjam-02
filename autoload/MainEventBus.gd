@@ -9,8 +9,8 @@ signal usable_object_is_unhovered(usable_object: Node2D);
 signal grabable_object_is_hovered(grabable_object: Node2D);
 signal grabable_object_is_unhovered(grabable_object: Node2D);
 
-# animations
-signal animation_fade_in_to_object(obj: Node2D);
-signal animation_fade_in_finished();
-signal animation_fade_out_from_object(obj: Node2D);
-signal animation_fade_out_finished();
+#images
+signal image_layer_show_image(image: Texture2D)
+signal image_layer_exit()
+signal image_layer_showed()
+signal image_layer_hidden()

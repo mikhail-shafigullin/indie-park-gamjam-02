@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MainEventBus="*uid://ci3tpwj4uurlp"
 DialogueManager="*uid://c3rodes2l3gxb"
+BetterTerrain="*uid://dsr73uwcp7q5j"
 
 [display]
 
@@ -28,7 +29,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

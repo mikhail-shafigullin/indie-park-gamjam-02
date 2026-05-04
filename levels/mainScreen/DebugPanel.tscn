@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://iq112y5h64of"]
+
+[ext_resource type="Script" uid="uid://cxdn1pb85ombc" path="res://levels/mainScreen/DebugPanel.gd" id="1_7r4yu"]
+[ext_resource type="PackedScene" uid="uid://0oe7olk4j1sr" path="res://levels/DebugLevel.tscn" id="2_s70a8"]
+[ext_resource type="PackedScene" uid="uid://cvjhdejsco1hk" path="res://levels/mainHall/MainHallLevel.tscn" id="3_ipa54"]
+
+[node name="DebugPanel" type="Control" unique_id=725556768]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7r4yu")
+debugLevel = ExtResource("2_s70a8")
+mainHallLevel = ExtResource("3_ipa54")
+
+[node name="Control" type="Control" parent="." unique_id=87020445]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 12.0
+offset_right = -11.0
+offset_bottom = 201.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Control" unique_id=1082782569]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ToDebugLevel" type="Button" parent="Control/HBoxContainer" unique_id=1107986939]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "To debug level"
+
+[node name="ToMainHall" type="Button" parent="Control/HBoxContainer" unique_id=1614744389]
+unique_name_in_owner = true
+layout_mode = 2
+text = "To hall"
+
+[connection signal="pressed" from="Control/HBoxContainer/ToDebugLevel" to="." method="_on_to_debug_level_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/ToMainHall" to="." method="_on_to_main_hall_pressed"]

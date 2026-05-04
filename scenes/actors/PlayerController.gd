@@ -1,3 +1,4 @@
+class_name PlayerController
 extends CharacterBody2D
 
 const SPEED = 130.0
@@ -19,6 +20,9 @@ var controlsEnabled = true
 
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var rayCast: RayCast2D = %RayCast
+
+func _init() -> void:
+	MainEventBus.send_player_to_marker.connect(teleportToMarker);
 
 func _ready() -> void:
 	MainEventBus.image_layer_show_image.connect(disableControls)
@@ -147,3 +151,8 @@ func releaseObject() -> void:
 func useObject(collider: Node2D) -> void:
 	var usableObject: Usable = collider.get_parent()
 	usableObject.useObject()
+	
+func teleportToMarker(marker: Marker2D):
+	reparent(marker.get_parent())
+	position = marker.position;
+	

@@ -2,19 +2,23 @@
 
 [ext_resource type="Script" uid="uid://tafj77oq3s3t" path="res://levels/mainScreen/MainScreen.gd" id="1_qbxu0"]
 [ext_resource type="Script" uid="uid://btun8i3w30tji" path="res://src/EventLogger.gd" id="1_uoskf"]
-[ext_resource type="PackedScene" uid="uid://0oe7olk4j1sr" path="res://levels/DebugLevel.tscn" id="2_av7ef"]
+[ext_resource type="PackedScene" uid="uid://cvjhdejsco1hk" path="res://levels/mainHall/MainHallLevel.tscn" id="2_jjity"]
+[ext_resource type="PackedScene" uid="uid://cacxjbpkqncsc" path="res://scenes/actors/Player.tscn" id="3_jjity"]
 [ext_resource type="PackedScene" uid="uid://5ncw2w2wilbg" path="res://levels/mainScreen/FadeInFadeOut.tscn" id="3_p5eba"]
 [ext_resource type="PackedScene" uid="uid://hoelf6lh5t8w" path="res://levels/mainScreen/ImageLayer.tscn" id="4_7ya88"]
+[ext_resource type="PackedScene" uid="uid://iq112y5h64of" path="res://levels/mainScreen/DebugPanel.tscn" id="5_gkeys"]
 
 [node name="MainScreen" type="Node2D" unique_id=806331985]
 script = ExtResource("1_qbxu0")
-starterScene = ExtResource("2_av7ef")
+starterScene = ExtResource("2_jjity")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1545383457]
 layer = 2
+visible = false
 
 [node name="FadeInFadeOut" parent="CanvasLayer" unique_id=1112765752 instance=ExtResource("3_p5eba")]
 unique_name_in_owner = true
+visible = false
 
 [node name="PuzzleImageLayer" type="CanvasLayer" parent="." unique_id=1534509054]
 
@@ -22,8 +26,15 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 visible = false
 
+[node name="DebugUI" type="CanvasLayer" parent="." unique_id=634191814]
+
+[node name="DebugPanel" parent="DebugUI" unique_id=725556768 instance=ExtResource("5_gkeys")]
+
 [node name="Location" type="Node2D" parent="." unique_id=1610091088]
 unique_name_in_owner = true
 
 [node name="EventLogger" type="Node" parent="." unique_id=1682247444]
 script = ExtResource("1_uoskf")
+
+[node name="Player" parent="." unique_id=1914172203 instance=ExtResource("3_jjity")]
+position = Vector2(-152, 0)

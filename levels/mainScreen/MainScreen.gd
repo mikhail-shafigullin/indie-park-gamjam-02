@@ -12,6 +12,7 @@ func _ready() -> void:
 	setLocation(starterScene);
 	MainEventBus.image_layer_show_image.connect(turnOnImageLayer);
 	MainEventBus.image_layer_exit.connect(turnOffImageLayer)
+	MainEventBus.level_change.connect(setLocation);
 	
 func setLocation(location: PackedScene):
 	currentLocation = location;

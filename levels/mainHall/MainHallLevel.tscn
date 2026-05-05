@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b6pxj73rmsalo" path="res://assets/images/Main_Hall_Sample.png" id="1_4i23u"]
 [ext_resource type="Script" uid="uid://62hdx3shcaav" path="res://levels/mainHall/MainHallLevel.gd" id="1_l4nmg"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
+[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 script = ExtResource("1_l4nmg")
@@ -28,3 +29,6 @@ texture = ExtResource("1_4i23u")
 [node name="MarkerStartGame" type="Marker2D" parent="." unique_id=1565325620]
 unique_name_in_owner = true
 position = Vector2(160, 128)
+
+[node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("4_00q4d")]
+position = Vector2(384, 384)

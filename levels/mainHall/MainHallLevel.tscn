@@ -26,9 +26,14 @@ modulate = Color(1, 1, 1, 0.16078432)
 position = Vector2(304, 240)
 texture = ExtResource("1_4i23u")
 
-[node name="MarkerStartGame" type="Marker2D" parent="." unique_id=1565325620]
+[node name="Start" type="Marker2D" parent="." unique_id=1565325620]
 unique_name_in_owner = true
 position = Vector2(160, 128)
 
 [node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("4_00q4d")]
 position = Vector2(384, 384)
+levelId = 2
+markerName = "Start"
+
+[node name="FromMCRoom" type="Marker2D" parent="." unique_id=1917212532]
+position = Vector2(384, 352)

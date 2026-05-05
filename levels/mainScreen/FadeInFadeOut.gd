@@ -14,7 +14,7 @@ func _ready() -> void:
 	animation_fade_in_to_object.connect(fadeIn)
 	animation_fade_out_from_object.connect(fadeOut)
 
-func fadeIn(obj: Node2D) -> void:
+func fadeIn(_obj: Node2D) -> void:
 	var tween := create_tween()
 	tween.tween_property(curtain, "color:a", 1.0, FADE_DURATION)
 	tween.finished.connect( func(): animation_fade_in_finished.emit())

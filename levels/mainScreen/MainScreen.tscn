@@ -14,11 +14,10 @@ starterScene = ExtResource("2_jjity")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1545383457]
 layer = 2
-visible = false
 
 [node name="FadeInFadeOut" parent="CanvasLayer" unique_id=1112765752 instance=ExtResource("3_p5eba")]
 unique_name_in_owner = true
-visible = false
+mouse_filter = 2
 
 [node name="PuzzleImageLayer" type="CanvasLayer" parent="." unique_id=1534509054]
 

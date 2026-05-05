@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cxdn1pb85ombc" path="res://levels/mainScreen/DebugPanel.gd" id="1_7r4yu"]
 [ext_resource type="PackedScene" uid="uid://0oe7olk4j1sr" path="res://levels/DebugLevel.tscn" id="2_s70a8"]
 [ext_resource type="PackedScene" uid="uid://cvjhdejsco1hk" path="res://levels/mainHall/MainHallLevel.tscn" id="3_ipa54"]
-[ext_resource type="PackedScene" uid="uid://t0wxmyah42nb" path="res://levels/mcRoom/MCRoom.tscn" id="4_ipa54"]
+[ext_resource type="PackedScene" uid="uid://t0wxmyah42nb" path="res://levels/mcRoom/MCRoomLevel.tscn" id="4_ipa54"]
 
 [node name="DebugPanel" type="Control" unique_id=725556768]
 layout_mode = 3
@@ -46,21 +46,25 @@ text = "To debug level"
 [node name="ToMainHall" type="Button" parent="Control/HBoxContainer" unique_id=1614744389]
 unique_name_in_owner = true
 layout_mode = 2
+focus_mode = 0
 text = "To hall"
 
 [node name="ToMCRoom" type="Button" parent="Control/HBoxContainer" unique_id=746829104]
 unique_name_in_owner = true
 layout_mode = 2
+focus_mode = 0
 text = "To MC room"
 
 [node name="ToBathroom" type="Button" parent="Control/HBoxContainer" unique_id=413346266]
 unique_name_in_owner = true
 layout_mode = 2
+focus_mode = 0
 text = "To Bathroom"
 
 [node name="ToBedroom" type="Button" parent="Control/HBoxContainer" unique_id=2081098291]
 unique_name_in_owner = true
 layout_mode = 2
+focus_mode = 0
 text = "To Bedroom"
 
 [connection signal="pressed" from="Control/HBoxContainer/ToDebugLevel" to="." method="_on_to_debug_level_pressed"]

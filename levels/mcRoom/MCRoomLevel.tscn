@@ -1,11 +1,12 @@
 [gd_scene format=4 uid="uid://t0wxmyah42nb"]
 
-[ext_resource type="Script" uid="uid://bvi6paecs0402" path="res://levels/mcRoom/McRoom.gd" id="1_80wps"]
-[ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="1_b8moh"]
-[ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_e1wun"]
+[ext_resource type="Script" uid="uid://bvi6paecs0402" path="res://levels/mcRoom/McRoomLevel.gd" id="1_2kbn8"]
+[ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_4kd21"]
+[ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="3_08wpr"]
+[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
 
 [node name="McRoom" type="Node2D" unique_id=1672391368]
-script = ExtResource("1_80wps")
+script = ExtResource("1_2kbn8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2552131]
 offset_right = 640.0
@@ -14,17 +15,22 @@ color = Color(0.114526816, 0.07526993, 0.0953889, 1)
 
 [node name="WallsBorder" type="TileMapLayer" parent="." unique_id=598621729]
 tile_map_data = PackedByteArray("AAAIAAUAAAACAAYAAAAJAAUAAAACAAYAAAAKAAUAAAACAAYAAAALAAUAAAACAAYAAAAMAAUAAAACAAYAAAANAAUAAAAFAAIAAAAIAAYAAAACAAYAAAAJAAYAAAACAAYAAAAKAAYAAAACAAYAAAALAAYAAAACAAYAAAAMAAYAAAACAAYAAAANAAYAAAAFAAIAAAAIAAcAAAACAAYAAAAJAAcAAAACAAYAAAAKAAcAAAACAAYAAAALAAcAAAACAAYAAAAMAAcAAAACAAYAAAANAAcAAAAFAAIAAAAIAAgAAAACAAYAAAAJAAgAAAACAAYAAAAKAAgAAAACAAYAAAALAAgAAAACAAYAAAAMAAgAAAACAAYAAAANAAgAAAAFAAIAAAAIAAkAAAAEAAMAAAAJAAkAAAAEAAMAAAAKAAkAAAAEAAMAAAALAAkAAAAEAAMAAAAMAAkAAAAEAAMAAAANAAkAAAAFAAMAAAAHAAYAAAADAAIAAAAHAAUAAAADAAIAAAAHAAQAAAADAAAAAAAIAAQAAAAEAAAAAAAJAAQAAAAEAAAAAAAHAAkAAAADAAMAAAAHAAgAAAADAAIAAAAKAAQAAAAEAAAAAAALAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAANAAQAAAAFAAAAAAAHAAcAAAADAAIAAAA=")
-tile_set = ExtResource("1_e1wun")
+tile_set = ExtResource("2_4kd21")
 
 [node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=674496461]
 tile_map_data = PackedByteArray("AAAIAAUAAAAEAAEAAAAJAAUAAAAEAAEAAAAKAAUAAAAEAAEAAAALAAUAAAAEAAEAAAAMAAUAAAAEAAEAAAAIAAYAAAAEAAIAAAAJAAYAAAAEAAIAAAAKAAYAAAAEAAIAAAALAAYAAAAEAAIAAAAMAAYAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAAIAAgAAAAEAAIAAAAJAAgAAAAEAAIAAAAKAAgAAAAEAAIAAAALAAgAAAAEAAIAAAAMAAgAAAAEAAIAAAA=")
-tile_set = ExtResource("1_e1wun")
+tile_set = ExtResource("2_4kd21")
 
 [node name="McBedroomSample" type="Sprite2D" parent="." unique_id=2110201947]
 modulate = Color(1, 1, 1, 0.24313726)
 position = Vector2(336, 224)
-texture = ExtResource("1_b8moh")
+texture = ExtResource("3_08wpr")
 
-[node name="StarterMarker" type="Marker2D" parent="." unique_id=1019772275]
+[node name="Start" type="Marker2D" parent="." unique_id=1019772275]
 unique_name_in_owner = true
 position = Vector2(288, 192)
+
+[node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("4_4kd21")]
+position = Vector2(288, 176)
+levelId = 1
+markerName = "FromMCRoom"

@@ -12,20 +12,20 @@ func _ready() -> void:
 
 
 func _on_to_debug_level_pressed() -> void:
-	MainEventBus.level_change.emit(LevelContainer.debugLevel);
+	LevelContainer.debugLevel.sendPlayerToMarker("Start")
 
 
 func _on_to_main_hall_pressed() -> void:
-	MainEventBus.level_change.emit(LevelContainer.mainHallLevel);
+	LevelContainer.mainHallLevel.sendPlayerToMarker("Start")
 
 
 func _on_to_mc_room_pressed() -> void:
-	MainEventBus.level_change.emit(LevelContainer.mcRoomLevel);
+	LevelContainer.mcRoomLevel.sendPlayerToMarker("Start")
 
 
 func _on_to_bathroom_pressed() -> void:
-	MainEventBus.level_change.emit(LevelContainer.bathroomLevel);
+	LevelContainer.bathroomLevel.sendPlayerToMarker("Start")
 
 
 func _on_to_bedroom_pressed() -> void:
-	MainEventBus.level_change.emit(LevelContainer.bedroomLevel);
+	LevelContainer.bedroomLevel.sendPlayerToMarker("Start")

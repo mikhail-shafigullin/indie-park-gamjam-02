@@ -25,10 +25,12 @@ func _init() -> void:
 	MainEventBus.send_player_to_marker.connect(teleportToMarker);
 
 func _ready() -> void:
-	MainEventBus.image_layer_show_image.connect(disableControls)
-	MainEventBus.image_layer_hidden.connect(enableControls)
+	MainEventBus.image_layer_show_image.connect(func(_image): disableControls())
+	MainEventBus.image_layer_hidden.connect(enableControls);
+	MainEventBus.level_change.connect(func(_lvl): disableControls());
+	MainEventBus.level_changed.connect(enableControls);
 
-func disableControls(_image: Texture2D) -> void:
+func disableControls() -> void:
 	controlsEnabled = false
 	velocity = Vector2.ZERO
 	state = State.IDLE

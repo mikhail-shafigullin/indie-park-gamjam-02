@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://huyvm2sn6c2g"]
+
+[ext_resource type="Script" uid="uid://bucwckpi33hlg" path="res://scenes/usableObjects/ChangeSceneUsable.gd" id="1_qpejf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxpvl"]
+size = Vector2(32, 16)
+
+[node name="ChangeScene" type="Node2D" unique_id=62105247]
+script = ExtResource("1_qpejf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=552369937]
+offset_right = 32.0
+offset_bottom = 16.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=890067592]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=369032404]
+position = Vector2(16, 8)
+shape = SubResource("RectangleShape2D_lxpvl")

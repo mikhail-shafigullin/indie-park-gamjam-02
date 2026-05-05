@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 MainEventBus="*uid://ci3tpwj4uurlp"
 DialogueManager="*uid://c3rodes2l3gxb"
 BetterTerrain="*uid://dsr73uwcp7q5j"
+LevelContainer="*uid://dv7g5tcevfqyn"
 
 [display]
 

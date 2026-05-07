@@ -1,6 +1,8 @@
 class_name Level
 extends Node
 
+signal player_enters_room
+
 var markers: Dictionary[String, Marker2D];
 
 func sendPlayerToMarker(name: String):

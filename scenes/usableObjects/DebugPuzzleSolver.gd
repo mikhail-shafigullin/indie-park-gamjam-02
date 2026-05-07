@@ -1,8 +1,5 @@
 extends Usable
 
-@export_enum("Debug", "MainRoom", "McRoom", "Bathroom", "Bedroom") var levelId: int;
-@export var markerName: String;
-
 @onready var colorRect: ColorRect = %ColorRect;
 
 const ENABLED_COLOR: Color = Color.WHITE;
@@ -17,12 +14,14 @@ func _ready() -> void:
 	else:
 		colorRect.color = ENABLED_COLOR;
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
 func useObject():
-	if(isDisable):
-		return;
-	var level: Level = LevelContainer.allLevels[levelId];
-	level.sendPlayerToMarker(markerName)
-	
+	pass;
+
 func onHover():
 	colorRect.color = HOVER_COLOR;
 

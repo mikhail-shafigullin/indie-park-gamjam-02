@@ -18,3 +18,11 @@ signal image_layer_hidden()
 
 #markers
 signal send_player_to_marker(marker: Marker2D)
+
+#puzzles
+signal puzzle_1_1_solved()
+signal puzzle_1_2_solved()
+signal puzzle_1_3_solved()
+signal puzzle_2_solved()
+signal puzzle_3_solved()
+signal puzzle_4_solved()

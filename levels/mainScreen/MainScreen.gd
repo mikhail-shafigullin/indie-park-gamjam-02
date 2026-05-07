@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var starterScene: PackedScene
+@export_enum("Debug", "MainRoom", "McRoom", "Bathroom", "Bedroom") var levelId: int;
 
 @onready var locationNode: Node = %Location;
 @onready var fadeControl: FadeInFadeOut = %FadeInFadeOut;
@@ -9,7 +9,7 @@ extends Node2D
 var currentLocation: Node2D;
 
 func _ready() -> void:
-	var starterLevel: Level = starterScene.instantiate();
+	var starterLevel: Level = LevelContainer.allLevels[levelId];
 	setLocation(starterLevel);
 	MainEventBus.send_player_to_marker.emit(starterLevel.getMarker("Start"))
 	MainEventBus.image_layer_show_image.connect(turnOnImageLayer);
@@ -24,6 +24,7 @@ func setLocation(location: Level):
 		locationNode.remove_child(child);
 	locationNode.add_child(location);
 	MainEventBus.level_changed.emit()
+	location.player_enters_room.emit();
 
 
 func fadeInFadeOut(callable: Callable) -> void:

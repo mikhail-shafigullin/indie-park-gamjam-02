@@ -117,9 +117,13 @@ func checkRaycastGrabable(prevTarget: Node, collider: Node) -> void:
 
 func hoverUsableObject(collider: Node2D) -> void:
 	MainEventBus.usable_object_is_hovered.emit(collider)
+	var usable: Usable = collider.get_parent();
+	usable.onHover();
 
 func unhoverUsableObject(collider: Node2D) -> void:
 	MainEventBus.usable_object_is_unhovered.emit(collider)
+	var usable: Usable = collider.get_parent();
+	usable.onUnhover();
 
 func hoverGrabableObject(collider: Node2D) -> void:
 	MainEventBus.grabable_object_is_hovered.emit(collider)
@@ -152,7 +156,7 @@ func releaseObject() -> void:
 
 func useObject(collider: Node2D) -> void:
 	var usableObject: Usable = collider.get_parent()
-	usableObject.useObject()
+	usableObject.useObjectWithSignal()
 	
 func teleportToMarker(marker: Marker2D):
 	reparent(marker.get_parent())

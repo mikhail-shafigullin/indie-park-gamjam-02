@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://dba2o6o7n8kwb"]
+
+[ext_resource type="Script" uid="uid://bx8sw1txdsijj" path="res://levels/bathRoom/BathRoom.gd" id="1_iget1"]
+[ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_nmwft"]
+[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
+[ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_nfqjp"]
+
+[node name="BathRoom" type="Node2D" unique_id=643836024]
+script = ExtResource("1_iget1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1725903837]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.114526816, 0.07526993, 0.0953889, 1)
+
+[node name="WallsBorder" type="TileMapLayer" parent="." unique_id=1828888455]
+tile_map_data = PackedByteArray("AAAIAAUAAAACAAYAAAAJAAUAAAACAAYAAAAKAAUAAAACAAYAAAALAAUAAAACAAYAAAAMAAUAAAACAAYAAAANAAUAAAAFAAIAAAAIAAYAAAACAAYAAAAJAAYAAAACAAYAAAAKAAYAAAACAAYAAAALAAYAAAACAAYAAAAMAAYAAAACAAYAAAANAAYAAAAFAAIAAAAIAAcAAAACAAYAAAAJAAcAAAACAAYAAAAKAAcAAAACAAYAAAALAAcAAAACAAYAAAAMAAcAAAACAAYAAAANAAcAAAAFAAIAAAAIAAgAAAACAAYAAAAJAAgAAAACAAYAAAAKAAgAAAACAAYAAAALAAgAAAACAAYAAAAMAAgAAAACAAYAAAANAAgAAAAFAAIAAAAIAAkAAAAEAAMAAAAJAAkAAAAEAAMAAAAKAAkAAAAEAAMAAAALAAkAAAAEAAMAAAAMAAkAAAAEAAMAAAANAAkAAAAFAAMAAAAHAAYAAAADAAIAAAAHAAUAAAADAAIAAAAHAAQAAAADAAAAAAAIAAQAAAAEAAAAAAAJAAQAAAAEAAAAAAAHAAkAAAADAAMAAAAHAAgAAAADAAIAAAAKAAQAAAAEAAAAAAALAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAANAAQAAAAFAAAAAAAHAAcAAAADAAIAAAA=")
+tile_set = ExtResource("1_nmwft")
+
+[node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=1651936829]
+tile_map_data = PackedByteArray("AAAIAAUAAAAEAAEAAAAJAAUAAAAEAAEAAAAKAAUAAAAEAAEAAAALAAUAAAAEAAEAAAAMAAUAAAAEAAEAAAAIAAYAAAAEAAIAAAAJAAYAAAAEAAIAAAAKAAYAAAAEAAIAAAALAAYAAAAEAAIAAAAMAAYAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAAIAAgAAAAEAAIAAAAJAAgAAAAEAAIAAAAKAAgAAAAEAAIAAAALAAgAAAAEAAIAAAAMAAgAAAAEAAIAAAA=")
+tile_set = ExtResource("1_nmwft")
+
+[node name="Start" type="Marker2D" parent="." unique_id=2065874566]
+unique_name_in_owner = true
+position = Vector2(288, 192)
+
+[node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("2_iget1")]
+unique_name_in_owner = true
+position = Vector2(288, 176)
+levelId = 1
+markerName = "FromBathRoom"
+
+[node name="Solve3" parent="." unique_id=442146003 instance=ExtResource("4_nfqjp")]
+unique_name_in_owner = true
+position = Vector2(400, 272)
+
+[node name="Label" type="Label" parent="Solve3" unique_id=261272467]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "3"
+
+[connection signal="_object_used" from="Solve3" to="." method="_on_solve_3__object_used"]

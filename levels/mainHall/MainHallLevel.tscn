@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://62hdx3shcaav" path="res://levels/mainHall/MainHallLevel.gd" id="1_l4nmg"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
+[ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 script = ExtResource("1_l4nmg")
@@ -30,10 +31,75 @@ texture = ExtResource("1_4i23u")
 unique_name_in_owner = true
 position = Vector2(160, 128)
 
-[node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("4_00q4d")]
+[node name="ChangeSceneToMcRoom" parent="." unique_id=62105247 instance=ExtResource("4_00q4d")]
+unique_name_in_owner = true
 position = Vector2(384, 384)
 levelId = 2
 markerName = "Start"
+isDisable = true
+
+[node name="ChangeSceneToBedRoom" parent="." unique_id=1758344587 instance=ExtResource("4_00q4d")]
+unique_name_in_owner = true
+position = Vector2(160, 384)
+levelId = 4
+markerName = "Start"
+isDisable = true
+
+[node name="ChangeSceneToBathRoom" parent="." unique_id=2045501824 instance=ExtResource("4_00q4d")]
+unique_name_in_owner = true
+position = Vector2(480, 256)
+rotation = -1.5707964
+levelId = 3
+markerName = "Start"
+isDisable = true
+
+[node name="ChangeSceneToDebugRoom" parent="." unique_id=1366967701 instance=ExtResource("4_00q4d")]
+unique_name_in_owner = true
+position = Vector2(160, 112)
+markerName = "Start"
+isDisable = true
 
 [node name="FromMCRoom" type="Marker2D" parent="." unique_id=1917212532]
 position = Vector2(384, 352)
+
+[node name="FromBedRoom" type="Marker2D" parent="." unique_id=1933854056]
+position = Vector2(160, 352)
+
+[node name="FromBathRoom" type="Marker2D" parent="." unique_id=325548758]
+position = Vector2(448, 224)
+
+[node name="Solve11" parent="." unique_id=442146003 instance=ExtResource("5_3upwg")]
+unique_name_in_owner = true
+position = Vector2(208, 336)
+
+[node name="Label" type="Label" parent="Solve11" unique_id=333503807]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "1.1"
+
+[node name="Solve12" parent="." unique_id=1467598435 instance=ExtResource("5_3upwg")]
+unique_name_in_owner = true
+position = Vector2(256, 336)
+isDisable = true
+
+[node name="Label" type="Label" parent="Solve12" unique_id=884831002]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "1.2"
+
+[node name="Solve13" parent="." unique_id=1097764661 instance=ExtResource("5_3upwg")]
+unique_name_in_owner = true
+position = Vector2(304, 336)
+isDisable = true
+
+[node name="Label" type="Label" parent="Solve13" unique_id=158149270]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "1.3"
+
+[connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
+[connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]
+[connection signal="_object_used" from="Solve13" to="." method="_on_solve_13__object_used"]

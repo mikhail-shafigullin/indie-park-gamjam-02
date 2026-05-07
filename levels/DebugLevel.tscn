@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://2w2xs5t5sdq5" path="res://assets/tilesets/test_tile_set.tres" id="1_54tx4"]
 [ext_resource type="Script" uid="uid://dpu6m4d2wp4ga" path="res://levels/DebugLevel.gd" id="1_s0miu"]
-[ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/usableExample.tscn" id="2_gs5g8"]
+[ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/UsableExample.tscn" id="2_gs5g8"]
 [ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/GrabableExample.tscn" id="3_b2lhc"]
 [ext_resource type="Script" uid="uid://bf8uau5xloki1" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
 [ext_resource type="Resource" uid="uid://cyuhk5j81mydt" path="res://dialogues/testDebug.dialogue" id="5_618h7"]
@@ -119,3 +119,10 @@ position = Vector2(208, 288)
 position = Vector2(96, 224)
 script = ExtResource("7_exmg7")
 image = ExtResource("8_s0miu")
+
+[node name="Label" type="Label" parent="." unique_id=1975859798]
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 132.0
+offset_bottom = 55.0
+text = "Game over"

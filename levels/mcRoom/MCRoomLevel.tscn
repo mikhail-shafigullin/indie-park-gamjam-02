@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_4kd21"]
 [ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="3_08wpr"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
+[ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_08wpr"]
 
 [node name="McRoom" type="Node2D" unique_id=1672391368]
 script = ExtResource("1_2kbn8")
@@ -31,6 +32,19 @@ unique_name_in_owner = true
 position = Vector2(288, 192)
 
 [node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("4_4kd21")]
+unique_name_in_owner = true
 position = Vector2(288, 176)
 levelId = 1
 markerName = "FromMCRoom"
+
+[node name="Solve2" parent="." unique_id=442146003 instance=ExtResource("5_08wpr")]
+unique_name_in_owner = true
+position = Vector2(400, 272)
+
+[node name="Label" type="Label" parent="Solve2" unique_id=597185863]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "2"
+
+[connection signal="_object_used" from="Solve2" to="." method="_on_solve_2__object_used"]

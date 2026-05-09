@@ -9,8 +9,12 @@ const DIRECTIONS = ["direction_down", "direction_left", "direction_up", "directi
 var directionIndex: int = 0
 
 func rotate() -> void:
-	directionIndex = (directionIndex + 1) % DIRECTIONS.size()
+	rotateTo((directionIndex + 1) % DIRECTIONS.size());
+
+func rotateTo(index: int) -> void:
+	directionIndex = index;
 	if animatedSprite:
 		animatedSprite.play(DIRECTIONS[directionIndex])
 	if collisionShape:
 		collisionShape.rotation_degrees += 90.0
+	

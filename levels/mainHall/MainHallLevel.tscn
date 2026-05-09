@@ -5,7 +5,11 @@
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
-[ext_resource type="PackedScene" uid="uid://dw52tthlbp2rp" path="res://levels/mainHall/BookCabinet.tscn" id="6_e54g3"]
+[ext_resource type="PackedScene" uid="uid://dw52tthlbp2rp" path="res://levels/mainHall/ClosedCabinet.tscn" id="6_e54g3"]
+[ext_resource type="PackedScene" uid="uid://ciso2avldnxis" path="res://levels/mainHall/BookCabinet.tscn" id="7_43xrf"]
+[ext_resource type="PackedScene" uid="uid://cr83883bae7pu" path="res://levels/mainHall/MainHallChair.tscn" id="8_qp0r6"]
+[ext_resource type="PackedScene" uid="uid://bw08x6qjyyghh" path="res://levels/mainHall/MainHallTV.tscn" id="9_0x067"]
+[ext_resource type="PackedScene" uid="uid://ctdi7w62p8h3f" path="res://levels/mainHall/MainHallArmchair.tscn" id="10_t4pyt"]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
@@ -31,7 +35,7 @@ tile_set = ExtResource("1_ssc33")
 
 [node name="UnmovableForeground" type="TileMapLayer" parent="." unique_id=836389284]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAGAAYAAQAAAAYAAAAHAAYAAQABAAYAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAEAAAALAAMAAQABAAAAAAALAAQAAQABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAKAAMAAQAAAAAAAAAKAAQAAQAAAAEAAAALAAMAAQABAAAAAAALAAQAAQABAAEAAAAMAAMAAQAAAAIAAAA=")
 tile_set = ExtResource("1_ssc33")
 
 [node name="MainHallSample" type="Sprite2D" parent="." unique_id=1968874829]
@@ -112,9 +116,56 @@ offset_right = 40.0
 offset_bottom = 39.0
 text = "1.3"
 
-[node name="BookCabinet" parent="." unique_id=1683579721 instance=ExtResource("6_e54g3")]
-position = Vector2(352, 272)
+[node name="ClosedCabinet" parent="." unique_id=1683579721 instance=ExtResource("6_e54g3")]
+position = Vector2(272, 128)
+
+[node name="BookCabinet" parent="." unique_id=717990769 instance=ExtResource("7_43xrf")]
+position = Vector2(240, 128)
+
+[node name="MainHallChair" parent="." unique_id=90066208 instance=ExtResource("8_qp0r6")]
+position = Vector2(336, 224)
+direction = 2
+
+[node name="MainHallChair2" parent="." unique_id=640479122 instance=ExtResource("8_qp0r6")]
+position = Vector2(368, 224)
+direction = 2
+
+[node name="MainHallChair3" parent="." unique_id=1475041634 instance=ExtResource("8_qp0r6")]
+position = Vector2(336, 176)
+
+[node name="AnimatedSprite2D" parent="MainHallChair3" index="0" unique_id=508264241]
+animation = &"direction_down"
+
+[node name="MainHallChair4" parent="." unique_id=377331443 instance=ExtResource("8_qp0r6")]
+position = Vector2(368, 176)
+
+[node name="AnimatedSprite2D" parent="MainHallChair4" index="0" unique_id=508264241]
+animation = &"direction_down"
+
+[node name="MainHallTV" parent="." unique_id=1374865387 instance=ExtResource("9_0x067")]
+position = Vector2(224, 208)
+
+[node name="MainHallArmchair" parent="." unique_id=1774705722 instance=ExtResource("10_t4pyt")]
+position = Vector2(272, 240)
+direction = 1
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" parent="MainHallArmchair" index="0" unique_id=508264241]
+animation = &"direction_left"
+
+[node name="MainHallArmchair2" parent="." unique_id=1602883225 instance=ExtResource("10_t4pyt")]
+position = Vector2(176, 240)
+direction = 3
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" parent="MainHallArmchair2" index="0" unique_id=508264241]
+animation = &"direction_right"
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]
 [connection signal="_object_used" from="Solve13" to="." method="_on_solve_13__object_used"]
+
+[editable path="MainHallChair3"]
+[editable path="MainHallChair4"]
+[editable path="MainHallArmchair"]
+[editable path="MainHallArmchair2"]

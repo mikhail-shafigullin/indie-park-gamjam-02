@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ctdi7w62p8h3f"]
+
+[ext_resource type="Script" uid="uid://ck27hh7nt558c" path="res://levels/mainHall/RotatableTool.gd" id="1_fh15l"]
+[ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="2_jymns"]
+[ext_resource type="PackedScene" uid="uid://b4ajytijor3tr" path="res://scenes/components/RotatableComponent.tscn" id="3_ncoar"]
+[ext_resource type="PackedScene" uid="uid://b8hmjdjnlvlwc" path="res://scenes/components/GrabableComponent.tscn" id="4_u0cgn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh15l"]
+atlas = ExtResource("2_jymns")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jymns"]
+atlas = ExtResource("2_jymns")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncoar"]
+atlas = ExtResource("2_jymns")
+region = Rect2(64, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0cgn"]
+atlas = ExtResource("2_jymns")
+region = Rect2(32, 256, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksf82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh15l")
+}],
+"loop": true,
+"name": &"direction_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jymns")
+}],
+"loop": true,
+"name": &"direction_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncoar")
+}],
+"loop": true,
+"name": &"direction_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0cgn")
+}],
+"loop": true,
+"name": &"direction_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43xrf"]
+size = Vector2(22, 17)
+
+[node name="MainHallArmchair" type="Node2D" unique_id=1683579721]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_fh15l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=508264241]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_ksf82")
+animation = &"direction_down"
+
+[node name="RotatableComponent" parent="." unique_id=1933610067 node_paths=PackedStringArray("animatedSprite", "collisionShape") instance=ExtResource("3_ncoar")]
+unique_name_in_owner = true
+animatedSprite = NodePath("../AnimatedSprite2D")
+collisionShape = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="GrabableComponent" parent="." unique_id=1324351773 instance=ExtResource("4_u0cgn")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=167749479]
+collision_layer = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=443427559]
+position = Vector2(-1, 7.5)
+shape = SubResource("RectangleShape2D_43xrf")

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dw62u2fp6jm54"]
+
+[ext_resource type="Script" uid="uid://btdlgwqm0fcfw" path="res://levels/mainScreen/MainUI.gd" id="1_ud377"]
+
+[node name="MainUI" type="Control" unique_id=1549586253]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ud377")
+
+[node name="Control" type="Control" parent="." unique_id=102339455]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -181.0
+offset_right = 184.0
+offset_bottom = -9.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=237788969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="GrabLabel" type="Label" parent="Control/VBoxContainer" unique_id=673872712]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "G - grab"
+
+[node name="UseLabel" type="Label" parent="Control/VBoxContainer" unique_id=820010044]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "F - use"

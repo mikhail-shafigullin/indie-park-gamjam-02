@@ -2,21 +2,26 @@
 
 [ext_resource type="Script" uid="uid://tafj77oq3s3t" path="res://levels/mainScreen/MainScreen.gd" id="1_qbxu0"]
 [ext_resource type="Script" uid="uid://btun8i3w30tji" path="res://src/EventLogger.gd" id="1_uoskf"]
+[ext_resource type="PackedScene" uid="uid://dw62u2fp6jm54" path="res://levels/mainScreen/MainUI.tscn" id="3_gkeys"]
 [ext_resource type="PackedScene" uid="uid://cacxjbpkqncsc" path="res://scenes/actors/Player.tscn" id="3_jjity"]
 [ext_resource type="PackedScene" uid="uid://5ncw2w2wilbg" path="res://levels/mainScreen/FadeInFadeOut.tscn" id="3_p5eba"]
 [ext_resource type="PackedScene" uid="uid://hoelf6lh5t8w" path="res://levels/mainScreen/ImageLayer.tscn" id="4_7ya88"]
-[ext_resource type="PackedScene" path="res://levels/mainScreen/DebugPanel.tscn" id="5_gkeys"]
+[ext_resource type="PackedScene" uid="uid://iq112y5h64of" path="res://levels/mainScreen/DebugPanel.tscn" id="5_gkeys"]
 
 [node name="MainScreen" type="Node2D" unique_id=806331985]
 script = ExtResource("1_qbxu0")
 levelId = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1545383457]
+[node name="FadeInFadeOutLayer" type="CanvasLayer" parent="." unique_id=1545383457]
 layer = 2
 
-[node name="FadeInFadeOut" parent="CanvasLayer" unique_id=1112765752 instance=ExtResource("3_p5eba")]
+[node name="FadeInFadeOut" parent="FadeInFadeOutLayer" unique_id=1112765752 instance=ExtResource("3_p5eba")]
 unique_name_in_owner = true
 mouse_filter = 2
+
+[node name="MainUILayer" type="CanvasLayer" parent="." unique_id=1903811824]
+
+[node name="MainUI" parent="MainUILayer" unique_id=1549586253 instance=ExtResource("3_gkeys")]
 
 [node name="PuzzleImageLayer" type="CanvasLayer" parent="." unique_id=1534509054]
 

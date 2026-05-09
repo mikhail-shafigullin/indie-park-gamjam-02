@@ -64,8 +64,11 @@ func _process(_delta: float) -> void:
 	updateRaycast()
 	checkRaycast()
 
-	if Input.is_action_just_pressed("use") and lastInteractTarget and lastInteractTarget.collision_layer & 4:
-		useObject(lastInteractTarget)
+	if Input.is_action_just_pressed("use"):
+		if grabbedObject:
+			rotateObject()
+		elif lastInteractTarget and lastInteractTarget.collision_layer & 4:
+			useObject(lastInteractTarget)
 
 	if Input.is_action_just_pressed("grab"):
 		if grabbedBody:
@@ -158,6 +161,17 @@ func releaseObject() -> void:
 	grabbedBody = null
 	grabbedObject = null
 	grabbedComponent = null
+
+func rotateObject() -> void:
+	if not grabbedObject:
+		return
+	var rotatable = grabbedObject.get_node_or_null("RotatableComponent") as RotatableComponent
+	if not rotatable:
+		return
+	rotatable.rotate()
+	var shapeNode: CollisionShape2D = grabbedBody.get_node("CollisionShape2D")
+	grabExtraCollision.rotation_degrees = shapeNode.rotation_degrees
+	grabExtraCollision.position = to_local(shapeNode.global_position)
 
 func useObject(collider: Node2D) -> void:
 	var usableObject: Usable = collider.get_parent()

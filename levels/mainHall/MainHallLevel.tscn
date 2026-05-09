@@ -5,62 +5,7 @@
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
-[ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="6_e54g3"]
-[ext_resource type="PackedScene" uid="uid://b8hmjdjnlvlwc" path="res://scenes/components/GrabableComponent.tscn" id="7_43xrf"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_43xrf"]
-atlas = ExtResource("6_e54g3")
-region = Rect2(160, 128, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e54g3"]
-atlas = ExtResource("6_e54g3")
-region = Rect2(224, 64, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qp0r6"]
-atlas = ExtResource("6_e54g3")
-region = Rect2(224, 128, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0x067"]
-atlas = ExtResource("6_e54g3")
-region = Rect2(224, 0, 32, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qp0r6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_43xrf")
-}],
-"loop": true,
-"name": &"direction_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e54g3")
-}],
-"loop": true,
-"name": &"direction_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qp0r6")
-}],
-"loop": true,
-"name": &"direction_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0x067")
-}],
-"loop": true,
-"name": &"direction_up",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_43xrf"]
-size = Vector2(29, 17)
+[ext_resource type="PackedScene" uid="uid://dw52tthlbp2rp" path="res://levels/mainHall/BookCabinet.tscn" id="6_e54g3"]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
@@ -167,26 +112,8 @@ offset_right = 40.0
 offset_bottom = 39.0
 text = "1.3"
 
-[node name="BookCabinet" type="Node2D" parent="." unique_id=2011975830]
-z_index = 1
-y_sort_enabled = true
+[node name="BookCabinet" parent="." unique_id=1683579721 instance=ExtResource("6_e54g3")]
 position = Vector2(352, 272)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BookCabinet" unique_id=888658789]
-y_sort_enabled = true
-sprite_frames = SubResource("SpriteFrames_qp0r6")
-animation = &"direction_down"
-
-[node name="RotatableComponent" type="Node" parent="BookCabinet" unique_id=1291803913]
-
-[node name="GrabableComponent" parent="BookCabinet" unique_id=1324351773 instance=ExtResource("7_43xrf")]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="BookCabinet" unique_id=703246060]
-collision_layer = 11
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BookCabinet/StaticBody2D" unique_id=332980420]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_43xrf")
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

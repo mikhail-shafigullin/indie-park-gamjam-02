@@ -5,8 +5,61 @@
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
+[ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="6_e54g3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43xrf"]
+atlas = ExtResource("6_e54g3")
+region = Rect2(160, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e54g3"]
+atlas = ExtResource("6_e54g3")
+region = Rect2(224, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp0r6"]
+atlas = ExtResource("6_e54g3")
+region = Rect2(224, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x067"]
+atlas = ExtResource("6_e54g3")
+region = Rect2(224, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qp0r6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43xrf")
+}],
+"loop": true,
+"name": &"direction_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e54g3")
+}],
+"loop": true,
+"name": &"direction_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp0r6")
+}],
+"loop": true,
+"name": &"direction_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x067")
+}],
+"loop": true,
+"name": &"direction_up",
+"speed": 5.0
+}]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
+y_sort_enabled = true
 script = ExtResource("1_l4nmg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1221534510]
@@ -20,6 +73,16 @@ tile_set = ExtResource("1_ssc33")
 
 [node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=1830527588]
 tile_map_data = PackedByteArray("AAAEAAMAAAABAAEAAAAFAAMAAAABAAEAAAAGAAMAAAABAAEAAAAHAAMAAAABAAEAAAAIAAMAAAABAAEAAAAJAAMAAAABAAEAAAAKAAMAAAABAAEAAAALAAMAAAABAAEAAAAMAAMAAAABAAEAAAANAAMAAAABAAEAAAAEAAQAAAABAAIAAAAFAAQAAAABAAIAAAAGAAQAAAABAAIAAAAHAAQAAAABAAIAAAAIAAQAAAABAAIAAAAJAAQAAAABAAIAAAAKAAQAAAABAAIAAAALAAQAAAABAAIAAAAMAAQAAAABAAIAAAANAAQAAAABAAIAAAAEAAUAAAABAAIAAAAFAAUAAAABAAIAAAAGAAUAAAABAAIAAAAHAAUAAAABAAIAAAAIAAUAAAABAAIAAAAJAAUAAAABAAIAAAAKAAUAAAABAAIAAAALAAUAAAABAAIAAAAMAAUAAAABAAIAAAANAAUAAAABAAIAAAAEAAYAAAABAAIAAAAFAAYAAAABAAIAAAAGAAYAAAABAAIAAAAHAAYAAAABAAIAAAAIAAYAAAABAAIAAAAJAAYAAAABAAIAAAAKAAYAAAABAAIAAAALAAYAAAABAAIAAAAMAAYAAAABAAIAAAANAAYAAAABAAIAAAAEAAcAAAABAAIAAAAFAAcAAAABAAIAAAAGAAcAAAABAAIAAAAHAAcAAAABAAIAAAAIAAcAAAABAAIAAAAJAAcAAAABAAIAAAAKAAcAAAABAAIAAAALAAcAAAABAAIAAAAMAAcAAAABAAIAAAANAAcAAAABAAIAAAAEAAgAAAABAAIAAAAFAAgAAAABAAIAAAAGAAgAAAABAAIAAAAHAAgAAAABAAIAAAAIAAgAAAABAAIAAAAJAAgAAAABAAIAAAAKAAgAAAABAAIAAAALAAgAAAABAAIAAAAMAAgAAAABAAIAAAANAAgAAAABAAIAAAAEAAkAAAABAAIAAAAFAAkAAAABAAIAAAAGAAkAAAABAAIAAAAHAAkAAAABAAIAAAAIAAkAAAABAAIAAAAJAAkAAAABAAIAAAAKAAkAAAABAAIAAAALAAkAAAABAAIAAAAMAAkAAAABAAIAAAANAAkAAAABAAIAAAAEAAoAAAABAAIAAAAFAAoAAAABAAIAAAAGAAoAAAABAAIAAAAHAAoAAAABAAIAAAAIAAoAAAABAAIAAAAJAAoAAAABAAIAAAAKAAoAAAABAAIAAAALAAoAAAABAAIAAAAMAAoAAAABAAIAAAANAAoAAAABAAIAAAAOAAcAAAABAAIAAAAMAAsAAAABAAIAAAAFAAsAAAABAAIAAAAOAAYAAAABAAEAAAA=")
+tile_set = ExtResource("1_ssc33")
+
+[node name="UnmovablesBackground" type="TileMapLayer" parent="." unique_id=1503460417]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAMAAQAAAAMAAAAGAAMAAQADAAgAAAAEAAMAAQABAAIAAAAEAAQAAQABAAMAAAAKAAUAAQADAAQAAAAKAAYAAQADAAUAAAALAAUAAQAEAAQAAAALAAYAAQAEAAUAAAAFAAYAAQAEAAYAAAAIAAYAAQAGAAYAAAAIAAkAAQAGAAgAAAAFAAkAAQAEAAgAAAAGAAkAAQAFAAgAAAAHAAkAAQAFAAgAAAAIAAcAAQAGAAcAAAAIAAgAAQAGAAcAAAAFAAgAAQAEAAcAAAAFAAcAAQAEAAcAAAAGAAYAAQAFAAYAAAAHAAYAAQAFAAYAAAAGAAcAAQAFAAcAAAAHAAcAAQAFAAcAAAAHAAgAAQAFAAcAAAAGAAgAAQAFAAcAAAAMAAMAAQAEAAAAAAAMAAQAAQAEAAEAAAANAAMAAQADAAAAAAANAAQAAQADAAEAAAANAAUAAQADAAIAAAANAAYAAQADAAMAAAA=")
+tile_set = ExtResource("1_ssc33")
+
+[node name="UnmovableForeground" type="TileMapLayer" parent="." unique_id=836389284]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAGAAYAAQAAAAYAAAAHAAYAAQABAAYAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAEAAAALAAMAAQABAAAAAAALAAQAAQABAAEAAAA=")
 tile_set = ExtResource("1_ssc33")
 
 [node name="MainHallSample" type="Sprite2D" parent="." unique_id=1968874829]
@@ -99,6 +162,16 @@ offset_top = 16.0
 offset_right = 40.0
 offset_bottom = 39.0
 text = "1.3"
+
+[node name="BookCabinet" type="Node2D" parent="." unique_id=2011975830]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BookCabinet" unique_id=888658789]
+sprite_frames = SubResource("SpriteFrames_qp0r6")
+animation = &"direction_down"
+
+[node name="GrabableComponent" type="Node" parent="BookCabinet" unique_id=1364875889]
+
+[node name="RotatableComponent" type="Node" parent="BookCabinet" unique_id=1291803913]
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

@@ -12,7 +12,8 @@ var lastDirection = Vector2.DOWN
 var lastInteractTarget: Node = null
 
 var grabbedBody: StaticBody2D = null
-var grabbedNode: Grabable = null
+var grabbedObject: Node2D = null
+var grabbedComponent: GrabableComponent = null
 var grabOffset: Vector2 = Vector2.ZERO
 var grabExtraCollision: CollisionShape2D = null
 var animationDirection = Vector2.DOWN
@@ -51,7 +52,7 @@ func _process(_delta: float) -> void:
 		state = State.WALK
 		lastDirection = direction
 		velocity = direction * SPEED 
-		if grabbedNode:
+		if grabbedObject:
 			velocity = velocity * GRAB_MULTIPLICATOR;
 	else:
 		state = State.IDLE
@@ -73,13 +74,13 @@ func _process(_delta: float) -> void:
 			grabObject(lastInteractTarget)
 
 func updateGrabbedPosition() -> void:
-	if not grabbedNode:
+	if not grabbedObject:
 		return
-	grabbedNode.global_position = global_position + grabOffset
+	grabbedObject.global_position = global_position + grabOffset
 
 func updateAnimation() -> void:
 	# if smth is grabbed we don't change animation direction
-	if not grabbedNode:
+	if not grabbedObject:
 		animationDirection = lastDirection;
 
 	var prefix := "walk_" if state == State.WALK else "idle_"
@@ -133,26 +134,30 @@ func unhoverGrabableObject(collider: Node2D) -> void:
 
 func grabObject(collider: Node) -> void:
 	var parent := collider.get_parent()
-	if not parent is Grabable:
+	var component := parent.get_node_or_null("GrabableComponent") as GrabableComponent
+	if not component:
+		push_error("grabObject: parent '%s' has no GrabableComponent child" % parent.name)
 		return
 	grabbedBody = collider as StaticBody2D
-	grabbedNode = parent as Grabable
-	grabOffset = grabbedNode.global_position - global_position
+	grabbedObject = parent as Node2D
+	grabbedComponent = component
+	grabOffset = grabbedObject.global_position - global_position
 	add_collision_exception_with(grabbedBody)
 	var shapeNode: CollisionShape2D = grabbedBody.get_node("CollisionShape2D")
 	grabExtraCollision = CollisionShape2D.new()
 	grabExtraCollision.shape = shapeNode.shape
 	grabExtraCollision.position = to_local(shapeNode.global_position)
 	add_child(grabExtraCollision)
-	grabbedNode.onGrab()
+	grabbedComponent.onGrab()
 
 func releaseObject() -> void:
-	grabbedNode.onRelease()
+	grabbedComponent.onRelease()
 	remove_collision_exception_with(grabbedBody)
 	grabExtraCollision.queue_free()
 	grabExtraCollision = null
 	grabbedBody = null
-	grabbedNode = null
+	grabbedObject = null
+	grabbedComponent = null
 
 func useObject(collider: Node2D) -> void:
 	var usableObject: Usable = collider.get_parent()

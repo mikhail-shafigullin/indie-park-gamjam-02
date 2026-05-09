@@ -1,1 +1,1 @@
-extends Grabable
+extends Node2D

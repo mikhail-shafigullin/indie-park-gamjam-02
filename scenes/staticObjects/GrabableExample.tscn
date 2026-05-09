@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://cu60mhxu0kpqe"]
 
-[ext_resource type="Script" uid="uid://cl0wdmc521fmg" path="res://scenes/staticObjects/GrabableExample.gd" id="1_grex"]
+[ext_resource type="PackedScene" uid="uid://b8hmjdjnlvlwc" path="res://scenes/components/GrabableComponent.tscn" id="1_loxsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_objww"]
 size = Vector2(32, 32)
 
 [node name="GrabableObj" type="Node2D" unique_id=1303292790]
-script = ExtResource("1_grex")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1638614721]
 offset_right = 32.0
@@ -19,3 +18,5 @@ collision_layer = 11
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1129428256]
 position = Vector2(16, 16)
 shape = SubResource("RectangleShape2D_objww")
+
+[node name="GrabableComponent" parent="." unique_id=1324351773 instance=ExtResource("1_loxsj")]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b8hmjdjnlvlwc"]
+
+[ext_resource type="Script" uid="uid://wghmq45k1ena" path="res://src/components/GrabableComponent.gd" id="1_k0mni"]
+
+[node name="GrabableComponent" type="Node" unique_id=1324351773]
+script = ExtResource("1_k0mni")

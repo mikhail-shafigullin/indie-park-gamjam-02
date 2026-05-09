@@ -1,5 +1,5 @@
-class_name Grabable
-extends Node2D
+class_name GrabableComponent
+extends Node
 
 func onGrab() -> void:
 	pass

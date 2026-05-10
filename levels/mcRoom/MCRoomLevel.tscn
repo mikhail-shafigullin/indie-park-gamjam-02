@@ -27,7 +27,6 @@ tile_map_data = PackedByteArray("AAAKAAYAAQAEAAYAAAAKAAcAAQAEAAcAAAAKAAgAAQAEAAg
 tile_set = ExtResource("2_4kd21")
 
 [node name="FurnitureForeground" type="TileMapLayer" parent="." unique_id=113481202]
-tile_map_data = PackedByteArray("AAALAAUAAgAAAAAAAAALAAYAAgAAAAEAAAA=")
 tile_set = ExtResource("2_4kd21")
 
 [node name="McBedroomSample" type="Sprite2D" parent="." unique_id=2110201947]

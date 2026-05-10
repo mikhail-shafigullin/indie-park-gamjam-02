@@ -39,7 +39,7 @@ func disableControls() -> void:
 	state = State.IDLE
 
 func enableControls() -> void:
-	if(get_tree()):
+	if(is_inside_tree()):
 		await get_tree().process_frame
 	controlsEnabled = true
 

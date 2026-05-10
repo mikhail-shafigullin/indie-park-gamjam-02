@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bvi6paecs0402" path="res://levels/mcRoom/McRoomLevel.gd" id="1_2kbn8"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_4kd21"]
 [ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="3_08wpr"]
-[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_08wpr"]
 
 [node name="McRoom" type="Node2D" unique_id=1672391368]
@@ -20,6 +20,14 @@ tile_set = ExtResource("2_4kd21")
 
 [node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=674496461]
 tile_map_data = PackedByteArray("AAAIAAUAAAAEAAEAAAAJAAUAAAAEAAEAAAAKAAUAAAAEAAEAAAALAAUAAAAEAAEAAAAMAAUAAAAEAAEAAAAIAAYAAAAEAAIAAAAJAAYAAAAEAAIAAAAKAAYAAAAEAAIAAAALAAYAAAAEAAIAAAAMAAYAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAAIAAgAAAAEAAIAAAAJAAgAAAAEAAIAAAAKAAgAAAAEAAIAAAALAAgAAAAEAAIAAAAMAAgAAAAEAAIAAAA=")
+tile_set = ExtResource("2_4kd21")
+
+[node name="FurnitureBackground" type="TileMapLayer" parent="." unique_id=1424467149]
+tile_map_data = PackedByteArray("AAAKAAYAAQAEAAYAAAAKAAcAAQAEAAcAAAAKAAgAAQAEAAgAAAALAAYAAQAFAAYAAAALAAcAAQAFAAcAAAALAAgAAQAFAAgAAAAMAAYAAQAGAAYAAAAMAAcAAQAGAAcAAAAMAAgAAQAGAAgAAAAKAAUAAQADAAgAAAAIAAUAAQAFAAQAAAAIAAYAAQAFAAUAAAAIAAcAAgAAAAIAAAAIAAgAAgAAAAMAAAAJAAcAAgABAAIAAAAJAAgAAgABAAMAAAAJAAUAAgAEAAAAAAA=")
+tile_set = ExtResource("2_4kd21")
+
+[node name="FurnitureForeground" type="TileMapLayer" parent="." unique_id=113481202]
+tile_map_data = PackedByteArray("AAALAAUAAgAAAAAAAAALAAYAAgAAAAEAAAA=")
 tile_set = ExtResource("2_4kd21")
 
 [node name="McBedroomSample" type="Sprite2D" parent="." unique_id=2110201947]

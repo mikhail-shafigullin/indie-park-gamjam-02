@@ -9,6 +9,10 @@ extends Level
 @onready var changeSceneToBathRoom: Usable = %ChangeSceneToBathRoom
 @onready var changeSceneToDebugRoom: Usable = %ChangeSceneToDebugRoom
 
+@onready var purpleDoor: ApartmentDoor = %PurpleDoor
+@onready var blueDoor: ApartmentDoor = %BlueDoor
+@onready var redDoor: ApartmentDoor = %RedDoor
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_enters_room.connect(giveAccessToPuzzles);
@@ -28,14 +32,17 @@ func giveAccessToPuzzles():
 		changeSceneToDebugRoom.enable();
 		
 func openMcRoom():
+	purpleDoor.open();
 	solve11Button.disable();
 	changeSceneToMcRoom.enable();
 
 func openBathroom():
+	blueDoor.open();
 	solve12Button.disable();
 	changeSceneToBathRoom.enable();
 	
 func openBedroom():
+	redDoor.open();
 	solve13Button.disable();
 	changeSceneToBedRoom.enable();
 

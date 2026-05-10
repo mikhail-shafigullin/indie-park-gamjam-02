@@ -1,0 +1,8 @@
+if {door_color} == "purple":
+	The [color=PURPLE]PURPLE[/color] door won't budge
+elif {door_color} == "blue":
+	The [color=BLUE]BLUE[/color] door won't budge
+elif {door_color} == "red":
+	The [color=RED]RED[/color] door won't budge
+else:
+	The door won't budge

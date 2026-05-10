@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b0frjmj536fr2"]
+
+[ext_resource type="Script" uid="uid://flek3xkcyv7f" path="res://scenes/usableObjects/ApartmentDoor.gd" id="1_si62s"]
+[ext_resource type="Texture2D" uid="uid://bn5ofbuw3fqo" path="res://assets/tilesets/Tileset_MC_Bedroom.png" id="1_t8q06"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u7bu"]
+atlas = ExtResource("1_t8q06")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p6ln"]
+size = Vector2(32, 32)
+
+[node name="Door" type="Node2D" unique_id=484289311]
+script = ExtResource("1_si62s")
+
+[node name="Image" type="Sprite2D" parent="." unique_id=1323231816]
+unique_name_in_owner = true
+texture = SubResource("AtlasTexture_8u7bu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1619956554]
+unique_name_in_owner = true
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=688837895]
+shape = SubResource("RectangleShape2D_4p6ln")

@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://12aj63se3ohe" path="res://levels/mainHall/TriggerOnGrabable.tscn" id="11_0ykuf"]
 [ext_resource type="Script" uid="uid://belj4ndnrvq0n" path="res://levels/mainHall/Puzzle1Logic.gd" id="12_4th8c"]
 [ext_resource type="Shader" uid="uid://buud482qgs4p6" path="res://src/shaders/pixleateLight.gdshader" id="13_xjkph"]
+[ext_resource type="PackedScene" uid="uid://b0frjmj536fr2" path="res://scenes/usableObjects/Door.tscn" id="16_a6vpp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sa234"]
 shader = ExtResource("13_xjkph")
@@ -30,6 +31,20 @@ fill_to = Vector2(1, 0.5229367)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xjkph"]
 shader = ExtResource("13_xjkph")
 shader_parameter/pixel_size = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4p6ln"]
+load_path = "res://.godot/imported/Tileset_Mother_Bedroom.png-ed0b3f7d586f3f052e58bf78beeee332.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17e1"]
+atlas = SubResource("CompressedTexture2D_4p6ln")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8u7bu"]
+load_path = "res://.godot/imported/Tileset_Bathroom.png-c2faf56b8b5b4c0d4e5c2afc6ac37d27.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p6ln"]
+atlas = SubResource("CompressedTexture2D_8u7bu")
+region = Rect2(128, 192, 32, 32)
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
@@ -269,6 +284,27 @@ collision_layer = 33
 collision_mask = 1
 expectedFurniture = NodePath("../MainHallArmchair")
 
+[node name="PurpleDoor" parent="." unique_id=484289311 instance=ExtResource("16_a6vpp")]
+unique_name_in_owner = true
+position = Vector2(400, 368)
+dialogueColor = "purple"
+
+[node name="RedDoor" parent="." unique_id=610089722 instance=ExtResource("16_a6vpp")]
+unique_name_in_owner = true
+position = Vector2(176, 368)
+dialogueColor = "red"
+
+[node name="Image" parent="RedDoor" index="0" unique_id=1323231816]
+texture = SubResource("AtlasTexture_h17e1")
+
+[node name="BlueDoor" parent="." unique_id=1566510094 instance=ExtResource("16_a6vpp")]
+unique_name_in_owner = true
+position = Vector2(464, 240)
+dialogueColor = "blue"
+
+[node name="Image" parent="BlueDoor" index="0" unique_id=1323231816]
+texture = SubResource("AtlasTexture_4p6ln")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1628009499]
 color = Color(0.99227136, 0.6830989, 0.6162289, 1)
 
@@ -280,3 +316,5 @@ color = Color(0.99227136, 0.6830989, 0.6162289, 1)
 [editable path="MainHallChair4"]
 [editable path="MainHallArmchair"]
 [editable path="MainHallArmchair2"]
+[editable path="RedDoor"]
+[editable path="BlueDoor"]

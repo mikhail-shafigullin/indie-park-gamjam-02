@@ -1,4 +1,6 @@
 join Ann center
-Ann: Talk
+A bookcase filled with books on various subjects
+There is a framed photo on one of the shelves
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle1-1.png" fade="0.5"]
-Thoughts
+[wait_input]
+Ann: It’s a picture of me with my mom and sister, taken right after we moved into this apartment.

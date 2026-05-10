@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qqxx445wyqdh"]
 
 [ext_resource type="Script" uid="uid://5mhw5yj5ci1x" path="res://scenes/dialogues/DialogicBackgroundScene.gd" id="1_5gupb"]
+[ext_resource type="Texture2D" uid="uid://du4wo3etmmdra" path="res://icon.svg" id="2_yjnat"]
 
 [node name="DialogicBackgroundScene" type="Control" unique_id=579515784]
 layout_mode = 3
@@ -10,3 +11,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5gupb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1287661616]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=738370302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="." unique_id=1608148121]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -218.0
+offset_right = 294.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="Image" type="TextureRect" parent="Control" unique_id=92607689]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_yjnat")
+expand_mode = 2
+stretch_mode = 5

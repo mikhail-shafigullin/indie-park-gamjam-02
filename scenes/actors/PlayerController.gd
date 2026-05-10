@@ -30,6 +30,8 @@ func _ready() -> void:
 	MainEventBus.image_layer_hidden.connect(enableControls);
 	MainEventBus.level_change.connect(func(_lvl): disableControls());
 	MainEventBus.level_changed.connect(enableControls);
+	Dialogic.timeline_ended.connect(enableControls);
+	Dialogic.timeline_started.connect(disableControls);
 
 func disableControls() -> void:
 	controlsEnabled = false
@@ -37,6 +39,8 @@ func disableControls() -> void:
 	state = State.IDLE
 
 func enableControls() -> void:
+	if(get_tree()):
+		await get_tree().process_frame
 	controlsEnabled = true
 
 func _process(_delta: float) -> void:
@@ -164,7 +168,6 @@ func releaseObject() -> void:
 	grabbedObject = null
 	grabbedComponent = null
 	MainEventBus.grabable_object_released.emit(releasedObject)
-	await get_tree().process_frame
 
 func rotateObject() -> void:
 	if not grabbedObject:

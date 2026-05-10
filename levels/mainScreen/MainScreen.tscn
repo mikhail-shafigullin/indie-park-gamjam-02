@@ -8,6 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://hoelf6lh5t8w" path="res://levels/mainScreen/ImageLayer.tscn" id="4_7ya88"]
 [ext_resource type="PackedScene" uid="uid://iq112y5h64of" path="res://levels/mainScreen/DebugPanel.tscn" id="5_gkeys"]
 
+[sub_resource type="Environment" id="Environment_gkeys"]
+background_mode = 3
+ssao_radius = 1.43
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.2
+fog_light_color = Color(0.8011695, 0.24705705, 0.9178358, 1)
+fog_light_energy = 3.67
+
 [node name="MainScreen" type="Node2D" unique_id=806331985]
 script = ExtResource("1_qbxu0")
 levelId = 1
@@ -41,3 +50,6 @@ script = ExtResource("1_uoskf")
 
 [node name="Player" parent="." unique_id=1914172203 instance=ExtResource("3_jjity")]
 position = Vector2(-152, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=764686722]
+environment = SubResource("Environment_gkeys")

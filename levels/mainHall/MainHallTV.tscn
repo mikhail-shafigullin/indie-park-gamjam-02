@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bw08x6qjyyghh"]
 
 [ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="1_d460l"]
-[ext_resource type="PackedScene" uid="uid://b8hmjdjnlvlwc" path="res://scenes/components/GrabableComponent.tscn" id="3_44cuo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d460l"]
 atlas = ExtResource("1_d460l")
@@ -17,10 +16,8 @@ y_sort_enabled = true
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819511238]
 texture = SubResource("AtlasTexture_d460l")
 
-[node name="GrabableComponent" parent="." unique_id=1324351773 instance=ExtResource("3_44cuo")]
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=167749479]
-collision_layer = 11
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=443427559]
 position = Vector2(0.5, 7.5)

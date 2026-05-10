@@ -177,9 +177,41 @@ collision_mask = 1
 expectedFurniture = NodePath("../ClosedCabinet")
 expectedDirection = 1
 
-[node name="Puzzle1Logic" type="Node" parent="." unique_id=2137089907 node_paths=PackedStringArray("triggersPuzzle1")]
+[node name="Puzzle1Logic" type="Node" parent="." unique_id=2137089907 node_paths=PackedStringArray("triggersPuzzle1", "triggersPuzzle2")]
 script = ExtResource("12_4th8c")
 triggersPuzzle1 = [NodePath("../TriggerOnBookCabinet"), NodePath("../TriggerOnClosedCabinet")]
+triggersPuzzle2 = [NodePath("../TriggerOnChairUp"), NodePath("../TriggerOnChairDown"), NodePath("../TriggerOnChairLeft"), NodePath("../TriggerOnChairRight")]
+
+[node name="TriggerOnChairUp" parent="." unique_id=2005577947 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+z_index = 1
+position = Vector2(224, 240)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../MainHallChair")
+expectedDirection = 2
+
+[node name="TriggerOnChairDown" parent="." unique_id=1643941785 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+z_index = 1
+position = Vector2(224, 269)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../MainHallChair")
+
+[node name="TriggerOnChairLeft" parent="." unique_id=1943197143 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+z_index = 1
+position = Vector2(208, 256)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../MainHallChair")
+expectedDirection = 1
+
+[node name="TriggerOnChairRight" parent="." unique_id=450829887 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+z_index = 1
+position = Vector2(240, 256)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../MainHallChair")
+expectedDirection = 3
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

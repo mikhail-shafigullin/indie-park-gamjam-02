@@ -13,9 +13,9 @@ func placeObjectOnTrigger(trigger: TriggerOnGrabable, grabable: Node2D):
 	if(allTriggersResolved(triggersPuzzle1)):
 		resolvePuzzle1();
 	if(allTriggersResolved(triggersPuzzle2)):
-		resolvePuzzle1();
+		resolvePuzzle2();
 	if(allTriggersResolved(triggersPuzzle3)):
-		resolvePuzzle1();
+		resolvePuzzle3();
 	pass;
 
 func allTriggersResolved(arrayTriggers: Array[TriggerOnGrabable]) -> bool:

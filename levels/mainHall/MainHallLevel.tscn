@@ -17,6 +17,12 @@
 y_sort_enabled = true
 script = ExtResource("1_l4nmg")
 
+[node name="Puzzle1Logic" type="Node" parent="." unique_id=2137089907 node_paths=PackedStringArray("triggersPuzzle1", "triggersPuzzle2", "triggersPuzzle3")]
+script = ExtResource("12_4th8c")
+triggersPuzzle1 = [NodePath("../TriggerOnBookCabinet"), NodePath("../TriggerOnClosedCabinet")]
+triggersPuzzle2 = [NodePath("../TriggerOnChairUp"), NodePath("../TriggerOnChairDown"), NodePath("../TriggerOnChairLeft"), NodePath("../TriggerOnChairRight")]
+triggersPuzzle3 = [NodePath("../TriggerOnArmChair")]
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1221534510]
 offset_right = 640.0
 offset_bottom = 480.0
@@ -177,11 +183,6 @@ collision_mask = 1
 expectedFurniture = NodePath("../ClosedCabinet")
 expectedDirection = 1
 
-[node name="Puzzle1Logic" type="Node" parent="." unique_id=2137089907 node_paths=PackedStringArray("triggersPuzzle1", "triggersPuzzle2")]
-script = ExtResource("12_4th8c")
-triggersPuzzle1 = [NodePath("../TriggerOnBookCabinet"), NodePath("../TriggerOnClosedCabinet")]
-triggersPuzzle2 = [NodePath("../TriggerOnChairUp"), NodePath("../TriggerOnChairDown"), NodePath("../TriggerOnChairLeft"), NodePath("../TriggerOnChairRight")]
-
 [node name="TriggerOnChairUp" parent="." unique_id=2005577947 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
 z_index = 1
 position = Vector2(224, 240)
@@ -192,7 +193,7 @@ expectedDirection = 2
 
 [node name="TriggerOnChairDown" parent="." unique_id=1643941785 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
 z_index = 1
-position = Vector2(224, 269)
+position = Vector2(224, 272)
 collision_layer = 33
 collision_mask = 1
 expectedFurniture = NodePath("../MainHallChair")
@@ -212,6 +213,13 @@ collision_layer = 33
 collision_mask = 1
 expectedFurniture = NodePath("../MainHallChair")
 expectedDirection = 3
+
+[node name="TriggerOnArmChair" parent="." unique_id=272754720 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+z_index = 1
+position = Vector2(192, 224)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../MainHallArmchair")
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

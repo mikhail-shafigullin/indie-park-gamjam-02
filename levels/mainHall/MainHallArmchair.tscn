@@ -7,7 +7,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fh15l"]
 atlas = ExtResource("2_jymns")
-region = Rect2(32, 224, 32, 32)
+region = Rect2(0, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jymns"]
 atlas = ExtResource("2_jymns")
@@ -19,7 +19,7 @@ region = Rect2(64, 256, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0cgn"]
 atlas = ExtResource("2_jymns")
-region = Rect2(32, 256, 32, 32)
+region = Rect2(32, 288, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ksf82"]
 animations = [{
@@ -67,7 +67,7 @@ script = ExtResource("1_fh15l")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=508264241]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_ksf82")
-animation = &"direction_down"
+animation = &"direction_up"
 
 [node name="RotatableComponent" parent="." unique_id=1933610067 node_paths=PackedStringArray("animatedSprite", "collisionShape") instance=ExtResource("3_ncoar")]
 unique_name_in_owner = true

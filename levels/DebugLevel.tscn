@@ -4,8 +4,6 @@
 [ext_resource type="Script" uid="uid://dpu6m4d2wp4ga" path="res://levels/DebugLevel.gd" id="1_s0miu"]
 [ext_resource type="PackedScene" uid="uid://doo6itsbamqno" path="res://scenes/usableObjects/UsableExample.tscn" id="2_gs5g8"]
 [ext_resource type="PackedScene" uid="uid://cu60mhxu0kpqe" path="res://scenes/staticObjects/GrabableExample.tscn" id="3_b2lhc"]
-[ext_resource type="Script" uid="uid://bf8uau5xloki1" path="res://levels/DialogueStarterExample.gd" id="4_objww"]
-[ext_resource type="Resource" uid="uid://cyuhk5j81mydt" path="res://dialogues/testDebug.dialogue" id="5_618h7"]
 [ext_resource type="Script" uid="uid://dgiff2ch4cy7o" path="res://scenes/usableObjects/ShowImageUsable.gd" id="7_exmg7"]
 [ext_resource type="Texture2D" uid="uid://dtutqgs5mrn1t" path="res://assets/images/debugApartment.jpeg" id="8_s0miu"]
 
@@ -14,9 +12,6 @@ size = Vector2(192, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs5g8"]
 size = Vector2(16, 80)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2lhc"]
-size = Vector2(16, 16)
 
 [node name="DebugLevel" type="Node2D" unique_id=736856760]
 script = ExtResource("1_s0miu")
@@ -90,24 +85,6 @@ shape = SubResource("RectangleShape2D_gs5g8")
 
 [node name="UsableExample" parent="." unique_id=442146003 instance=ExtResource("2_gs5g8")]
 position = Vector2(384, 224)
-
-[node name="DialogueStarterObj" type="Node2D" parent="." unique_id=68385085]
-position = Vector2(384, 304)
-script = ExtResource("4_objww")
-dialogueRes = ExtResource("5_618h7")
-metadata/_edit_group_ = true
-
-[node name="ColorRect" type="ColorRect" parent="DialogueStarterObj" unique_id=373490155]
-offset_right = 16.0
-offset_bottom = 16.0
-color = Color(1, 0.24624708, 0.18872753, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="DialogueStarterObj" unique_id=1563090926]
-collision_layer = 7
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueStarterObj/StaticBody2D" unique_id=1872030387]
-position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_b2lhc")
 
 [node name="GrabableObj" parent="." unique_id=1303292790 instance=ExtResource("3_b2lhc")]
 position = Vector2(400, 256)

@@ -1,0 +1,4 @@
+join Ann center
+Ann: Talk
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle1-1.png" fade="0.5"]
+Thoughts

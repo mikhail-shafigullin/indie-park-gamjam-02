@@ -58,6 +58,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43xrf"]
 size = Vector2(29, 17)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0neyw"]
+polygon = PackedVector2Array(-7, 13, -7, -27, 6, -27, 6, 13)
+
 [node name="BookCabinet" type="Node2D" unique_id=1683579721]
 z_index = 1
 y_sort_enabled = true
@@ -79,3 +82,7 @@ collision_layer = 11
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=443427559]
 position = Vector2(0.5, 5.5)
 shape = SubResource("RectangleShape2D_43xrf")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=667850567]
+position = Vector2(1, 0)
+occluder = SubResource("OccluderPolygon2D_0neyw")

@@ -12,6 +12,9 @@ extends Level
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_enters_room.connect(giveAccessToPuzzles);
+	MainEventBus.puzzle_1_1_solved.connect(openMcRoom);
+	MainEventBus.puzzle_1_2_solved.connect(openBathroom);
+	MainEventBus.puzzle_1_3_solved.connect(openBedroom)
 	pass;
 
 func giveAccessToPuzzles():
@@ -23,22 +26,24 @@ func giveAccessToPuzzles():
 	if(PuzzleStates.puzzle4Solved):
 		changeSceneToBedRoom.disable();
 		changeSceneToDebugRoom.enable();
+		
+func openMcRoom():
+	solve11Button.disable();
+	changeSceneToMcRoom.enable();
+
+func openBathroom():
+	solve12Button.disable();
+	changeSceneToBathRoom.enable();
+	
+func openBedroom():
+	solve13Button.disable();
+	changeSceneToBedRoom.enable();
 
 func _on_solve_11__object_used() -> void:
 	MainEventBus.puzzle_1_1_solved.emit();
-	solve11Button.disable();
-	changeSceneToMcRoom.enable();
-	pass # Replace with function body.
-
 
 func _on_solve_12__object_used() -> void:
 	MainEventBus.puzzle_1_2_solved.emit();
-	solve12Button.disable();
-	changeSceneToBathRoom.enable()
-	pass # Replace with function body.
 
 func _on_solve_13__object_used() -> void:
 	MainEventBus.puzzle_1_3_solved.emit();
-	solve13Button.disable();
-	changeSceneToBedRoom.enable();
-	pass # Replace with function body.

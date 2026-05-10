@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://12aj63se3ohe"]
+
+[ext_resource type="Script" uid="uid://3kjw0fajbqh5" path="res://levels/mainHall/TriggerOnGrabable.gd" id="1_8lqiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4pyt"]
+size = Vector2(32, 32)
+
+[node name="TriggerOnBookCabinet" type="Area2D" unique_id=1176637669]
+collision_mask = 33
+script = ExtResource("1_8lqiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2102800848]
+shape = SubResource("RectangleShape2D_t4pyt")

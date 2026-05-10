@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cr83883bae7pu" path="res://levels/mainHall/MainHallChair.tscn" id="8_qp0r6"]
 [ext_resource type="PackedScene" uid="uid://bw08x6qjyyghh" path="res://levels/mainHall/MainHallTV.tscn" id="9_0x067"]
 [ext_resource type="PackedScene" uid="uid://ctdi7w62p8h3f" path="res://levels/mainHall/MainHallArmchair.tscn" id="10_t4pyt"]
+[ext_resource type="PackedScene" uid="uid://12aj63se3ohe" path="res://levels/mainHall/TriggerOnGrabable.tscn" id="11_0ykuf"]
+[ext_resource type="Script" uid="uid://belj4ndnrvq0n" path="res://levels/mainHall/Puzzle1Logic.gd" id="12_4th8c"]
 
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
@@ -160,6 +162,24 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" parent="MainHallArmchair2" index="0" unique_id=508264241]
 animation = &"direction_right"
+
+[node name="TriggerOnBookCabinet" parent="." unique_id=1176637669 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+position = Vector2(432, 336)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../BookCabinet")
+expectedDirection = 1
+
+[node name="TriggerOnClosedCabinet" parent="." unique_id=1786748837 node_paths=PackedStringArray("expectedFurniture") instance=ExtResource("11_0ykuf")]
+position = Vector2(432, 304)
+collision_layer = 33
+collision_mask = 1
+expectedFurniture = NodePath("../ClosedCabinet")
+expectedDirection = 1
+
+[node name="Puzzle1Logic" type="Node" parent="." unique_id=2137089907 node_paths=PackedStringArray("triggersPuzzle1")]
+script = ExtResource("12_4th8c")
+triggersPuzzle1 = [NodePath("../TriggerOnBookCabinet"), NodePath("../TriggerOnClosedCabinet")]
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

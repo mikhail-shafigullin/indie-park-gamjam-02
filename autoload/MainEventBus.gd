@@ -9,6 +9,9 @@ signal usable_object_is_unhovered(usable_object: Node2D);
 
 signal grabable_object_is_hovered(grabable_object: Node2D);
 signal grabable_object_is_unhovered(grabable_object: Node2D);
+signal grabable_object_grabbed(grabable_object: Node2D)
+signal grabable_object_released(grabable_object: Node2D)
+signal grabable_object_is_placed_on_trigger(trigger: TriggerOnGrabable, grabable_object: Node2D)
 
 #images
 signal image_layer_show_image(image: Texture2D)

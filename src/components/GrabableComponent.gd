@@ -1,8 +1,11 @@
 class_name GrabableComponent
 extends Node
 
+signal grabbed
+signal released
+
 func onGrab() -> void:
-	pass
+	grabbed.emit()
 
 func onRelease() -> void:
-	pass
+	released.emit()

@@ -152,8 +152,10 @@ func grabObject(collider: Node) -> void:
 	grabExtraCollision.position = to_local(shapeNode.global_position)
 	add_child(grabExtraCollision)
 	grabbedComponent.onGrab()
+	MainEventBus.grabable_object_grabbed.emit(grabbedObject)
 
 func releaseObject() -> void:
+	var releasedObject := grabbedObject
 	grabbedComponent.onRelease()
 	remove_collision_exception_with(grabbedBody)
 	grabExtraCollision.queue_free()
@@ -161,6 +163,8 @@ func releaseObject() -> void:
 	grabbedBody = null
 	grabbedObject = null
 	grabbedComponent = null
+	MainEventBus.grabable_object_released.emit(releasedObject)
+	await get_tree().process_frame
 
 func rotateObject() -> void:
 	if not grabbedObject:

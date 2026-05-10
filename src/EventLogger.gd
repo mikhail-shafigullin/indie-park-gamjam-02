@@ -16,12 +16,17 @@ func _ready() -> void:
 		var signalObject: Signal = bus[sigName]
 		if argCount == 0:
 			signalObject.connect(logEvent.bind(sigName))
-		else:
+		elif argCount == 1:
 			signalObject.connect(logEventWithArg.bind(sigName))
+		else:
+			signalObject.connect(logEventWithTwoArgs.bind(sigName))
 
 
 func logEvent(eventName: String) -> void:
 	print("[EventLogger] %s" % eventName)
 
 func logEventWithArg(_arg: Variant, eventName: String) -> void:
+	print("[EventLogger] %s" % eventName)
+
+func logEventWithTwoArgs(_arg1: Variant, _arg2: Variant, eventName: String) -> void:
 	print("[EventLogger] %s" % eventName)

@@ -1,4 +1,3 @@
-@tool
 extends Node2D
 
 @export_enum("down", "left", "up", "right") var direction: int;

@@ -47,10 +47,13 @@ func openBedroom():
 	changeSceneToBedRoom.enable();
 
 func _on_solve_11__object_used() -> void:
+	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_1_solved.emit();
 
 func _on_solve_12__object_used() -> void:
+	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_2_solved.emit();
 
 func _on_solve_13__object_used() -> void:
+	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_3_solved.emit();

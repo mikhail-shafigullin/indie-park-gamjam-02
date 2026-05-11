@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://62hdx3shcaav" path="res://levels/mainHall/MainHallLevel.gd" id="1_l4nmg"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
-[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
+[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
 [ext_resource type="PackedScene" uid="uid://dw52tthlbp2rp" path="res://levels/mainHall/ClosedCabinet.tscn" id="6_e54g3"]
 [ext_resource type="PackedScene" uid="uid://ciso2avldnxis" path="res://levels/mainHall/BookCabinet.tscn" id="7_43xrf"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bw08x6qjyyghh" path="res://levels/mainHall/MainHallTV.tscn" id="9_0x067"]
 [ext_resource type="PackedScene" uid="uid://ctdi7w62p8h3f" path="res://levels/mainHall/MainHallArmchair.tscn" id="10_t4pyt"]
 [ext_resource type="PackedScene" uid="uid://12aj63se3ohe" path="res://levels/mainHall/TriggerOnGrabable.tscn" id="11_0ykuf"]
-[ext_resource type="Script" path="res://levels/mainHall/Puzzle1Logic.gd" id="12_4th8c"]
+[ext_resource type="Script" uid="uid://belj4ndnrvq0n" path="res://levels/mainHall/Puzzle1Logic.gd" id="12_4th8c"]
 [ext_resource type="Shader" uid="uid://buud482qgs4p6" path="res://src/shaders/pixleateLight.gdshader" id="13_xjkph"]
 [ext_resource type="PackedScene" uid="uid://b0frjmj536fr2" path="res://scenes/usableObjects/Door.tscn" id="16_a6vpp"]
 

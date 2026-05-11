@@ -30,7 +30,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",
-"MainHallDoorClosed": "res://dialogues/timelines/mainHall/MainHallDoorClosed.dtl"
+"MainHallDoorClosed": "res://dialogues/timelines/mainHall/MainHallDoorClosed.dtl",
+"MainHallPuzzleSolved": "res://dialogues/timelines/mainHall/MainHallPuzzleSolved.dtl"
 }
 layout/style_directory={
 "": "res://dialogues/styles/DefaultDialogueStyle.tres",

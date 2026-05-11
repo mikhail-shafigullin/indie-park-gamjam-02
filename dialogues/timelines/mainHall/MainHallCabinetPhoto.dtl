@@ -4,4 +4,5 @@ There is a framed photo on one of the shelves
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle1-1.png" fade="0.5"]
 [wait_input]
 Ann: It’s a picture of me with my mom and sister, taken right after we moved into this apartment.
-On the other side of the photograph it says\: [i]A place for everything, and everything in its place.[/i]
+On the other side of the photograph it says\: [pause = 0.5]\
+[i]A place for everything, and everything in its place.[/i]

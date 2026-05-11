@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dh5gbsp5exvfm"]
+
+[ext_resource type="Script" uid="uid://cq3t5ahunfixg" path="res://levels/mainScreen/InventoryUI.gd" id="1_invui"]
+
+[node name="InventoryUI" type="Control" unique_id=1123379205]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_invui")
+
+[node name="InventoryPanel" type="Panel" parent="." unique_id=170883857]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 250.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel" unique_id=2044101977]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="InventoryPanel/VBoxContainer" unique_id=1477821134]
+layout_mode = 2
+text = "INVENTORY"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="InventoryPanel/VBoxContainer" unique_id=1547490670]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryPanel/VBoxContainer" unique_id=716559237]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+
+[node name="ItemListContainer" type="VBoxContainer" parent="InventoryPanel/VBoxContainer/ScrollContainer" unique_id=211376925]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="InventoryPanel/VBoxContainer" unique_id=802987711]
+layout_mode = 2
+
+[node name="DescriptionPanel" type="Panel" parent="InventoryPanel/VBoxContainer" unique_id=2002804528]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+
+[node name="DescVBox" type="VBoxContainer" parent="InventoryPanel/VBoxContainer/DescriptionPanel" unique_id=1134982134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemNameLabel" type="Label" parent="InventoryPanel/VBoxContainer/DescriptionPanel/DescVBox" unique_id=1966979938]
+unique_name_in_owner = true
+layout_mode = 2
+text = "No item selected"
+
+[node name="ItemDescLabel" type="Label" parent="InventoryPanel/VBoxContainer/DescriptionPanel/DescVBox" unique_id=527621558]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+autowrap_mode = 3
+
+[node name="TooltipPanel" type="Panel" parent="InventoryPanel" unique_id=813204661]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 5.0
+offset_top = 35.0
+offset_right = -5.0
+offset_bottom = 90.0
+grow_horizontal = 2
+
+[node name="TooltipVBox" type="VBoxContainer" parent="InventoryPanel/TooltipPanel" unique_id=924315772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TooltipUseLabel" type="Label" parent="InventoryPanel/TooltipPanel/TooltipVBox" unique_id=135426883]
+unique_name_in_owner = true
+layout_mode = 2
+text = "> Use"
+
+[node name="TooltipExamineLabel" type="Label" parent="InventoryPanel/TooltipPanel/TooltipVBox" unique_id=246537994]
+unique_name_in_owner = true
+layout_mode = 2
+text = "  Examine"

@@ -1,0 +1,8 @@
+I found a few MES cartridges scattered across the floor.
+I calmly pick up the cartridges.
+[background arg="#000000ff" fade="1.0" wait="true"]
+...
+[signal arg="MCRoom_DeleteCartridgesFromFloor"]
+Six cartridges added to inventory.
+[background fade="1.0" wait="true"]
+[color=GREEN]Press [TAB] to open inventory.[/color]

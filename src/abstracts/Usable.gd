@@ -1,5 +1,5 @@
 class_name Usable
-extends Node
+extends Node2D
 
 signal _object_used;
 signal _object_disabled;

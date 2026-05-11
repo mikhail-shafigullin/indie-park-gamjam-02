@@ -29,6 +29,7 @@ directories/dch_directory={
 "Ann": "res://dialogues/characters/Ann.dch"
 }
 directories/dtl_directory={
+"MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",
 "MainHallDoorClosed": "res://dialogues/timelines/mainHall/MainHallDoorClosed.dtl",
 "MainHallPuzzleSolved": "res://dialogues/timelines/mainHall/MainHallPuzzleSolved.dtl"

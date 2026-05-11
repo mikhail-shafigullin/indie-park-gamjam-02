@@ -3,8 +3,42 @@
 [ext_resource type="Script" uid="uid://bvi6paecs0402" path="res://levels/mcRoom/McRoomLevel.gd" id="1_2kbn8"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_4kd21"]
 [ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="3_08wpr"]
-[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
+[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_08wpr"]
+[ext_resource type="PackedScene" uid="uid://xnttreoh0vbs" path="res://levels/mcRoom/McRoomCartridge.tscn" id="6_55q5b"]
+[ext_resource type="Texture2D" uid="uid://bn5ofbuw3fqo" path="res://assets/tilesets/Tileset_MC_Bedroom.png" id="7_bul60"]
+[ext_resource type="Script" uid="uid://c0j0uqb0xg8al" path="res://levels/mcRoom/MCRoomTV.gd" id="8_bucqu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bucqu"]
+atlas = ExtResource("7_bul60")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bul60"]
+atlas = ExtResource("7_bul60")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkt2w"]
+atlas = ExtResource("7_bul60")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e20gh"]
+atlas = ExtResource("7_bul60")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oma1q"]
+atlas = ExtResource("7_bul60")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nrem"]
+atlas = ExtResource("7_bul60")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex7mc"]
+atlas = ExtResource("7_bul60")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bul60"]
+size = Vector2(30, 29)
 
 [node name="McRoom" type="Node2D" unique_id=1672391368]
 y_sort_enabled = true
@@ -60,4 +94,86 @@ offset_right = 40.0
 offset_bottom = 39.0
 text = "2"
 
+[node name="AllCartidges" type="Node2D" parent="." unique_id=769110923]
+position = Vector2(320, 192)
+
+[node name="Cartridge1" parent="AllCartidges" unique_id=1523120974 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(0, 32)
+
+[node name="Cartridge2" parent="AllCartidges" unique_id=450405858 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(32, 0)
+
+[node name="Sprite2D" parent="AllCartidges/Cartridge2" index="0" unique_id=225052829]
+texture = SubResource("AtlasTexture_bucqu")
+
+[node name="CollisionShape2D" parent="AllCartidges/Cartridge2/StaticBody2D" parent_id_path=PackedInt32Array(450405858, 340350340) index="0" unique_id=772919040]
+position = Vector2(7, 25)
+
+[node name="Cartridge3" parent="AllCartidges" unique_id=609930620 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(32, 32)
+
+[node name="Sprite2D" parent="AllCartidges/Cartridge3" index="0" unique_id=225052829]
+texture = SubResource("AtlasTexture_bul60")
+
+[node name="CollisionShape2D" parent="AllCartidges/Cartridge3/StaticBody2D" parent_id_path=PackedInt32Array(609930620, 340350340) index="0" unique_id=772919040]
+position = Vector2(25, 25)
+
+[node name="Cartridge4" parent="AllCartidges" unique_id=1316806325 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(64, 32)
+
+[node name="Sprite2D" parent="AllCartidges/Cartridge4" index="0" unique_id=225052829]
+texture = SubResource("AtlasTexture_kkt2w")
+
+[node name="CollisionShape2D" parent="AllCartidges/Cartridge4/StaticBody2D" parent_id_path=PackedInt32Array(1316806325, 340350340) index="0" unique_id=772919040]
+position = Vector2(15, 25)
+
+[node name="Cartridge5" parent="AllCartidges" unique_id=614594696 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(64, 0)
+
+[node name="Sprite2D" parent="AllCartidges/Cartridge5" index="0" unique_id=225052829]
+texture = SubResource("AtlasTexture_e20gh")
+
+[node name="CollisionShape2D" parent="AllCartidges/Cartridge5/StaticBody2D" parent_id_path=PackedInt32Array(614594696, 340350340) index="0" unique_id=772919040]
+position = Vector2(10, 17)
+
+[node name="Cartridge6" parent="AllCartidges" unique_id=1712228247 instance=ExtResource("6_55q5b")]
+z_index = 1
+position = Vector2(0, 64)
+
+[node name="Sprite2D" parent="AllCartidges/Cartridge6" index="0" unique_id=225052829]
+texture = SubResource("AtlasTexture_oma1q")
+
+[node name="CollisionShape2D" parent="AllCartidges/Cartridge6/StaticBody2D" parent_id_path=PackedInt32Array(1712228247, 340350340) index="0" unique_id=772919040]
+position = Vector2(17, 19)
+
+[node name="TV" type="Node2D" parent="." unique_id=1452165712]
+z_index = 1
+position = Vector2(368, 192)
+script = ExtResource("8_bucqu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TV" unique_id=598782004]
+texture = SubResource("AtlasTexture_1nrem")
+
+[node name="Sprite2D2" type="Sprite2D" parent="TV" unique_id=1120730267]
+position = Vector2(0, 32)
+texture = SubResource("AtlasTexture_ex7mc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TV" unique_id=836058288]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TV/StaticBody2D" unique_id=385521383]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_bul60")
+
 [connection signal="_object_used" from="Solve2" to="." method="_on_solve_2__object_used"]
+
+[editable path="AllCartidges/Cartridge2"]
+[editable path="AllCartidges/Cartridge3"]
+[editable path="AllCartidges/Cartridge4"]
+[editable path="AllCartidges/Cartridge5"]
+[editable path="AllCartidges/Cartridge6"]

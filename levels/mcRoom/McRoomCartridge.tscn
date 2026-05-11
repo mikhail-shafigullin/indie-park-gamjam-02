@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://xnttreoh0vbs"]
+
+[ext_resource type="Script" uid="uid://dc8blopiy70om" path="res://levels/mcRoom/McRoomCartridge.gd" id="1_6evn8"]
+[ext_resource type="Texture2D" uid="uid://bn5ofbuw3fqo" path="res://assets/tilesets/Tileset_MC_Bedroom.png" id="1_12rni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bul60"]
+atlas = ExtResource("1_12rni")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55q5b"]
+size = Vector2(15, 15)
+
+[node name="Cartridge" type="Node2D" unique_id=1523120974]
+y_sort_enabled = true
+script = ExtResource("1_6evn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=225052829]
+y_sort_enabled = true
+position = Vector2(16, 16)
+texture = SubResource("AtlasTexture_bul60")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=340350340]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=772919040]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(15, 15)
+shape = SubResource("RectangleShape2D_55q5b")

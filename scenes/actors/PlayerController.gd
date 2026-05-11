@@ -2,7 +2,7 @@ class_name PlayerController
 extends CharacterBody2D
 
 const SPEED = 130.0
-const INTERACT_DISTANCE = 37.0
+const INTERACT_DISTANCE = 20.0
 const GRAB_MULTIPLICATOR = 0.7
 
 enum State { IDLE, WALK }
@@ -30,6 +30,8 @@ func _ready() -> void:
 	MainEventBus.image_layer_hidden.connect(enableControls);
 	MainEventBus.level_change.connect(func(_lvl): disableControls());
 	MainEventBus.level_changed.connect(enableControls);
+	MainEventBus.inventory_opened.connect(disableControls);
+	MainEventBus.inventory_closed.connect(enableControls)
 	Dialogic.timeline_ended.connect(enableControls);
 	Dialogic.timeline_started.connect(disableControls);
 

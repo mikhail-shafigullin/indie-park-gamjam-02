@@ -29,3 +29,8 @@ signal puzzle_1_3_solved()
 signal puzzle_2_solved()
 signal puzzle_3_solved()
 signal puzzle_4_solved()
+
+#inventory
+signal inventory_opened();
+signal inventory_closed();
+signal inventory_add_item(item: InventoryItem);

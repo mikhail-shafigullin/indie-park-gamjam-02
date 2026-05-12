@@ -32,28 +32,28 @@ func giveAccessToPuzzles():
 		changeSceneToDebugRoom.enable();
 		
 func openMcRoom():
+	Dialogic.start('MainHallPuzzleSolved');
 	purpleDoor.open();
 	solve11Button.disable();
 	changeSceneToMcRoom.enable();
 
 func openBathroom():
+	Dialogic.start('MainHallPuzzleSolved');
 	blueDoor.open();
 	solve12Button.disable();
 	changeSceneToBathRoom.enable();
 	
 func openBedroom():
+	Dialogic.start('MainHallPuzzleSolved');
 	redDoor.open();
 	solve13Button.disable();
 	changeSceneToBedRoom.enable();
 
 func _on_solve_11__object_used() -> void:
-	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_1_solved.emit();
 
 func _on_solve_12__object_used() -> void:
-	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_2_solved.emit();
 
 func _on_solve_13__object_used() -> void:
-	Dialogic.start('MainHallPuzzleSolved');
 	MainEventBus.puzzle_1_3_solved.emit();

@@ -34,3 +34,5 @@ signal puzzle_4_solved()
 signal inventory_opened();
 signal inventory_closed();
 signal inventory_add_item(item: InventoryItem);
+signal inventory_item_used(item: InventoryItem);
+signal inventory_item_examined(item: InventoryItem);

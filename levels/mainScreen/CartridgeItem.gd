@@ -29,8 +29,12 @@ func _init(genre: CartrigdeGenre) -> void:
 			itemName = "Cartridge #6"
 	description = "Cartridge for MES console"
 
-func use() -> void:
-	print("Inserting the cartridge...")
+func use(usedOnItem: Usable) -> void:
+	if(usedOnItem):
+		pass;
+	else:
+		Dialogic.start('MCRoomCartridgeUseNoItem');
 
 func examine() -> void:
-	print("Examining the cartridge. Looks like something retro.")
+	Dialogic.VAR.set_variable("mcRoom.cartridgeType", cartridgeGenre)
+	Dialogic.start('MCRoomCartridge1Examine');

@@ -1,0 +1,25 @@
+[background arg="#000000ff" fade="0.5" wait="true"]
+if {mcRoom.cartridgeType} == 0.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge1.png" fade="0.5" wait="true"]
+	...
+	[REPLACE] Fighting cartridge
+elif {mcRoom.cartridgeType} == 1.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge2.png" fade="0.5" wait="true"]
+	...
+	[REPLACE] Racing cartridge
+elif {mcRoom.cartridgeType} == 2.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge3.png" fade="0.5" wait="true"]
+	...
+	[REPLACE] Adventure cartridge
+elif {mcRoom.cartridgeType} == 3.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge4.png" fade="0.0"]
+	...
+	[REPLACE] Platformer cartridge
+elif {mcRoom.cartridgeType} == 4.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge5.png" fade="0.5" wait="true"]
+	...
+	[REPLACE] Puzzle cartridge
+elif {mcRoom.cartridgeType} == 5.0:
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge6.png" fade="0.5" wait="true"]
+	...
+	[REPLACE] Roleplay cartridge

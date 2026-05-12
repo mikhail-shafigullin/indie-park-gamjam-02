@@ -22,6 +22,7 @@ BetterTerrain="*uid://dsr73uwcp7q5j"
 LevelContainer="*uid://dv7g5tcevfqyn"
 PuzzleStates="*res://autoload/PuzzleStates.gd"
 Dialogic="*uid://ds2q0uclmolvu"
+Global="*uid://cpgxeuwd2s0bx"
 
 [dialogic]
 
@@ -29,7 +30,10 @@ directories/dch_directory={
 "Ann": "res://dialogues/characters/Ann.dch"
 }
 directories/dtl_directory={
+"MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
+"MCRoomCartridgeUseNoItem": "res://dialogues/timelines/mcRoom/MCRoomCartridgeUseNoItem.dtl",
+"MCRoomTVUseWithoutCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithoutCartridge.dtl",
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",
 "MainHallDoorClosed": "res://dialogues/timelines/mainHall/MainHallDoorClosed.dtl",
 "MainHallPuzzleSolved": "res://dialogues/timelines/mainHall/MainHallPuzzleSolved.dtl"
@@ -42,7 +46,10 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://dialogues/styles/DefaultDialogueStyle.tres"]
 layout/default_style="res://dialogues/styles/DefaultDialogueStyle.tres"
 variables={
-"door_color": "white"
+"door_color": "white",
+"mcRoom": {
+"cartridgeType": 0
+}
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

@@ -86,9 +86,12 @@ func hideTooltip() -> void:
 func executeTooltipAction() -> void:
 	var item = items[focusedItemIndex]
 	if tooltipFocusedIndex == 0:
-		item.use()
+		item.useWithSignal()
 	else:
-		item.examine()
+		item.examineWithSignal()
+	hideTooltip();
+	closeInventory();
+	
 
 func updateItemFocus() -> void:
 	for i in items.size():

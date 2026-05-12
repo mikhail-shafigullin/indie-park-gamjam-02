@@ -18,6 +18,7 @@ var grabOffset: Vector2 = Vector2.ZERO
 var grabExtraCollision: CollisionShape2D = null
 var animationDirection = Vector2.DOWN
 var controlsEnabled = true
+var hoveredUsable: Usable = null;
 
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var rayCast: RayCast2D = %RayCast
@@ -34,6 +35,7 @@ func _ready() -> void:
 	MainEventBus.inventory_closed.connect(enableControls)
 	Dialogic.timeline_ended.connect(enableControls);
 	Dialogic.timeline_started.connect(disableControls);
+	Global.player = self;
 
 func disableControls() -> void:
 	controlsEnabled = false
@@ -128,11 +130,13 @@ func checkRaycastGrabable(prevTarget: Node, collider: Node) -> void:
 func hoverUsableObject(collider: Node2D) -> void:
 	MainEventBus.usable_object_is_hovered.emit(collider)
 	var usable: Usable = collider.get_parent();
+	hoveredUsable = usable;
 	usable.onHover();
 
 func unhoverUsableObject(collider: Node2D) -> void:
 	MainEventBus.usable_object_is_unhovered.emit(collider)
 	var usable: Usable = collider.get_parent();
+	hoveredUsable = null;
 	usable.onUnhover();
 
 func hoverGrabableObject(collider: Node2D) -> void:

@@ -27,25 +27,42 @@ func _init() -> void:
 	MainEventBus.send_player_to_marker.connect(teleportToMarker);
 
 func _ready() -> void:
-	MainEventBus.image_layer_show_image.connect(func(_image): disableControls())
-	MainEventBus.image_layer_hidden.connect(enableControls);
+	MainEventBus.puzzle_layer_show_scene.connect(func(_image): disableControls())
+	MainEventBus.puzzle_layer_showed.connect(disableControls);
+	MainEventBus.puzzle_layer_hidden.connect(enableControls);
 	MainEventBus.level_change.connect(func(_lvl): disableControls());
 	MainEventBus.level_changed.connect(enableControls);
-	MainEventBus.inventory_opened.connect(disableControls);
-	MainEventBus.inventory_closed.connect(enableControls)
 	Dialogic.timeline_ended.connect(enableControls);
 	Dialogic.timeline_started.connect(disableControls);
+	MainEventBus.inventory_opened.connect(disableControls);
+	MainEventBus.inventory_closed.connect(enableControls)
+	
 	Global.player = self;
 
 func disableControls() -> void:
+	print("player disabled")
 	controlsEnabled = false
 	velocity = Vector2.ZERO
 	state = State.IDLE
 
 func enableControls() -> void:
+	print("player enabled")
 	if(is_inside_tree()):
 		await get_tree().process_frame
 	controlsEnabled = true
+	
+func _input(event: InputEvent) -> void:
+	if controlsEnabled and event.is_action_pressed("use") and not event.echo:
+		if grabbedObject:
+			rotateObject()
+		elif lastInteractTarget and lastInteractTarget.collision_layer & 4:
+			useObject(lastInteractTarget)
+		
+	if controlsEnabled and event.is_action_pressed("grab") and not event.echo:
+		if grabbedBody:
+			releaseObject()
+		elif lastInteractTarget and lastInteractTarget.collision_layer & 8:
+			grabObject(lastInteractTarget)
 
 func _process(_delta: float) -> void:
 	if not controlsEnabled:
@@ -71,18 +88,6 @@ func _process(_delta: float) -> void:
 	updateAnimation()
 	updateRaycast()
 	checkRaycast()
-
-	if Input.is_action_just_pressed("use"):
-		if grabbedObject:
-			rotateObject()
-		elif lastInteractTarget and lastInteractTarget.collision_layer & 4:
-			useObject(lastInteractTarget)
-
-	if Input.is_action_just_pressed("grab"):
-		if grabbedBody:
-			releaseObject()
-		elif lastInteractTarget and lastInteractTarget.collision_layer & 8:
-			grabObject(lastInteractTarget)
 
 func updateGrabbedPosition() -> void:
 	if not grabbedObject:

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dw62u2fp6jm54" path="res://levels/mainScreen/MainUI.tscn" id="3_gkeys"]
 [ext_resource type="PackedScene" uid="uid://cacxjbpkqncsc" path="res://scenes/actors/Player.tscn" id="3_jjity"]
 [ext_resource type="PackedScene" uid="uid://5ncw2w2wilbg" path="res://levels/mainScreen/FadeInFadeOut.tscn" id="3_p5eba"]
-[ext_resource type="PackedScene" uid="uid://hoelf6lh5t8w" path="res://levels/mainScreen/ImageLayer.tscn" id="4_7ya88"]
+[ext_resource type="PackedScene" uid="uid://hoelf6lh5t8w" path="res://levels/mainScreen/PuzzleLayer.tscn" id="4_7ya88"]
 [ext_resource type="PackedScene" uid="uid://iq112y5h64of" path="res://levels/mainScreen/DebugPanel.tscn" id="5_gkeys"]
 [ext_resource type="PackedScene" uid="uid://dh5gbsp5exvfm" path="res://levels/mainScreen/InventoryUI.tscn" id="6_invui"]
 
@@ -39,13 +39,14 @@ unique_name_in_owner = true
 visible = false
 
 [node name="InventoryUILayer" type="CanvasLayer" parent="." unique_id=712345801]
-layer = 1
 
 [node name="InventoryUI" parent="InventoryUILayer" unique_id=712345802 instance=ExtResource("6_invui")]
 
 [node name="DebugUI" type="CanvasLayer" parent="." unique_id=634191814]
 
 [node name="DebugPanel" parent="DebugUI" unique_id=725556768 instance=ExtResource("5_gkeys")]
+
+[node name="ScreenPuzzleLayer" type="CanvasLayer" parent="." unique_id=523123272]
 
 [node name="Location" type="Node2D" parent="." unique_id=1610091088]
 unique_name_in_owner = true

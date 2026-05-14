@@ -5,7 +5,7 @@ func _init() -> void:
 	itemName = "Doll"
 	description = "A worn cloth doll with button eyes. It's looking at you."
 
-func use() -> void:
+func use(usedOnItem: Usable) -> void:
 	print("Shaking the doll...")
 
 func examine() -> void:

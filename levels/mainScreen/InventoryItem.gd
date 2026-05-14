@@ -5,12 +5,12 @@ extends Resource
 @export var description: String = ""
 
 func useWithSignal() -> void:
-	MainEventBus.inventory_item_used.emit(self)
 	use(Global.player.hoveredUsable);
+	MainEventBus.inventory_item_used.emit(self)
 
 func examineWithSignal() -> void:
-	MainEventBus.inventory_item_examined.emit(self)
 	examine();
+	MainEventBus.inventory_item_examined.emit(self)
 
 func use(usedOnItem: Usable) -> void:
 	pass;

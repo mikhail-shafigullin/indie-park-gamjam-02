@@ -151,22 +151,22 @@ texture = SubResource("AtlasTexture_oma1q")
 [node name="CollisionShape2D" parent="AllCartidges/Cartridge6/StaticBody2D" parent_id_path=PackedInt32Array(1712228247, 340350340) index="0" unique_id=772919040]
 position = Vector2(17, 19)
 
-[node name="TV" type="Node2D" parent="." unique_id=1452165712]
+[node name="McRoomTV" type="Node2D" parent="." unique_id=1452165712]
 z_index = 1
 position = Vector2(368, 192)
 script = ExtResource("8_bucqu")
 
-[node name="Sprite2D" type="Sprite2D" parent="TV" unique_id=598782004]
+[node name="Sprite2D" type="Sprite2D" parent="McRoomTV" unique_id=598782004]
 texture = SubResource("AtlasTexture_1nrem")
 
-[node name="Sprite2D2" type="Sprite2D" parent="TV" unique_id=1120730267]
+[node name="Sprite2D2" type="Sprite2D" parent="McRoomTV" unique_id=1120730267]
 position = Vector2(0, 32)
 texture = SubResource("AtlasTexture_ex7mc")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TV" unique_id=836058288]
+[node name="StaticBody2D" type="StaticBody2D" parent="McRoomTV" unique_id=836058288]
 collision_layer = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TV/StaticBody2D" unique_id=385521383]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="McRoomTV/StaticBody2D" unique_id=385521383]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_bul60")
 

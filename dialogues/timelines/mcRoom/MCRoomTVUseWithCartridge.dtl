@@ -1,0 +1,3 @@
+[REPLACE] Check the puzzle after dialogue
+# res://scenes/puzzles/McRoomCartridgeShelfUI.tscn
+do PuzzleStates.startPuzzle("uid://xtj11vdbbm4k")

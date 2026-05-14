@@ -13,11 +13,11 @@ signal grabable_object_grabbed(grabable_object: Node2D)
 signal grabable_object_released(grabable_object: Node2D)
 signal grabable_object_is_placed_on_trigger(trigger: TriggerOnGrabable, grabable_object: Node2D)
 
-#images
-signal image_layer_show_image(image: Texture2D)
-signal image_layer_exit()
-signal image_layer_showed()
-signal image_layer_hidden()
+#puzzleLayer
+signal puzzle_layer_show_scene(controlNode: Control)
+signal puzzle_layer_exit()
+signal puzzle_layer_showed()
+signal puzzle_layer_hidden()
 
 #markers
 signal send_player_to_marker(marker: Marker2D)

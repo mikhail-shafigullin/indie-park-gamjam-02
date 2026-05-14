@@ -603,7 +603,7 @@ light_mask = 2
 y_sort_enabled = true
 position = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_jak6m")
-animation = &"idle_down"
+animation = &"walk_down"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=244202369]

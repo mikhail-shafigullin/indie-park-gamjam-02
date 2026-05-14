@@ -15,3 +15,6 @@ func _ready() -> void:
 	MainEventBus.puzzle_2_solved.connect(func(): puzzle2Solved = true);
 	MainEventBus.puzzle_3_solved.connect(func(): puzzle3Solved = true);
 	MainEventBus.puzzle_4_solved.connect(func(): puzzle4Solved = true);
+
+func startPuzzle(scenePath: String):
+	MainEventBus.puzzle_layer_show_scene.emit(load(scenePath).instantiate())

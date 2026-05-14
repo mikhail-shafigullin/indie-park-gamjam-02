@@ -30,8 +30,8 @@ func _init(genre: CartrigdeGenre) -> void:
 	description = "Cartridge for MES console"
 
 func use(usedOnItem: Usable) -> void:
-	if(usedOnItem):
-		pass;
+	if(usedOnItem and usedOnItem.name == "McRoomTV"):
+		Dialogic.start('MCRoomTVUseWithCartridge');
 	else:
 		Dialogic.start('MCRoomCartridgeUseNoItem');
 

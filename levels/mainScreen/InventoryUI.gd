@@ -10,6 +10,7 @@ var navMode: NavMode = NavMode.ITEMS
 var items: Array[InventoryItem] = []
 var focusedItemIndex: int = 0
 var tooltipFocusedIndex: int = 0
+var isEnabled: bool = true;
 
 @onready var inventoryPanel: Panel = %InventoryPanel
 @onready var itemListContainer: VBoxContainer = %ItemListContainer
@@ -24,9 +25,12 @@ func _ready() -> void:
 	visible = false
 	tooltipPanel.visible = false
 	MainEventBus.inventory_add_item.connect(addItem)
+	Dialogic.timeline_started.connect(disableInventory);
+	Dialogic.timeline_ended.connect(enableInventory)
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_TAB:
+	if (event is InputEventKey and event.pressed and 
+		not event.echo and event.keycode == KEY_TAB and isEnabled):
 		toggleInventory()
 		get_viewport().set_input_as_handled()
 		return
@@ -90,8 +94,14 @@ func executeTooltipAction() -> void:
 	else:
 		item.examineWithSignal()
 	hideTooltip();
-	closeInventory();
+	closeInventoryEffect();
+
+func disableInventory():
+	isEnabled = false;
+	closeInventoryEffect();
 	
+func enableInventory():
+	isEnabled = true;
 
 func updateItemFocus() -> void:
 	for i in items.size():
@@ -138,9 +148,12 @@ func openInventory() -> void:
 	tween.tween_property(inventoryPanel, "position:x", 0.0, ANIM_DURATION)
 
 func closeInventory() -> void:
+	MainEventBus.inventory_closed.emit()
+	closeInventoryEffect()
+
+func closeInventoryEffect() -> void:
 	isOpen = false
 	hideTooltip()
-	MainEventBus.inventory_closed.emit()
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_CUBIC)

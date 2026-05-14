@@ -4,7 +4,7 @@ extends Node2D
 
 @onready var locationNode: Node = %Location;
 @onready var fadeControl: FadeInFadeOut = %FadeInFadeOut;
-@onready var imageLayer: ImageLayerContainer = %ImageLayer;
+@onready var imageLayer: PuzzleLayerContainer = %ImageLayer;
 
 var currentLocation: Node2D;
 
@@ -12,8 +12,8 @@ func _ready() -> void:
 	var starterLevel: Level = LevelContainer.allLevels[levelId];
 	setLocation(starterLevel);
 	MainEventBus.send_player_to_marker.emit(starterLevel.getMarker("Start"))
-	MainEventBus.image_layer_show_image.connect(turnOnImageLayer);
-	MainEventBus.image_layer_exit.connect(turnOffImageLayer)
+	MainEventBus.puzzle_layer_show_scene.connect(turnOnImageLayer);
+	MainEventBus.puzzle_layer_exit.connect(turnOffImageLayer)
 	MainEventBus.level_change.connect(setLocationWithFade);
 
 func setLocationWithFade(location: Level):
@@ -36,13 +36,13 @@ func fadeInFadeOut(callable: Callable) -> void:
 		CONNECT_ONE_SHOT
 	)
 
-func turnOnImageLayer(image: Texture2D):
+func turnOnImageLayer(controlNode: Control):
 	fadeControl.animation_fade_in_to_object.emit(self);
 	fadeControl.animation_fade_in_finished.connect(
 		showImageAndStartFadeOut,
 		CONNECT_ONE_SHOT
 		)
-	imageLayer.image_layer_set_image.emit(image);
+	imageLayer.puzzle_layer_set_scene.emit(controlNode);
 	pass;
 
 func turnOffImageLayer():
@@ -54,18 +54,18 @@ func turnOffImageLayer():
 	pass;
 
 func showImageAndStartFadeOut():
-	imageLayer.showImageLayer()
+	imageLayer.showPuzzleLayer()
 	fadeControl.animation_fade_out_from_object.emit(self);
 	fadeControl.animation_fade_out_finished.connect(
-		func(): imageLayer.startImageView(),
+		func(): imageLayer.startPuzzleView(),
 		CONNECT_ONE_SHOT
 	)
 	pass
 
 func hideImageAndSyatyFadeOut():
-	imageLayer.hideImageLayer();
+	imageLayer.hidePuzzleLayer();
 	fadeControl.animation_fade_out_from_object.emit(self);
 	fadeControl.animation_fade_out_finished.connect(
-		func(): MainEventBus.image_layer_hidden.emit(),
+		func(): MainEventBus.puzzle_layer_hidden.emit(),
 		CONNECT_ONE_SHOT
 	)

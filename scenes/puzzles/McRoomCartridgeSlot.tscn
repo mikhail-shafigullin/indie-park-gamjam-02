@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bid23vmeg8nrp"]
+
+[ext_resource type="Script" uid="uid://c7slot8k2npe4" path="res://scenes/puzzles/ShelfSlot.gd" id="1_0ubct"]
+
+[node name="Slot0" type="Panel" unique_id=642588462]
+custom_minimum_size = Vector2(90, 300)
+script = ExtResource("1_0ubct")
+metadata/_edit_horizontal_guides_ = [-94.0]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1122093224]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -55.0
+offset_right = 150.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+bbcode_enabled = true
+text = "[font_size=40]Game name[/font_size]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,9 +1,9 @@
 class_name CartridgeItem
 extends InventoryItem
 
-var cartridgeGenre: CartrigdeGenre;
+var cartridgeGenre: CartridgeGenre;
 
-enum CartrigdeGenre{
+enum CartridgeGenre{
 	FIGHTING,
 	RACING,
 	ADVENTURE,
@@ -12,21 +12,21 @@ enum CartrigdeGenre{
 	ROLEPLAY
 }
 
-func _init(genre: CartrigdeGenre) -> void:
+func _init(genre: CartridgeGenre) -> void:
 	cartridgeGenre = genre;
 	match genre:
-		CartrigdeGenre.FIGHTING:
-			itemName = "Cartridge #1"
-		CartrigdeGenre.RACING:
-			itemName = "Cartridge #2"
-		CartrigdeGenre.ADVENTURE:
-			itemName = "Cartridge #3"
-		CartrigdeGenre.PLATFORMER:
-			itemName = "Cartridge #4"
-		CartrigdeGenre.PUZZLE:
-			itemName = "Cartridge #5"
-		CartrigdeGenre.ROLEPLAY:
-			itemName = "Cartridge #6"
+		CartridgeGenre.FIGHTING:
+			itemName = "Cartridge with a mighty kick"
+		CartridgeGenre.RACING:
+			itemName = "Cartridge with a red car"
+		CartridgeGenre.ADVENTURE:
+			itemName = "Cartridge with a person holding a torch"
+		CartridgeGenre.PLATFORMER:
+			itemName = "Cartridge with a cute fox"
+		CartridgeGenre.PUZZLE:
+			itemName = "Cartridge with some nerd"
+		CartridgeGenre.ROLEPLAY:
+			itemName = "Cartridge with green hair"
 	description = "Cartridge for MES console"
 
 func use(usedOnItem: Usable) -> void:

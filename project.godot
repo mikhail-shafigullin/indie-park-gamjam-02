@@ -33,6 +33,7 @@ directories/dtl_directory={
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
 "MCRoomCartridgeUseNoItem": "res://dialogues/timelines/mcRoom/MCRoomCartridgeUseNoItem.dtl",
+"MCRoomTVPuzzlePutCartridgeToSlot": "res://dialogues/timelines/mcRoom/MCRoomTVPuzzlePutCartridgeToSlot.dtl",
 "MCRoomTVUseWithCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithCartridge.dtl",
 "MCRoomTVUseWithoutCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithoutCartridge.dtl",
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",

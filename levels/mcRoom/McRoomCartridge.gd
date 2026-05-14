@@ -10,22 +10,22 @@ func _ready() -> void:
 func useObject():
 	Dialogic.start('MCRoomCartridgeOnFloor');
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.FIGHTING)
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.FIGHTING)
 		);
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.RACING)
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.RACING)
 		);
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.ADVENTURE)
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.ADVENTURE)
 		);
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.PLATFORMER)
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.PLATFORMER)
 		);
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.PUZZLE)
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.PUZZLE)
 		);
 	MainEventBus.inventory_add_item.emit(
-		CartridgeItem.new(CartridgeItem.CartrigdeGenre.ROLEPLAY));
+		CartridgeItem.new(CartridgeItem.CartridgeGenre.ROLEPLAY));
 	pass;
 
 func _on_dialogic_signal(argument:String):

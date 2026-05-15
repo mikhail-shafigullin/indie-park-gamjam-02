@@ -30,6 +30,15 @@ func _init(genre: CartridgeGenre) -> void:
 	description = "Cartridge for MES console"
 
 func use(usedOnItem: Usable) -> void:
+	var currentPuzzle: Control = Global.currentPuzzle;
+	if(currentPuzzle and currentPuzzle is McRoomCartridgeShelfUI):
+		var puzzle: McRoomCartridgeShelfUI = currentPuzzle as McRoomCartridgeShelfUI;
+		var isCartridgeInserted: bool = !PuzzleStates.mcRoomTVPuzzleLogic.tryToPutCartridgeItem(self);
+		Dialogic.VAR.set_variable('mcRoom.isCartridgeInserted', isCartridgeInserted);
+		Dialogic.VAR.set_variable("mcRoom.cartridgeType", cartridgeGenre)
+		Dialogic.start('MCRoomTVPuzzlePutCartridgeToSlot');
+		return;
+	
 	if(usedOnItem and usedOnItem.name == "McRoomTV"):
 		Dialogic.start('MCRoomTVUseWithCartridge');
 	else:

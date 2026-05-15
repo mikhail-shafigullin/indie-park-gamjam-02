@@ -19,8 +19,8 @@ func _ready() -> void:
 			child.slotActivated.connect(onSlotActivated)
 			child.focus_entered.connect(onSlotFocusEntered.bind(idx))
 			slots.append(child)
-	if not slots.is_empty():
-		slots[0].grab_focus()
+	focusedSlotIndex = 0;
+	slots[0].grab_focus()
 
 func _input(event: InputEvent) -> void:
 	if slots.is_empty():
@@ -40,6 +40,7 @@ func _input(event: InputEvent) -> void:
 
 func onSlotFocusEntered(idx: int) -> void:
 	focusedSlotIndex = idx
+	PuzzleStates.mcRoomTVPuzzleLogic.setFocusedPuzzle(idx);
 
 func moveFocus(dx: int, dy: int) -> void:
 	var rows: int = slots.size() / COLS
@@ -51,4 +52,15 @@ func moveFocus(dx: int, dy: int) -> void:
 	slots[focusedSlotIndex].grab_focus()
 
 func onSlotActivated(slot: ShelfSlot) -> void:
+	var cartridgeInSlot: CartridgeItem = PuzzleStates.mcRoomTVPuzzleLogic.getCartridgeInSlot(slot.slotIndex);
+	if(cartridgeInSlot):
+		Dialogic.VAR.set_variable("mcRoom.cartridgeType", cartridgeInSlot.cartridgeGenre);
+		Dialogic.VAR.set_variable("mcRoom.isCartridgeInserted", true);
+		PuzzleStates.mcRoomTVPuzzleLogic.removeCartridgeFromSlot(slot.slotIndex);
+		MainEventBus.inventory_add_item.emit(cartridgeInSlot);
+	else:
+		Dialogic.VAR.set_variable("mcRoom.isCartridgeInserted", false);
+	
+	Dialogic.start("MCRoomTVPuzzleExtractCartridge");
 	slotSelected.emit(slot.slotIndex)
+	

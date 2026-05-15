@@ -46,19 +46,25 @@ func disableControls() -> void:
 	state = State.IDLE
 
 func enableControls() -> void:
+	if(is_inside_tree()):
+		get_viewport().set_input_as_handled()
+	if(Global.currentPuzzle):
+		return;
 	print("player enabled")
 	if(is_inside_tree()):
 		await get_tree().process_frame
 	controlsEnabled = true
 	
 func _input(event: InputEvent) -> void:
-	if controlsEnabled and event.is_action_pressed("use") and not event.echo:
+	if (!Global.currentPuzzle and controlsEnabled 
+			and event.is_action_pressed("use") and not event.echo):
 		if grabbedObject:
 			rotateObject()
 		elif lastInteractTarget and lastInteractTarget.collision_layer & 4:
 			useObject(lastInteractTarget)
 		
-	if controlsEnabled and event.is_action_pressed("grab") and not event.echo:
+	if (!Global.currentPuzzle and controlsEnabled 
+			and event.is_action_pressed("grab") and not event.echo):
 		if grabbedBody:
 			releaseObject()
 		elif lastInteractTarget and lastInteractTarget.collision_layer & 8:

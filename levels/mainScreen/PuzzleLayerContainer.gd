@@ -27,9 +27,11 @@ func hidePuzzleLayer() -> void:
 	self.visible = false;
 	
 func startPuzzleView() -> void:
+	Global.currentPuzzle = currentPuzzle;
 	set_process_input(true)
 
 func closePuzzleView() -> void:
+	Global.currentPuzzle = null;
 	set_process_input(false)
 	MainEventBus.puzzle_layer_exit.emit();
 

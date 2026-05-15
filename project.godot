@@ -33,7 +33,9 @@ directories/dtl_directory={
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
 "MCRoomCartridgeUseNoItem": "res://dialogues/timelines/mcRoom/MCRoomCartridgeUseNoItem.dtl",
+"MCRoomTVPuzzleExtractCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVPuzzleExtractCartridge.dtl",
 "MCRoomTVPuzzlePutCartridgeToSlot": "res://dialogues/timelines/mcRoom/MCRoomTVPuzzlePutCartridgeToSlot.dtl",
+"MCRoomTVPuzzleSolved": "res://dialogues/timelines/mcRoom/MCRoomTVPuzzleSolved.dtl",
 "MCRoomTVUseWithCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithCartridge.dtl",
 "MCRoomTVUseWithoutCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithoutCartridge.dtl",
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",
@@ -51,7 +53,7 @@ variables={
 "door_color": "white",
 "mcRoom": {
 "cartridgeType": 0,
-"isCartridgeInTVStand": false
+"isCartridgeInserted": false
 }
 }
 extensions_folder="res://addons/dialogic_additions"

@@ -7,6 +7,8 @@ var puzzle2Solved: bool = false;
 var puzzle3Solved: bool = false;
 var puzzle4Solved: bool = false;
 
+var mcRoomTVPuzzleLogic: MCRoomTVPuzzleLogic;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MainEventBus.puzzle_1_1_solved.connect(func(): puzzle11Solved = true);
@@ -15,6 +17,12 @@ func _ready() -> void:
 	MainEventBus.puzzle_2_solved.connect(func(): puzzle2Solved = true);
 	MainEventBus.puzzle_3_solved.connect(func(): puzzle3Solved = true);
 	MainEventBus.puzzle_4_solved.connect(func(): puzzle4Solved = true);
+	
+	mcRoomTVPuzzleLogic = MCRoomTVPuzzleLogic.new();
 
 func startPuzzle(scenePath: String):
 	MainEventBus.puzzle_layer_show_scene.emit(load(scenePath).instantiate())
+
+func finishPuzzle():
+	Global.currentPuzzle = null;
+	MainEventBus.puzzle_layer_exit.emit();

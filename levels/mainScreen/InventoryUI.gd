@@ -24,7 +24,8 @@ func _ready() -> void:
 	inventoryPanel.position.x = -PANEL_WIDTH
 	visible = false
 	tooltipPanel.visible = false
-	MainEventBus.inventory_add_item.connect(addItem)
+	MainEventBus.inventory_add_item.connect(addItem);
+	MainEventBus.inventory_remove_item.connect(removeItem);
 	Dialogic.timeline_started.connect(disableInventory);
 	Dialogic.timeline_ended.connect(enableInventory)
 
@@ -126,6 +127,19 @@ func addItem(item: InventoryItem) -> void:
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	itemListContainer.add_child(button)
 	if items.size() == 1:
+		updateItemFocus()
+
+func removeItem(item: InventoryItem) -> void:
+	var idx = items.find(item)
+	if idx == -1:
+		return
+	items.remove_at(idx)
+	itemListContainer.get_child(idx).queue_free()
+	if items.is_empty():
+		itemNameLabel.text = ""
+		itemDescLabel.text = ""
+	else:
+		focusedItemIndex = clamp(focusedItemIndex, 0, items.size() - 1)
 		updateItemFocus()
 
 func toggleInventory() -> void:

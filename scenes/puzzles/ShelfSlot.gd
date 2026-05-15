@@ -26,10 +26,13 @@ func _draw() -> void:
 		draw_rect(Rect2(Vector2.ZERO, size), Color.WHITE, false, 2.0)
 
 func _gui_input(event: InputEvent) -> void:
+	if(Dialogic.current_timeline):
+		return;
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			slotActivated.emit(self)
 			get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("use"):
-		slotActivated.emit(self)
 		get_viewport().set_input_as_handled()
+		slotActivated.emit(self)
+		

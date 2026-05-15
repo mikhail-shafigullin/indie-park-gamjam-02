@@ -23,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5707964
 pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0.08332089, 0.08332089, 0.08332089, 1)
 bbcode_enabled = true
 text = "[font_size=40]Game name[/font_size]"
 fit_content = true

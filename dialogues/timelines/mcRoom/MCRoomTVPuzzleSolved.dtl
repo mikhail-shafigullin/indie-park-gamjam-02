@@ -1,0 +1,3 @@
+[REPLACE] Puzzle is solved
+# 123123
+do PuzzleStates.finishPuzzle()

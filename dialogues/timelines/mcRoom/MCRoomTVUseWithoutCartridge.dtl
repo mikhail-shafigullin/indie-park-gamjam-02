@@ -1,17 +1,9 @@
 This is the TV I adore.
 It has an MES console connected to it with one gamepad.
 I bend down to the TV stand and open the door.
-[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/images/debugApartment.jpeg" fade="0.5" wait="true"]
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle2_Shelf.png" fade="0.5" wait="true"]
 This is where my treasures are kept.
-- Take out all cartridges
-	if {mcRoom.isCartridgeInTVStand} == true:
-		I’ve taken all the cartridges out of their cases and kept them.
-		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxClosed.png" fade="0.5" wait="true"]
-		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBox1.png" fade="0.5" wait="true"]
-		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
-		[i]The cartridges have been added to my inventory.[/i]
-	else:
-		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxClosed.png" fade="0.5" wait="true"]
-		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
-		All cartridge cases are empty.
+- Take a look to the shelf with cartridges
+	# res://scenes/puzzles/McRoomCartridgeShelfUI.tscn
+	do PuzzleStates.startPuzzle("uid://xtj11vdbbm4k")
 - Close the TV stand

@@ -5,5 +5,4 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func useObject():
-	Dialogic.VAR.set_variable("mcRoom.isCartridgeInTVStand", true)
 	Dialogic.start('MCRoomTVUseWithoutCartridge');

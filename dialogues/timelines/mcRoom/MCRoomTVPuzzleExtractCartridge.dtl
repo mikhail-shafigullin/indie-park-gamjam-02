@@ -1,11 +1,6 @@
 if {mcRoom.isCartridgeInserted} == true:
-	label haveInsertedCartridge
-	[REPLACE] Inside the case we already have a cartridge
-	[end_timeline]
-else:
-	[REPLACE] I am inserting the cartridge inside the case
+	[REPLACE] I am extracting the cartridge from the case
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxClosed.png" fade="0.5" wait="true"]
-	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
 	if {mcRoom.cartridgeType} == 0.0:
 		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBox1.png" fade="0.5" wait="true"]
 	elif {mcRoom.cartridgeType} == 1.0:
@@ -18,5 +13,10 @@ else:
 		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBox5.png" fade="0.5" wait="true"]
 	elif {mcRoom.cartridgeType} == 5.0:
 		[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBox6.png" fade="0.5" wait="true"]
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
+	[wait_input]
+else:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxClosed.png" fade="0.5" wait="true"]
-	[end_timeline]
+	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
+	[wait_input]
+	[REPLACE] There is no cartridge inside the case.

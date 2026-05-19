@@ -41,8 +41,6 @@ func isPuzzleCorrect() -> bool:
 		if(!cartridge):
 			return false;
 		var expectedGenre = correctCartridgeSequence[i]
-		if(cartridge.cartridgeGenre == expectedGenre):
-			return true;
 		if(cartridge.cartridgeGenre != expectedGenre):
 			return false;
 	return true;

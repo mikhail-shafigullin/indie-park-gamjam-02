@@ -4,6 +4,94 @@
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_lq3hh"]
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_goyxn"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_suvdt"]
+[ext_resource type="Texture2D" uid="uid://bew2mfk672gkf" path="res://assets/images/Mom_Bedroom_Drowned.png" id="5_0xbf0"]
+[ext_resource type="Script" uid="uid://c3qxvsq1ajtku" path="res://levels/bedRoom/ShoreAnimation.gd" id="6_fgqp5"]
+[ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="6_snw41"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
+atlas = ExtResource("6_snw41")
+region = Rect2(0, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cji5"]
+atlas = ExtResource("6_snw41")
+region = Rect2(32, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_appov"]
+atlas = ExtResource("6_snw41")
+region = Rect2(64, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2kh1"]
+atlas = ExtResource("6_snw41")
+region = Rect2(96, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq8ej"]
+atlas = ExtResource("6_snw41")
+region = Rect2(128, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4secq"]
+atlas = ExtResource("6_snw41")
+region = Rect2(160, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hub06"]
+atlas = ExtResource("6_snw41")
+region = Rect2(192, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5foqf"]
+atlas = ExtResource("6_snw41")
+region = Rect2(224, 0, 32, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_au8c6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgqp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cji5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_appov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2kh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq8ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4secq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hub06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5foqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hub06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4secq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq8ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2kh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_appov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cji5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgqp5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="BedRoom" type="Node2D" unique_id=1708056244]
 script = ExtResource("1_goyxn")
@@ -14,11 +102,11 @@ offset_bottom = 480.0
 color = Color(0.114526816, 0.07526993, 0.0953889, 1)
 
 [node name="WallsBorder" type="TileMapLayer" parent="." unique_id=1355526622]
-tile_map_data = PackedByteArray("AAAIAAUAAAACAAYAAAAJAAUAAAACAAYAAAAKAAUAAAACAAYAAAALAAUAAAACAAYAAAAMAAUAAAACAAYAAAANAAUAAAAFAAIAAAAIAAYAAAACAAYAAAAJAAYAAAACAAYAAAAKAAYAAAACAAYAAAALAAYAAAACAAYAAAAMAAYAAAACAAYAAAANAAYAAAAFAAIAAAAIAAcAAAACAAYAAAAJAAcAAAACAAYAAAAKAAcAAAACAAYAAAALAAcAAAACAAYAAAAMAAcAAAACAAYAAAANAAcAAAAFAAIAAAAIAAgAAAACAAYAAAAJAAgAAAACAAYAAAAKAAgAAAACAAYAAAALAAgAAAACAAYAAAAMAAgAAAACAAYAAAANAAgAAAAFAAIAAAAIAAkAAAAEAAMAAAAJAAkAAAAEAAMAAAAKAAkAAAAEAAMAAAALAAkAAAAEAAMAAAAMAAkAAAAEAAMAAAANAAkAAAAFAAMAAAAHAAYAAAADAAIAAAAHAAUAAAADAAIAAAAHAAQAAAADAAAAAAAIAAQAAAAEAAAAAAAJAAQAAAAEAAAAAAAHAAkAAAADAAMAAAAHAAgAAAADAAIAAAAKAAQAAAAEAAAAAAALAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAANAAQAAAAFAAAAAAAHAAcAAAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAAIAAUAAAAEAAYAAAAJAAUAAAAEAAYAAAAKAAUAAAAEAAYAAAALAAUAAAAEAAYAAAAMAAUAAAAEAAYAAAANAAUAAAAIAAIAAAAIAAYAAAAEAAYAAAAJAAYAAAAEAAYAAAAKAAYAAAAEAAYAAAALAAYAAAAEAAYAAAAMAAYAAAAEAAYAAAANAAYAAAAIAAIAAAAIAAcAAAAEAAYAAAAJAAcAAAAEAAYAAAAKAAcAAAAEAAYAAAALAAcAAAAEAAYAAAAMAAcAAAAEAAYAAAANAAcAAAAIAAIAAAAIAAgAAAAEAAYAAAAJAAgAAAAEAAYAAAAKAAgAAAAEAAYAAAALAAgAAAAEAAYAAAAMAAgAAAAEAAYAAAANAAgAAAAIAAIAAAAIAAkAAAAHAAMAAAAJAAkAAAAHAAMAAAAKAAkAAAAHAAMAAAALAAkAAAAHAAMAAAAMAAkAAAAHAAMAAAANAAkAAAAIAAMAAAAHAAYAAAAGAAIAAAAHAAUAAAAGAAIAAAAHAAQAAAAGAAAAAAAIAAQAAAAHAAAAAAAJAAQAAAAHAAAAAAAHAAkAAAAGAAMAAAAHAAgAAAAGAAIAAAAKAAQAAAAHAAAAAAALAAQAAAAHAAAAAAAMAAQAAAAHAAAAAAANAAQAAAAIAAAAAAAHAAcAAAAGAAIAAAA=")
 tile_set = ExtResource("1_lq3hh")
 
 [node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=1202613109]
-tile_map_data = PackedByteArray("AAAIAAUAAAAEAAEAAAAJAAUAAAAEAAEAAAAKAAUAAAAEAAEAAAALAAUAAAAEAAEAAAAMAAUAAAAEAAEAAAAIAAYAAAAEAAIAAAAJAAYAAAAEAAIAAAAKAAYAAAAEAAIAAAALAAYAAAAEAAIAAAAMAAYAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAAIAAgAAAAEAAIAAAAJAAgAAAAEAAIAAAAKAAgAAAAEAAIAAAALAAgAAAAEAAIAAAAMAAgAAAAEAAIAAAA=")
+tile_map_data = PackedByteArray("AAAIAAYAAAAHAAIAAAAJAAYAAAAHAAIAAAAKAAYAAAAHAAIAAAALAAYAAAAHAAIAAAAMAAYAAAAHAAIAAAAIAAcAAAAHAAIAAAAJAAcAAAAHAAIAAAAKAAcAAAAHAAIAAAALAAcAAAAHAAIAAAAMAAcAAAAHAAIAAAAIAAgAAAAHAAIAAAAJAAgAAAAHAAIAAAAKAAgAAAAHAAIAAAALAAgAAAAHAAIAAAAMAAgAAAAHAAIAAAAIAAUAAAAHAAEAAAAJAAUAAAAHAAEAAAAKAAUAAAAHAAEAAAALAAUAAAAHAAEAAAAMAAUAAAAHAAEAAAA=")
 tile_set = ExtResource("1_lq3hh")
 
 [node name="Start" type="Marker2D" parent="." unique_id=232430641]
@@ -40,5 +128,30 @@ offset_top = 16.0
 offset_right = 40.0
 offset_bottom = 39.0
 text = "4"
+
+[node name="MomBedroomDrowned" type="Sprite2D" parent="." unique_id=1244473801]
+modulate = Color(1, 1, 1, 0.2784314)
+position = Vector2(256, 288)
+texture = ExtResource("5_0xbf0")
+
+[node name="Shore" type="Node2D" parent="." unique_id=1413452255]
+position = Vector2(256, 160)
+script = ExtResource("6_fgqp5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Shore" unique_id=1732522009]
+position = Vector2(16, 48)
+sprite_frames = SubResource("SpriteFrames_au8c6")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Shore" unique_id=208145149]
+position = Vector2(48, 80)
+sprite_frames = SubResource("SpriteFrames_au8c6")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Shore" unique_id=1728931590]
+position = Vector2(80, 112)
+sprite_frames = SubResource("SpriteFrames_au8c6")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Shore" unique_id=1477557042]
+position = Vector2(112, 144)
+sprite_frames = SubResource("SpriteFrames_au8c6")
 
 [connection signal="_object_used" from="Solve4" to="." method="_on_solve_4__object_used"]

@@ -66,6 +66,9 @@ texture_region_size = Vector2i(32, 32)
 }
 7:1/0 = 0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0/metadata/_better_terrain = {
+&"type": 9
+}
 8:1/0 = 0
 8:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_642hy")
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -101,9 +104,16 @@ texture_region_size = Vector2i(32, 32)
 &"type": 5
 }
 7:2/0 = 0
+7:2/0/metadata/_better_terrain = {
+&"type": 10
+}
 8:2/0 = 0
 8:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_642hy")
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:2/0/metadata/_better_terrain = {
+4: [11],
+&"type": 11
+}
 9:2/0 = 0
 9:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_e5nat")
 9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -145,9 +155,16 @@ texture_region_size = Vector2i(32, 32)
 7:3/0 = 0
 7:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_642hy")
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:3/0/metadata/_better_terrain = {
+0: [11],
+&"type": 11
+}
 8:3/0 = 0
 8:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_642hy")
 8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:3/0/metadata/_better_terrain = {
+&"type": 11
+}
 9:3/0 = 0
 9:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_e5nat")
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -190,6 +207,12 @@ texture_region_size = Vector2i(32, 32)
 4:4/0 = 0
 4:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:4/0/metadata/_better_terrain = {
+0: [11],
+3: [11],
+4: [11],
+&"type": -1
+}
 7:4/0 = 0
 7:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -228,6 +251,11 @@ texture_region_size = Vector2i(32, 32)
 4:5/0 = 0
 4:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:5/0/metadata/_better_terrain = {
+0: [11],
+3: [11],
+&"type": 11
+}
 7:5/0 = 0
 7:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -261,6 +289,12 @@ texture_region_size = Vector2i(32, 32)
 &"type": 6
 }
 4:6/0 = 0
+4:6/0/metadata/_better_terrain = {
+0: [11],
+3: [11],
+4: [11],
+&"type": 11
+}
 7:6/0 = 0
 8:6/0 = 0
 9:6/0 = 0
@@ -312,12 +346,25 @@ texture_region_size = Vector2i(32, 32)
 6:0/0 = 0
 6:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6k5cd")
 6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0/metadata/_better_terrain = {
+3: [11],
+&"type": -1
+}
 7:0/0 = 0
 7:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6k5cd")
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:0/0/metadata/_better_terrain = {
+3: [11],
+4: [11],
+&"type": -1
+}
 8:0/0 = 0
 8:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_642hy")
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:0/0/metadata/_better_terrain = {
+4: [11],
+&"type": -1
+}
 9:0/0 = 0
 9:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_e5nat")
 9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -370,6 +417,11 @@ texture_region_size = Vector2i(32, 32)
 6:2/0 = 0
 6:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1u3vh")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/0/metadata/_better_terrain = {
+0: [11],
+3: [11],
+&"type": -1
+}
 11:2/0 = 0
 11:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wtbx4")
 11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -392,6 +444,10 @@ texture_region_size = Vector2i(32, 32)
 6:3/0 = 0
 6:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1u3vh")
 6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0/metadata/_better_terrain = {
+0: [11],
+&"type": -1
+}
 11:3/0 = 0
 11:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wtbx4")
 11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -410,6 +466,11 @@ texture_region_size = Vector2i(32, 32)
 5:4/0 = 0
 5:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:4/0/metadata/_better_terrain = {
+3: [11],
+4: [11],
+&"type": 11
+}
 6:4/0 = 0
 6:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -432,6 +493,11 @@ texture_region_size = Vector2i(32, 32)
 5:5/0 = 0
 5:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:5/0/metadata/_better_terrain = {
+0: [11],
+4: [11],
+&"type": 11
+}
 6:5/0 = 0
 6:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_es056")
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -901,6 +967,12 @@ metadata/_better_terrain = {
 }], ["bath_walls", Color(0.4601069, 0.70560914, 0.89015925, 1), 0, [], {
 &"path": ""
 }], ["bath_floor", Color(0.75023973, 0.09259276, 0.93917596, 1), 0, [], {
+&"path": ""
+}], ["bedroom_walls", Color(0.88151824, 0.19073457, 0.364086, 1), 0, [], {
+&"path": ""
+}], ["bedroom_floor", Color(0.7455883, 0.27799305, 0.28028154, 1), 0, [], {
+&"path": ""
+}], ["bedroom_walls_border", Color(0.7147904, 0.2065581, 0.13823451, 1), 0, [], {
 &"path": ""
 }]],
 &"version": "0.2"

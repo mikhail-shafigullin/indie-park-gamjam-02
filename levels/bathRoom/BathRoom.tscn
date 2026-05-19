@@ -5,9 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_nfqjp"]
 [ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="5_2s1kr"]
+[ext_resource type="Script" uid="uid://dpufe2my61qn2" path="res://levels/bathRoom/WardrobeUsable.gd" id="5_mvhf6"]
 [ext_resource type="Texture2D" uid="uid://snhbxbvg0hjv" path="res://assets/images/Bathroom_Sample.png" id="5_t2crg"]
 [ext_resource type="Script" uid="uid://reqih6bmfo3x" path="res://levels/bathRoom/BathRoomChair.gd" id="5_urg14"]
 [ext_resource type="Texture2D" uid="uid://cogak1qu1ah2s" path="res://assets/tilesets/Tileset_Bathroom.png" id="6_ads21"]
+[ext_resource type="Script" uid="uid://c1t6su8v7r188" path="res://levels/bathRoom/ClothesUsable.gd" id="10_dqsc6"]
+[ext_resource type="Script" uid="uid://b5ss4gmtnf14i" path="res://levels/bathRoom/BathtubUsable.gd" id="11_p7qul"]
+[ext_resource type="Script" uid="uid://dpr6qvthnigp0" path="res://levels/bathRoom/ToiletUsable.gd" id="12_i5yoo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7qul"]
 atlas = ExtResource("6_ads21")
@@ -130,6 +134,8 @@ text = "3"
 
 [node name="Wardrobe" type="Node2D" parent="." unique_id=2126425981]
 position = Vector2(320, 128)
+script = ExtResource("5_mvhf6")
+metadata/_edit_group_ = true
 
 [node name="WardrobeClosedSprite" type="Sprite2D" parent="Wardrobe" unique_id=1768578983]
 position = Vector2(16, 32)
@@ -150,6 +156,7 @@ shape = SubResource("RectangleShape2D_urg14")
 [node name="Chair" type="Node2D" parent="." unique_id=826550242]
 position = Vector2(352, 224)
 script = ExtResource("5_urg14")
+metadata/_edit_group_ = true
 
 [node name="ChairSprite" type="Sprite2D" parent="Chair" unique_id=1322846606]
 position = Vector2(16, 16)
@@ -181,8 +188,9 @@ position = Vector2(320, 208)
 texture = ExtResource("5_t2crg")
 
 [node name="Clothes" type="Node2D" parent="." unique_id=1588845861]
-visible = false
 position = Vector2(320, 192)
+script = ExtResource("10_dqsc6")
+metadata/_edit_group_ = true
 
 [node name="ClothesSprite" type="Sprite2D" parent="Clothes" unique_id=655016932]
 position = Vector2(16, 16)
@@ -197,6 +205,8 @@ shape = SubResource("RectangleShape2D_mvhf6")
 
 [node name="Bathtub" type="Node2D" parent="." unique_id=299461264]
 position = Vector2(368, 128)
+script = ExtResource("11_p7qul")
+metadata/_edit_group_ = true
 
 [node name="Curtains1Sprite" type="Sprite2D" parent="Bathtub" unique_id=739758329]
 position = Vector2(16, 25)
@@ -221,6 +231,8 @@ shape = SubResource("RectangleShape2D_dqsc6")
 
 [node name="Toilet" type="Node2D" parent="." unique_id=2004773970]
 position = Vector2(272, 160)
+script = ExtResource("12_i5yoo")
+metadata/_edit_group_ = true
 
 [node name="OpenedSprite" type="Sprite2D" parent="Toilet" unique_id=2080154049]
 texture = SubResource("AtlasTexture_nvdqv")

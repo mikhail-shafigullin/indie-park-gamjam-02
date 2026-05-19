@@ -1,0 +1,9 @@
+label wardrobeIsClosed
+[REPLACE] I pull the handle of the cabinet and feel something pressing from the outside
+[REPLACE] The pressure increases and I release the handle in fear
+[signal arg="Bathroom_ClothesFallsOut"]
+[REPLACE] The door opens and a pile of clothes falls out of the closet
+[end_timeline]
+label wardrobeIsOpened
+[REPLACE] There is nothing else in the cabinet
+[end_timeline]

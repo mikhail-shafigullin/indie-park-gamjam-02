@@ -30,6 +30,9 @@ directories/dch_directory={
 "Ann": "res://dialogues/characters/Ann.dch"
 }
 directories/dtl_directory={
+"BathroomChairWithoutDoll": "res://dialogues/timelines/bathroom/BathroomChairWithoutDoll.dtl",
+"BathroomClothesOnGround": "res://dialogues/timelines/bathroom/BathroomClothesOnGround.dtl",
+"BathroomWardrobeOpened": "res://dialogues/timelines/bathroom/BathroomWardrobeOpened.dtl",
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
 "MCRoomCartridgeUseNoItem": "res://dialogues/timelines/mcRoom/MCRoomCartridgeUseNoItem.dtl",

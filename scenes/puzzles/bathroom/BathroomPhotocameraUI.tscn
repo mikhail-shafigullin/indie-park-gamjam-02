@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://df4n8jpmxjfi2"]
+
+[ext_resource type="Script" uid="uid://bvj8ee2ordnon" path="res://scenes/puzzles/bathroom/BathroomPhotocameraUI.gd" id="1_w1si4"]
+
+[node name="BathroomPhotocameraUi" type="Control" unique_id=1068388632]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_w1si4")

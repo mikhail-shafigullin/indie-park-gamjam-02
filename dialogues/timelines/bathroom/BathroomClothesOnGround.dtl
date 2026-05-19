@@ -1,0 +1,5 @@
+[REPLACE] Clothes are scattered on the ground
+[background arg="#000000ff" fade="1.0" wait="true"]
+...
+[signal arg="Bathroom_ClothesOnTheGround"]
+Pile of clothes added to inventory.

@@ -400,11 +400,11 @@ tile_set = ExtResource("1_lq3hh")
 
 [node name="Start" type="Marker2D" parent="." unique_id=232430641]
 unique_name_in_owner = true
-position = Vector2(288, 192)
+position = Vector2(352, 208)
 
 [node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("2_goyxn")]
 unique_name_in_owner = true
-position = Vector2(288, 176)
+position = Vector2(352, 176)
 levelId = 1
 markerName = "FromBedRoom"
 

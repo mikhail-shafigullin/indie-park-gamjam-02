@@ -1,0 +1,3 @@
+[REPLACE] On the bed I am seeing diary
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="0.5" wait="true"]
+[REPLACE] Hint for TV Puzzle

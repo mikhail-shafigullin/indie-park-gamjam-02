@@ -16,6 +16,9 @@ func _init() -> void:
 		CartridgeItem.CartridgeGenre.ADVENTURE
 	];
 
+func initPuzzle() -> void:
+	Dialogic.timeline_ended.connect(checkPuzzleSolved)
+
 func tryToPutCartridgeItem(cartridgeItem: CartridgeItem) -> bool:
 	print("tryToPutCartridgeItem", cartridgeItem)
 	if(cartridgesCases.get(focusedSlot)):
@@ -30,8 +33,6 @@ func addCartridgeItem(cartridgeItem: CartridgeItem):
 func addCartridgeItemToSlot(slot: int, cartridgeItem: CartridgeItem):
 	MainEventBus.inventory_remove_item.emit(cartridgeItem);
 	cartridgesCases.set(slot, cartridgeItem);
-	if(isPuzzleCorrect()):
-		triggerPuzzleSolved();
 	pass
 
 func isPuzzleCorrect() -> bool:
@@ -40,6 +41,8 @@ func isPuzzleCorrect() -> bool:
 		if(!cartridge):
 			return false;
 		var expectedGenre = correctCartridgeSequence[i]
+		if(cartridge.cartridgeGenre == expectedGenre):
+			return true;
 		if(cartridge.cartridgeGenre != expectedGenre):
 			return false;
 	return true;
@@ -53,6 +56,11 @@ func getCartridgeInSlot(slot: int) -> CartridgeItem:
 func removeCartridgeFromSlot(slot: int):
 	cartridgesCases[slot] = null;
 
+func checkPuzzleSolved():
+	if(isPuzzleCorrect()):
+		triggerPuzzleSolved();
+
 func triggerPuzzleSolved():
-	Dialogic.start("MCRoomTVPuzzleSolved");
+	Dialogic.timeline_ended.disconnect(checkPuzzleSolved)
+	Dialogic.start('MCRoomTVPuzzleSolved');
 	MainEventBus.puzzle_2_solved.emit()

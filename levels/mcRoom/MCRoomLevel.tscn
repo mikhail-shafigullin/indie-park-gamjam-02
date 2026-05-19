@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://xnttreoh0vbs" path="res://levels/mcRoom/McRoomCartridge.tscn" id="6_55q5b"]
 [ext_resource type="Texture2D" uid="uid://bn5ofbuw3fqo" path="res://assets/tilesets/Tileset_MC_Bedroom.png" id="7_bul60"]
 [ext_resource type="Script" uid="uid://c0j0uqb0xg8al" path="res://levels/mcRoom/MCRoomTV.gd" id="8_bucqu"]
+[ext_resource type="Script" uid="uid://cktwlhtde4il3" path="res://levels/mcRoom/TvPuzzleHintNote.gd" id="9_e20gh"]
+[ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="9_kkt2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bucqu"]
 atlas = ExtResource("7_bul60")
@@ -39,6 +41,13 @@ region = Rect2(32, 0, 32, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bul60"]
 size = Vector2(30, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lryew"]
+atlas = ExtResource("9_kkt2w")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e20gh"]
+size = Vector2(13, 10)
 
 [node name="McRoom" type="Node2D" unique_id=1672391368]
 y_sort_enabled = true
@@ -169,6 +178,22 @@ collision_layer = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="McRoomTV/StaticBody2D" unique_id=385521383]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_bul60")
+
+[node name="Note" type="Node2D" parent="." unique_id=423405391]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(272, 256)
+script = ExtResource("9_e20gh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Note" unique_id=1131421092]
+texture = SubResource("AtlasTexture_lryew")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Note" unique_id=969405989]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Note/StaticBody2D" unique_id=989759394]
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_e20gh")
 
 [connection signal="_object_used" from="Solve2" to="." method="_on_solve_2__object_used"]
 

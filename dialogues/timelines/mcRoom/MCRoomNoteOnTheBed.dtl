@@ -1,0 +1,9 @@
+[REPLACE] On the bed I am seeing diary
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="0.5" wait="true"]
+[REPLACE] Hint for TV Puzzle
+[background arg="#000000ff" fade="1.0" wait="true"]
+...
+[signal arg="MCRoom_DeleteNoteFromFloor"]
+Note added to inventory.
+[background fade="1.0" wait="true"]
+[color=GREEN]Press [TAB] to open inventory.[/color]

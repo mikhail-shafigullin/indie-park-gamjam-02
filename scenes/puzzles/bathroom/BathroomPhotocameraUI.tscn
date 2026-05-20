@@ -1,8 +1,318 @@
 [gd_scene format=3 uid="uid://df4n8jpmxjfi2"]
 
 [ext_resource type="Script" uid="uid://bvj8ee2ordnon" path="res://scenes/puzzles/bathroom/BathroomPhotocameraUI.gd" id="1_w1si4"]
+[ext_resource type="Texture2D" uid="uid://cevh1t03e15b3" path="res://assets/cgs/CG_Puzzle3_BathroomBG.png" id="2_hdwu5"]
+[ext_resource type="Theme" uid="uid://cqjuatlefxmr0" path="res://assets/styles/cameraStyle.tres" id="3_nwm4d"]
+[ext_resource type="Texture2D" uid="uid://bsg5pa5fejmdu" path="res://assets/cgs/CG_Puzzle3_Camera.png" id="3_r8i4b"]
+[ext_resource type="Texture2D" uid="uid://co3atyt1tdd47" path="res://assets/cgs/CG_Puzzle3_Store.png" id="4_fed35"]
 
 [node name="BathroomPhotocameraUi" type="Control" unique_id=1068388632]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_w1si4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1237761882]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 480.0
+texture = ExtResource("2_hdwu5")
+
+[node name="Control" type="Control" parent="." unique_id=1018806409]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 124.0
+offset_top = 176.0
+offset_right = -254.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_nwm4d")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1774374912]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.30800456, 0.30800456, 0.30800453, 1)
+
+[node name="CommonMenu" type="Control" parent="Control" unique_id=1959979854]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="Control/CommonMenu" unique_id=1415927533]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 33.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/CommonMenu/Header" unique_id=452639884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.11372549, 0.11372549, 0.5686275)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CommonMenu/Header" unique_id=2028861133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="Control/CommonMenu/Header/HBoxContainer" unique_id=1405474187]
+visible = false
+layout_mode = 2
+text = "18:00"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/CommonMenu" unique_id=1491279510]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 27.0
+offset_right = -12.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CommonMenu/ScrollContainer" unique_id=1722212304]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="TakeAPhotoButton" type="Button" parent="Control/CommonMenu/ScrollContainer/VBoxContainer" unique_id=584361794]
+layout_mode = 2
+text = "Take A Photo"
+
+[node name="GalleryButton" type="Button" parent="Control/CommonMenu/ScrollContainer/VBoxContainer" unique_id=1255544740]
+layout_mode = 2
+text = "Gallery
+"
+
+[node name="ExitButton" type="Button" parent="Control/CommonMenu/ScrollContainer/VBoxContainer" unique_id=1179901210]
+layout_mode = 2
+text = "Exit"
+
+[node name="PasswordMenu" type="Control" parent="Control" unique_id=239588358]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="Control/PasswordMenu" unique_id=52324734]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 33.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/PasswordMenu/Header" unique_id=889985704]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.11372549, 0.11372549, 0.5686275)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PasswordMenu/Header" unique_id=1102944177]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="Control/PasswordMenu/Header/HBoxContainer" unique_id=1657636619]
+visible = false
+layout_mode = 2
+text = "18:00"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PasswordMenu" unique_id=1039937874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 27.0
+offset_right = -12.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PasswordMenu/ScrollContainer" unique_id=1160146424]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer" unique_id=1060143338]
+layout_mode = 2
+alignment = 1
+
+[node name="PasswordInput" type="LineEdit" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=582996809]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+placeholder_text = "password"
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer" unique_id=1635445314]
+layout_mode = 2
+text = "Hint:"
+horizontal_alignment = 1
+
+[node name="GalleryButton" type="Button" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer" unique_id=975289099]
+layout_mode = 2
+text = "Enter
+"
+
+[node name="PhotosListMenu" type="Control" parent="Control" unique_id=1500708792]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="Control/PhotosListMenu" unique_id=1222853555]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 33.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/PhotosListMenu/Header" unique_id=522008446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.11372549, 0.11372549, 0.5686275)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PhotosListMenu/Header" unique_id=1999760633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="Control/PhotosListMenu/Header/HBoxContainer" unique_id=334418235]
+visible = false
+layout_mode = 2
+text = "18:00"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PhotosListMenu" unique_id=1544833310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 27.0
+offset_right = -12.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PhotosListMenu/ScrollContainer" unique_id=81134090]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="photo01" type="Button" parent="Control/PhotosListMenu/ScrollContainer/VBoxContainer" unique_id=1922584937]
+layout_mode = 2
+text = "photo-01.heif"
+
+[node name="photo02" type="Button" parent="Control/PhotosListMenu/ScrollContainer/VBoxContainer" unique_id=228703243]
+layout_mode = 2
+text = "photo-02.heif"
+
+[node name="PhotoZoomMenu" type="Control" parent="Control" unique_id=467290647]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control/PhotoZoomMenu" unique_id=1623025844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/PhotoZoomMenu/Control" unique_id=491766509]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_fed35")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Control/PhotoZoomMenu/Control" unique_id=1129172478]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -41.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1708595979]
+layout_mode = 1
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 795.39105
+offset_bottom = 684.3099
+scale = Vector2(0.79606664, 0.81488013)
+mouse_filter = 2
+texture = ExtResource("3_r8i4b")

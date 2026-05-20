@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://by6ly44g2wjrv"]
+
+[ext_resource type="Script" uid="uid://cn3m023g80o74" path="res://scenes/puzzles/bathroom/BathroomDollDressing.gd" id="1_dxul0"]
+[ext_resource type="Texture2D" uid="uid://cevh1t03e15b3" path="res://assets/cgs/CG_Puzzle3_BathroomBG.png" id="1_na43x"]
+[ext_resource type="Texture2D" uid="uid://jmau2lvncn5h" path="res://assets/cgs/CG_Puzzle3_Chair.png" id="2_e141t"]
+[ext_resource type="Texture2D" uid="uid://bxqj2y1eecsi5" path="res://assets/cgs/CG_Puzzle3_Doll_Body.png" id="3_jx3gr"]
+[ext_resource type="Texture2D" uid="uid://40whghf5ph0v" path="res://assets/cgs/CG_Puzzle3_Doll_Clothes1.png" id="4_nvxbv"]
+[ext_resource type="Texture2D" uid="uid://cw4fnwjqkwi4l" path="res://assets/cgs/CG_Puzzle3_Doll_Clothes2.png" id="5_bgfd6"]
+[ext_resource type="Texture2D" uid="uid://76x43b2gylgn" path="res://assets/cgs/CG_Puzzle3_Doll_Clothes3.png" id="6_g3p0i"]
+[ext_resource type="Texture2D" uid="uid://cu6ry0574r8nl" path="res://assets/cgs/CG_Puzzle3_Doll_Clothes4.png" id="7_x2eix"]
+[ext_resource type="Texture2D" uid="uid://cg2o8cfy3d1b2" path="res://assets/cgs/CG_Puzzle3_Doll_Mouth1.png" id="8_5o1om"]
+[ext_resource type="Texture2D" uid="uid://dl5hl7i1145cr" path="res://assets/cgs/CG_Puzzle3_Doll_Mouth2.png" id="9_okp73"]
+[ext_resource type="Texture2D" uid="uid://dwxiy67toww28" path="res://assets/cgs/CG_Puzzle3_Doll_Mouth3.png" id="10_nmslo"]
+[ext_resource type="Texture2D" uid="uid://d2cb0fcl7ykey" path="res://assets/cgs/CG_Puzzle3_Doll_Mouth4.png" id="11_01s6k"]
+[ext_resource type="Texture2D" uid="uid://boh5grumpcb4e" path="res://assets/cgs/CG_Puzzle3_Doll_Eyes1.png" id="12_3x8fj"]
+[ext_resource type="Texture2D" uid="uid://dgtuk5rjrimme" path="res://assets/cgs/CG_Puzzle3_Doll_Eyes2.png" id="13_x6xrv"]
+[ext_resource type="Texture2D" uid="uid://cl7i50ky24eg7" path="res://assets/cgs/CG_Puzzle3_Doll_Eyes3.png" id="14_ifh5h"]
+[ext_resource type="Texture2D" uid="uid://dmt20tms6mqtf" path="res://assets/cgs/CG_Puzzle3_Doll_Eyes4.png" id="15_7o1b5"]
+[ext_resource type="Texture2D" uid="uid://dxhhqmgluc0jp" path="res://assets/cgs/CG_Puzzle3_Doll_Hair1.png" id="16_x6xrv"]
+[ext_resource type="Texture2D" uid="uid://blk1erjhdx2q1" path="res://assets/cgs/CG_Puzzle3_Doll_Hair2.png" id="17_f738t"]
+[ext_resource type="Texture2D" uid="uid://b0mr3hmvi2sae" path="res://assets/cgs/CG_Puzzle3_Doll_Hair3.png" id="18_dxul0"]
+[ext_resource type="Texture2D" uid="uid://gkmnxt557s12" path="res://assets/cgs/CG_Puzzle3_Doll_Hair4.png" id="19_ogikn"]
+
+[node name="BathroomDollDressing" type="Control" unique_id=24603525]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dxul0")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=47910320]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_na43x")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=948901356]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e141t")
+
+[node name="body" type="Control" parent="." unique_id=1435991717]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="body_base" type="TextureRect" parent="body" unique_id=398366810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jx3gr")
+
+[node name="body1" type="TextureRect" parent="body" unique_id=1717474290]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_nvxbv")
+
+[node name="body2" type="TextureRect" parent="body" unique_id=756625891]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_bgfd6")
+
+[node name="body3" type="TextureRect" parent="body" unique_id=1746011621]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_g3p0i")
+
+[node name="body4" type="TextureRect" parent="body" unique_id=698459280]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_x2eix")
+
+[node name="mouth" type="Control" parent="." unique_id=789925635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mouth1" type="TextureRect" parent="mouth" unique_id=1219557826]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_5o1om")
+
+[node name="mouth2" type="TextureRect" parent="mouth" unique_id=285294459]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_okp73")
+
+[node name="mouth3" type="TextureRect" parent="mouth" unique_id=1389252251]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_nmslo")
+
+[node name="mouth4" type="TextureRect" parent="mouth" unique_id=1353289895]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_01s6k")
+
+[node name="eyes" type="Control" parent="." unique_id=90905264]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Eyes1" type="TextureRect" parent="eyes" unique_id=699794626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_3x8fj")
+
+[node name="Eyes2" type="TextureRect" parent="eyes" unique_id=907737473]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_x6xrv")
+
+[node name="Eyes3" type="TextureRect" parent="eyes" unique_id=988743904]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_ifh5h")
+
+[node name="Eyes4" type="TextureRect" parent="eyes" unique_id=404117739]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_7o1b5")
+
+[node name="hair" type="Control" parent="." unique_id=1315004983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hair1" type="TextureRect" parent="hair" unique_id=1870247891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_x6xrv")
+
+[node name="Hair2" type="TextureRect" parent="hair" unique_id=403738625]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_f738t")
+
+[node name="Hair3" type="TextureRect" parent="hair" unique_id=1393823539]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_dxul0")
+
+[node name="Hair4" type="TextureRect" parent="hair" unique_id=239647324]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_ogikn")

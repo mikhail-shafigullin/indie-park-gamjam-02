@@ -1,0 +1,3 @@
+[REPLACE] I take a look in the menu of the camera
+# res://scenes/puzzles/bathroom/BathroomPhotocameraUI.tscn
+do PuzzleStates.startPuzzle("uid://df4n8jpmxjfi2")

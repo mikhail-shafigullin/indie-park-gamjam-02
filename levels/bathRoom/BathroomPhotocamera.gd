@@ -6,4 +6,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func useObject():
+	Dialogic.start("BathroomPhotocameraUse")
 	pass;

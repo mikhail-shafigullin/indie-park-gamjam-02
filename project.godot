@@ -32,6 +32,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "BathroomChairWithoutDoll": "res://dialogues/timelines/bathroom/BathroomChairWithoutDoll.dtl",
 "BathroomClothesOnGround": "res://dialogues/timelines/bathroom/BathroomClothesOnGround.dtl",
+"BathroomPhotocameraUse": "res://dialogues/timelines/bathroom/BathroomPhotocameraUse.dtl",
 "BathroomWardrobeOpened": "res://dialogues/timelines/bathroom/BathroomWardrobeOpened.dtl",
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",

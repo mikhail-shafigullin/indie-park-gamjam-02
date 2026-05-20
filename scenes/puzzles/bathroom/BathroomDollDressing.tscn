@@ -49,6 +49,7 @@ grow_vertical = 2
 texture = ExtResource("2_e141t")
 
 [node name="body" type="Control" parent="." unique_id=1435991717]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,6 +97,7 @@ grow_vertical = 2
 texture = ExtResource("6_g3p0i")
 
 [node name="body4" type="TextureRect" parent="body" unique_id=698459280]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,6 +107,7 @@ grow_vertical = 2
 texture = ExtResource("7_x2eix")
 
 [node name="mouth" type="Control" parent="." unique_id=789925635]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,6 +155,7 @@ grow_vertical = 2
 texture = ExtResource("11_01s6k")
 
 [node name="eyes" type="Control" parent="." unique_id=90905264]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -199,6 +203,7 @@ grow_vertical = 2
 texture = ExtResource("15_7o1b5")
 
 [node name="hair" type="Control" parent="." unique_id=1315004983]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -244,3 +249,171 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("19_ogikn")
+
+[node name="Control" type="Control" parent="." unique_id=1295158619]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.00002
+offset_top = -195.0
+offset_right = 21.0
+offset_bottom = -137.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="hairButtonLeft" type="Button" parent="Control" unique_id=1931335910]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.549515
+offset_top = -22.980965
+offset_right = -61.54952
+offset_bottom = 8.019035
+grow_horizontal = 2
+grow_vertical = 2
+text = "<"
+
+[node name="hairButtonRight" type="Button" parent="Control" unique_id=1919872887]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.50788
+offset_top = -13.788569
+offset_right = 73.50788
+offset_bottom = 17.21143
+grow_horizontal = 2
+grow_vertical = 2
+text = ">"
+
+[node name="Control2" type="Control" parent="." unique_id=2106880307]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -168.0
+offset_right = 46.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="eyesButtonLeft" type="Button" parent="Control2" unique_id=490293772]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.549515
+offset_top = -22.980965
+offset_right = -61.54952
+offset_bottom = 8.019035
+grow_horizontal = 2
+grow_vertical = 2
+text = "<"
+
+[node name="eyesButtonRight" type="Button" parent="Control2" unique_id=2075792629]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.50788
+offset_top = -13.788569
+offset_right = 73.50788
+offset_bottom = 17.21143
+grow_horizontal = 2
+grow_vertical = 2
+text = ">"
+
+[node name="Control3" type="Control" parent="." unique_id=1530888517]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -137.99998
+offset_right = 73.0
+offset_bottom = -79.999985
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="mouthButtonLeft" type="Button" parent="Control3" unique_id=1068355351]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.549515
+offset_top = -22.980965
+offset_right = -61.54952
+offset_bottom = 8.019035
+grow_horizontal = 2
+grow_vertical = 2
+text = "<"
+
+[node name="mouthButtonRight" type="Button" parent="Control3" unique_id=139606477]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.50788
+offset_top = -13.788569
+offset_right = 73.50788
+offset_bottom = 17.21143
+grow_horizontal = 2
+grow_vertical = 2
+text = ">"
+
+[node name="Control4" type="Control" parent="." unique_id=1518760776]
+anchors_preset = 0
+offset_left = 199.0
+offset_top = 245.0
+offset_right = 437.0
+offset_bottom = 285.0
+
+[node name="clothesButtonLeft" type="Button" parent="Control4" unique_id=1972124368]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 30.0
+offset_bottom = 31.0
+text = "<"
+
+[node name="clothesButtonRight" type="Button" parent="Control4" unique_id=1140620876]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 228.0
+offset_bottom = 31.0
+text = ">"
+
+[connection signal="pressed" from="Control/hairButtonLeft" to="." method="_on_hair_button_left_pressed"]
+[connection signal="pressed" from="Control/hairButtonRight" to="." method="_on_hair_button_right_pressed"]
+[connection signal="pressed" from="Control2/eyesButtonLeft" to="." method="_on_eyes_button_left_pressed"]
+[connection signal="pressed" from="Control2/eyesButtonRight" to="." method="_on_eyes_button_right_pressed"]
+[connection signal="pressed" from="Control3/mouthButtonLeft" to="." method="_on_mouth_button_left_pressed"]
+[connection signal="pressed" from="Control3/mouthButtonRight" to="." method="_on_mouth_button_right_pressed"]
+[connection signal="pressed" from="Control4/clothesButtonLeft" to="." method="_on_clothes_button_left_pressed"]
+[connection signal="pressed" from="Control4/clothesButtonRight" to="." method="_on_clothes_button_right_pressed"]

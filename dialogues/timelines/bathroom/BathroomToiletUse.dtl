@@ -1,0 +1,12 @@
+label ToiletClosed
+[REPLACE] It is closed toilet. I open it.
+[signal arg="Bathroom_ToiletOpen"]
+[REPLACE] I see strange cylinder in the toilet. It looks like... [color=GREEN]a face[/color]
+[end_timeline]
+label ToiletOpened
+[REPLACE] I take a strange cylinder from the toilet...
+[i]Strange cylinder[/i] added to inventory
+[end_timeline]
+label HeadTaken
+[REPLACE] There is nothing more inside the toilet
+[end_timeline]

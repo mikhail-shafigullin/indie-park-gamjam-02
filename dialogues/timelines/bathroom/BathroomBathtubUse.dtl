@@ -1,0 +1,12 @@
+label CurtainsClosed
+[REPLACE] I slowly open the curtains
+[signal arg="Bathroom_BathtubCurtainsOpen"]
+[REPLACE] Inside the bathtub I see naked mannequin.
+[end_timeline]
+label CurtainsOpened
+[REPLACE] I take a naked mannequin from the bathtub.
+[i]Naked Mannequin[/i] added to the inventory
+[end_timeline]
+label DollTaken
+[REPLACE] There is nothing more inside the bathtub.
+[end_timeline]

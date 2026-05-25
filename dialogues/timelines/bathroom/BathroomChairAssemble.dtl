@@ -1,0 +1,24 @@
+label placeDoll
+[REPLACE] I am placing the mannequin on the chair
+[signal arg="Bathroom_DollPlacedOnChair"]
+[end_timeline]
+
+label placeHead
+[REPLACE] I am placing the strange cylinder on the neck of the doll.
+[signal arg="Bathroom_HeadPlacedOnChair"]
+[end_timeline]
+
+label placeClothes
+[REPLACE] I am dressing the mannequin with cloths from the cabinet
+[signal arg="Bathroom_ClothesPlacedOnChair"]
+[end_timeline]
+label chairUseWithoutDoll
+[REPLACE] The chair stands suspiciously in front of the camera.
+[end_timeline]
+label chairUseWithDoll
+[REPLACE] The chair with placed mannequin stands suspiciously in front of the camera.
+[end_timeline]
+label chairUseWithPuzzle
+# res://scenes/puzzles/bathroom/BathroomDollDressing.tscn
+do PuzzleStates.startPuzzle("uid://by6ly44g2wjrv")
+[end_timeline]

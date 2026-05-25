@@ -1,3 +1,1 @@
 [REPLACE] The chair stands suspiciously in front of the camera.
-# res://scenes/puzzles/bathroom/BathroomDollDressing.tscn
-do PuzzleStates.startPuzzle("uid://by6ly44g2wjrv")

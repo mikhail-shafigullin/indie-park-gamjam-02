@@ -10,3 +10,14 @@ func _init() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func use(usedOnItem: Usable) -> void:
+	if usedOnItem is BathRoomChair:
+		var bathRoomChair = usedOnItem as BathRoomChair;
+		if(bathRoomChair.isDollPlaced):
+			Dialogic.start("BathroomChairAssemble", "placeHead");
+			MainEventBus.inventory_remove_item.emit(self);
+		else:
+			Dialogic.start("DefaultMessages", "inventoryItemNoUse")
+	else:
+		Dialogic.start("DefaultMessages", "inventoryItemNoUse")

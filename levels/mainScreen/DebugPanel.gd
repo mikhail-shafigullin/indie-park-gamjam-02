@@ -29,3 +29,7 @@ func _on_to_bathroom_pressed() -> void:
 
 func _on_to_bedroom_pressed() -> void:
 	LevelContainer.bedroomLevel.sendPlayerToMarker("Start")
+
+
+func _on_to_dark_room_pressed() -> void:
+	LevelContainer.darkRoomLevel.sendPlayerToMarker("Start")

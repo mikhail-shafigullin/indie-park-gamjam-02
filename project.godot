@@ -31,11 +31,13 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "BathroomBathtubUse": "res://dialogues/timelines/bathroom/BathroomBathtubUse.dtl",
+"BathroomChairAssemble": "res://dialogues/timelines/bathroom/BathroomChairAssemble.dtl",
 "BathroomChairWithoutDoll": "res://dialogues/timelines/bathroom/BathroomChairWithoutDoll.dtl",
 "BathroomClothesOnGround": "res://dialogues/timelines/bathroom/BathroomClothesOnGround.dtl",
 "BathroomPhotocameraUse": "res://dialogues/timelines/bathroom/BathroomPhotocameraUse.dtl",
 "BathroomToiletUse": "res://dialogues/timelines/bathroom/BathroomToiletUse.dtl",
 "BathroomWardrobeOpened": "res://dialogues/timelines/bathroom/BathroomWardrobeOpened.dtl",
+"DefaultMessages": "res://dialogues/timelines/DefaultMessages.dtl",
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",
 "MCRoomCartridgeUseNoItem": "res://dialogues/timelines/mcRoom/MCRoomCartridgeUseNoItem.dtl",

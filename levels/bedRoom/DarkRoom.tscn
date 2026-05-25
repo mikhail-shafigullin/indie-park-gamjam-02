@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b5m2kqanwq7st"]
+
+[ext_resource type="Script" uid="uid://8j3nf6xvr4yk" path="res://levels/bedRoom/DarkRoom.gd" id="1_drscr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_left"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_right"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up"]
+size = Vector2(640, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_down"]
+size = Vector2(640, 32)
+
+[node name="DarkRoom" type="Node2D" unique_id=301145231]
+script = ExtResource("1_drscr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=301145232]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.02, 0.02, 0.05, 1)
+
+[node name="Start" type="Marker2D" parent="." unique_id=301145233]
+unique_name_in_owner = true
+position = Vector2(320, 240)
+
+[node name="BoundaryLeft" type="Area2D" parent="." unique_id=301145234]
+position = Vector2(0, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=301145235]
+shape = SubResource("RectangleShape2D_left")
+
+[node name="BoundaryRight" type="Area2D" parent="." unique_id=301145236]
+position = Vector2(640, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=301145237]
+shape = SubResource("RectangleShape2D_right")
+
+[node name="BoundaryUp" type="Area2D" parent="." unique_id=301145238]
+position = Vector2(320, 0)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryUp" unique_id=301145239]
+shape = SubResource("RectangleShape2D_up")
+
+[node name="BoundaryDown" type="Area2D" parent="." unique_id=301145240]
+position = Vector2(320, 480)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryDown" unique_id=301145241]
+shape = SubResource("RectangleShape2D_down")
+
+[connection signal="body_entered" from="BoundaryLeft" to="." method="onBoundaryLeft"]
+[connection signal="body_entered" from="BoundaryRight" to="." method="onBoundaryRight"]
+[connection signal="body_entered" from="BoundaryUp" to="." method="onBoundaryUp"]
+[connection signal="body_entered" from="BoundaryDown" to="." method="onBoundaryDown"]

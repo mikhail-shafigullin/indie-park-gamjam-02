@@ -67,8 +67,15 @@ layout_mode = 2
 focus_mode = 0
 text = "To Bedroom"
 
+[node name="ToDarkRoom" type="Button" parent="Control/HBoxContainer" unique_id=2081098292]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "To Dark Room"
+
 [connection signal="pressed" from="Control/HBoxContainer/ToDebugLevel" to="." method="_on_to_debug_level_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMainHall" to="." method="_on_to_main_hall_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMCRoom" to="." method="_on_to_mc_room_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBathroom" to="." method="_on_to_bathroom_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBedroom" to="." method="_on_to_bedroom_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/ToDarkRoom" to="." method="_on_to_dark_room_pressed"]

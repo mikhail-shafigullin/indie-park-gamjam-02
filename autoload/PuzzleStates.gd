@@ -8,6 +8,7 @@ var puzzle3Solved: bool = false;
 var puzzle4Solved: bool = false;
 
 var mcRoomTVPuzzleLogic: MCRoomTVPuzzleLogic;
+var bathroomDollPuzzleLogic: BathRoomDollPuzzleLogic;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +20,7 @@ func _ready() -> void:
 	MainEventBus.puzzle_4_solved.connect(func(): puzzle4Solved = true);
 	
 	mcRoomTVPuzzleLogic = MCRoomTVPuzzleLogic.new();
+	bathroomDollPuzzleLogic = BathRoomDollPuzzleLogic.new();
 
 func startPuzzle(scenePath: String):
 	MainEventBus.puzzle_layer_show_scene.emit(load(scenePath).instantiate())

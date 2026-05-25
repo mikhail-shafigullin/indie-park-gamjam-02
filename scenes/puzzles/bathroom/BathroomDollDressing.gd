@@ -31,14 +31,39 @@ func _ready() -> void:
 		
 	for child in hairsContainer.get_children():
 		hairsList.push_back(child)
-	
-	pass # Replace with function body.
+	setPuzzle(PuzzleStates.bathroomDollPuzzleLogic.currentDollState);
+
+func setPuzzle(initialDollState: Array[int]):
+	chooseBodyByIndex(initialDollState[0]);
+	chooseMouthByIndex(initialDollState[1]);
+	chooseEyesByIndex(initialDollState[2]);
+	chooseHairByIndex(initialDollState[3]);
 
 func chooseBody(isRight: bool):
+	var nextIndex = bodiesIndex+1 if isRight else bodiesIndex-1;
+	chooseBodyByIndex(nextIndex);
+	PuzzleStates.bathroomDollPuzzleLogic.setBody(nextIndex);
+
+func chooseHair(isRight: bool):
+	var nextIndex = hairsIndex+1 if isRight else hairsIndex-1;
+	chooseHairByIndex(nextIndex)
+	PuzzleStates.bathroomDollPuzzleLogic.setHair(nextIndex);
+
+func chooseEyes(isRight: bool):
+	var nextIndex = eyesIndex+1 if isRight else eyesIndex-1;
+	chooseEyesByIndex(nextIndex);
+	PuzzleStates.bathroomDollPuzzleLogic.setEyes(nextIndex);
+
+func chooseMouth(isRight: bool):
+	var nextIndex = mouthsIndex+1 if isRight else mouthsIndex-1;
+	chooseMouthByIndex(nextIndex)
+	PuzzleStates.bathroomDollPuzzleLogic.setMouth(nextIndex);
+
+func chooseBodyByIndex(index):
 	var currentBody = bodiesList[bodiesIndex];
 	if(currentBody != null): 
 		currentBody.visible = false;
-	bodiesIndex = bodiesIndex+1 if isRight else bodiesIndex-1;
+	bodiesIndex = index;
 	if(bodiesIndex >= bodiesList.size() ):
 		bodiesIndex = 0;
 	elif(bodiesIndex < 0):
@@ -47,37 +72,40 @@ func chooseBody(isRight: bool):
 	if(nextBody != null):
 		nextBody.visible = true;
 
-func chooseHair(isRight: bool):
+func chooseHairByIndex(nextIndex):
 	var currentBody = hairsList[hairsIndex];
 	currentBody.visible = false;
-	hairsIndex = hairsIndex+1 if isRight else hairsIndex-1;
+	hairsIndex = nextIndex;
 	if(hairsIndex >= hairsList.size() ):
 		hairsIndex = 0;
 	elif(hairsIndex < 0):
 		hairsIndex = hairsList.size() - 1;
 	var nextBody = hairsList[hairsIndex];
+	PuzzleStates.bathroomDollPuzzleLogic.setHair(hairsIndex);
 	nextBody.visible = true;
 
-func chooseEyes(isRight: bool):
+func chooseEyesByIndex(nextIndex):
 	var currentBody = eyesList[eyesIndex];
 	currentBody.visible = false;
-	eyesIndex = eyesIndex+1 if isRight else eyesIndex-1;
+	eyesIndex = nextIndex
 	if(eyesIndex >= eyesList.size() ):
 		eyesIndex = 0;
 	elif(eyesIndex < 0):
 		eyesIndex = eyesList.size() - 1;
 	var nextBody = eyesList[eyesIndex];
+	PuzzleStates.bathroomDollPuzzleLogic.setEyes(eyesIndex)
 	nextBody.visible = true;
 
-func chooseMouth(isRight: bool):
+func chooseMouthByIndex(nextIndex):
 	var currentBody = mouthsList[mouthsIndex];
 	currentBody.visible = false;
-	mouthsIndex = mouthsIndex+1 if isRight else mouthsIndex-1;
+	mouthsIndex = nextIndex;
 	if(mouthsIndex >= mouthsList.size() ):
 		mouthsIndex = 0;
 	elif(mouthsIndex < 0):
 		mouthsIndex = mouthsList.size() - 1;
 	var nextBody = mouthsList[mouthsIndex];
+	PuzzleStates.bathroomDollPuzzleLogic.setMouth(mouthsIndex)
 	nextBody.visible = true;
 
 func _on_hair_button_left_pressed() -> void:

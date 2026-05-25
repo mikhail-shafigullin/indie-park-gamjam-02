@@ -35,11 +35,13 @@ func _ready() -> void:
 	Dialogic.timeline_ended.connect(enableControls);
 	Dialogic.timeline_started.connect(disableControls);
 	MainEventBus.inventory_opened.connect(disableControls);
-	MainEventBus.inventory_closed.connect(enableControls)
+	MainEventBus.inventory_closed.connect(enableControls);
 	
 	Global.player = self;
 
 func disableControls() -> void:
+	if(is_inside_tree()):
+		await get_tree().process_frame
 	print("player disabled")
 	controlsEnabled = false
 	velocity = Vector2.ZERO

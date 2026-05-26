@@ -21,7 +21,11 @@ var controlsEnabled = true
 var hoveredUsable: Usable = null;
 
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var motherSprite: AnimatedSprite2D = %MotherAnimatedSprite2D
+@onready var boatSprite: AnimatedSprite2D = %BoatSprite
 @onready var rayCast: RayCast2D = %RayCast
+
+var currentSprite;
 
 func _init() -> void:
 	MainEventBus.send_player_to_marker.connect(teleportToMarker);
@@ -36,6 +40,8 @@ func _ready() -> void:
 	Dialogic.timeline_started.connect(disableControls);
 	MainEventBus.inventory_opened.connect(disableControls);
 	MainEventBus.inventory_closed.connect(enableControls);
+	
+	currentSprite = sprite;
 	
 	Global.player = self;
 
@@ -108,7 +114,11 @@ func updateAnimation() -> void:
 		animationDirection = lastDirection;
 
 	var prefix := "walk_" if state == State.WALK else "idle_"
-	sprite.play(prefix + directionName())
+	if(boatSprite.visible):
+		currentSprite.play("idle_" + directionName())
+	else:
+		currentSprite.play(prefix + directionName())
+	boatSprite.play(directionName());
 
 func directionName() -> String:
 	if abs(animationDirection.x) > abs(animationDirection.y):
@@ -207,3 +217,16 @@ func teleportToMarker(marker: Marker2D):
 	reparent(marker.get_parent())
 	position = marker.position;
 	
+func changeCurrentSprite():
+	currentSprite.visible = false;
+	if(currentSprite == sprite):
+		currentSprite = motherSprite;
+	else:
+		currentSprite = sprite;
+	currentSprite.visible = false;
+
+func changeSpriteOnBoatState():
+	if(boatSprite.visible):
+		boatSprite.visible = false;
+	else:
+		boatSprite.visible = true;

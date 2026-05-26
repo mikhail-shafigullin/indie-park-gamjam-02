@@ -1,26 +1,31 @@
-extends Level
+extends DarkRoomPuzzleRoom
 
-@onready var starterMarker: Marker2D = %Start;
-@onready var puzzle4Button: Usable = %Solve4;
-@onready var changeScene: Usable = %ChangeScene;
+@onready var puzzle4Button: Usable = %Solve4
+@onready var changeScene: Usable = %ChangeScene
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	player_enters_room.connect(closeDoorFor4thPuzzle);
-	pass # Replace with function body.
+func onPlayerEntersRoom() -> void:
+	super.onPlayerEntersRoom()
+	closeDoorFor4thPuzzle()
 
+func closeDoorFor4thPuzzle() -> void:
+	if PuzzleStates.puzzle13Solved == true and PuzzleStates.puzzle4Solved != true:
+		changeScene.disable()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func onStepCorrect() -> void:
+	isRespawning = false
+	LevelContainer.darkRoomLevel.sendPlayerToMarker("Start")
 
-func closeDoorFor4thPuzzle():
-	if(PuzzleStates.puzzle13Solved == true and 
-	PuzzleStates.puzzle4Solved != true):
-		changeScene.disable();
+func onFirstMistake() -> void:
+	sendPlayerToMarker("Start")
 
+func onSecondMistake() -> void:
+	sendPlayerToMarker("Start")
+
+func onPuzzleSolved() -> void:
+	isRespawning = false
+	LevelContainer.darkRoomLevel.sendPlayerToMarker("Start")
 
 func _on_solve_4__object_used() -> void:
-	puzzle4Button.disable();
-	MainEventBus.puzzle_4_solved.emit();
+	puzzle4Button.disable()
+	MainEventBus.puzzle_4_solved.emit()
 	changeScene.enable()

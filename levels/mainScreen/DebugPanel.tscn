@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://iq112y5h64of"]
+[gd_scene format=3 uid="uid://b3x4i53rutqu7"]
 
 [ext_resource type="Script" uid="uid://cxdn1pb85ombc" path="res://levels/mainScreen/DebugPanel.gd" id="1_7r4yu"]
 [ext_resource type="PackedScene" uid="uid://0oe7olk4j1sr" path="res://levels/DebugLevel.tscn" id="2_s70a8"]
@@ -26,7 +26,7 @@ anchor_right = 1.0
 offset_left = -136.0
 offset_top = 12.0
 offset_right = -11.0
-offset_bottom = 201.0
+offset_bottom = 331.0
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Control" unique_id=1082782569]
@@ -73,9 +73,16 @@ layout_mode = 2
 focus_mode = 0
 text = "To Dark Room"
 
+[node name="ToBedRoomSecondPart" type="Button" parent="Control/HBoxContainer" unique_id=1710934284]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "To Bed Room 2"
+
 [connection signal="pressed" from="Control/HBoxContainer/ToDebugLevel" to="." method="_on_to_debug_level_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMainHall" to="." method="_on_to_main_hall_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMCRoom" to="." method="_on_to_mc_room_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBathroom" to="." method="_on_to_bathroom_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBedroom" to="." method="_on_to_bedroom_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToDarkRoom" to="." method="_on_to_dark_room_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/ToBedRoomSecondPart" to="." method="_on_to_bed_room_second_part_pressed"]

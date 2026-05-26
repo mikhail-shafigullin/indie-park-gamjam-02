@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c31lo5o770sbs" path="res://levels/bedRoom/BedRoom.gd" id="1_goyxn"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_lq3hh"]
-[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_goyxn"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_goyxn"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_suvdt"]
 [ext_resource type="Texture2D" uid="uid://bew2mfk672gkf" path="res://assets/images/Mom_Bedroom_Drowned.png" id="5_0xbf0"]
-[ext_resource type="Script" uid="uid://c3qxvsq1ajtku" path="res://levels/bedRoom/ShoreAnimation.gd" id="6_fgqp5"]
+[ext_resource type="Script" path="res://levels/bedRoom/ShoreAnimation.gd" id="6_fgqp5"]
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="6_snw41"]
 [ext_resource type="Texture2D" uid="uid://dmiy34w35rlbs" path="res://assets/sprites/Sprites_Boat.png" id="8_7cji5"]
 [ext_resource type="Script" uid="uid://cwtt3ux2e6nrc" path="res://levels/bedRoom/BedRoomBoat.gd" id="8_appov"]
-[ext_resource type="Script" uid="uid://dtw728gkdha6p" path="res://levels/bedRoom/BedRoomPostCard.gd" id="10_qq8ej"]
+[ext_resource type="Script" path="res://levels/bedRoom/BedRoomPostCard.gd" id="10_qq8ej"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="10_y2kh1"]
-[ext_resource type="Script" uid="uid://yr0k3bbnjs8h" path="res://levels/bedRoom/BedRoomCertificate.gd" id="12_4secq"]
+[ext_resource type="Script" path="res://levels/bedRoom/BedRoomCertificate.gd" id="12_4secq"]
 [ext_resource type="Texture2D" uid="uid://bburs4x7mtkca" path="res://assets/tilesets/Tileset_Mother_Bedroom_Shore.png" id="13_hub06"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
@@ -444,6 +444,18 @@ region = Rect2(96, 0, 32, 32)
 atlas = ExtResource("10_y2kh1")
 region = Rect2(128, 0, 32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brleft"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brright"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brup"]
+size = Vector2(640, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brdown"]
+size = Vector2(640, 32)
+
 [node name="BedRoom" type="Node2D" unique_id=1708056244]
 y_sort_enabled = true
 script = ExtResource("1_goyxn")
@@ -603,4 +615,51 @@ texture = SubResource("AtlasTexture_6stmu")
 visible = false
 texture = SubResource("AtlasTexture_6qva0")
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1521742928]
+position = Vector2(208, 288)
+
+[node name="Restore" type="StaticBody2D" parent="." unique_id=399021095]
+position = Vector2(256, 272)
+collision_layer = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Restore" unique_id=1844354300]
+position = Vector2(0, -32)
+polygon = PackedVector2Array(16, 0, 16, 16, 16, 32, 48, 32, 48, 48, 64, 48, 64, 64, 48, 64, 32, 64, 32, 48, 16, 48, 0, 48, 0, 16, -16, 16, -16, 0)
+
+[node name="BoundaryLeft" type="Area2D" parent="." unique_id=100000001]
+position = Vector2(0, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=100000002]
+shape = SubResource("RectangleShape2D_brleft")
+
+[node name="BoundaryRight" type="Area2D" parent="." unique_id=100000003]
+position = Vector2(640, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=100000004]
+shape = SubResource("RectangleShape2D_brright")
+
+[node name="BoundaryUp" type="Area2D" parent="." unique_id=100000005]
+position = Vector2(320, 0)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryUp" unique_id=100000006]
+shape = SubResource("RectangleShape2D_brup")
+
+[node name="BoundaryDown" type="Area2D" parent="." unique_id=100000007]
+position = Vector2(320, 480)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryDown" unique_id=100000008]
+shape = SubResource("RectangleShape2D_brdown")
+
 [connection signal="_object_used" from="Solve4" to="." method="_on_solve_4__object_used"]
+[connection signal="body_entered" from="BoundaryLeft" to="." method="onBoundaryLeft"]
+[connection signal="body_entered" from="BoundaryRight" to="." method="onBoundaryRight"]
+[connection signal="body_entered" from="BoundaryUp" to="." method="onBoundaryUp"]
+[connection signal="body_entered" from="BoundaryDown" to="." method="onBoundaryDown"]

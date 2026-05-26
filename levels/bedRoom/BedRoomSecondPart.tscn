@@ -1,0 +1,278 @@
+[gd_scene format=4 uid="uid://b80gc8qdssvq0"]
+
+[ext_resource type="Script" uid="uid://bb45366e151s7" path="res://levels/bedRoom/BedRoomSecondPart.gd" id="1_e80hd"]
+[ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_uo17m"]
+[ext_resource type="Script" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
+[ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="5_4nab5"]
+[ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="6_4nab5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(0, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cji5"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(32, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_appov"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(64, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2kh1"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(96, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq8ej"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(128, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4secq"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(160, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hub06"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(192, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5foqf"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(224, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au8c6"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(224, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br8l4"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(192, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmsbv"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(160, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnppd"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(128, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28umg"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(96, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vp64"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(64, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp18j"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(32, 0, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5umq"]
+atlas = ExtResource("5_4nab5")
+region = Rect2(0, 0, 32, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hf2yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgqp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cji5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_appov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2kh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq8ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4secq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hub06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5foqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au8c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br8l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmsbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnppd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28umg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vp64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp18j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5umq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au8c6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf2yo"]
+atlas = ExtResource("6_4nab5")
+region = Rect2(32, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoqqj"]
+atlas = ExtResource("6_4nab5")
+region = Rect2(96, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4x0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf2yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoqqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrdpx"]
+size = Vector2(55, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nab5"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hf2yo"]
+size = Vector2(32, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoqqj"]
+size = Vector2(640, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4x0u"]
+size = Vector2(640, 32)
+
+[node name="BedRoomSecondPart" type="Node2D" unique_id=1970677901]
+y_sort_enabled = true
+script = ExtResource("1_e80hd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1363045643]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.114526816, 0.07526993, 0.0953889, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Shore" type="Node2D" parent="." unique_id=33321593]
+
+[node name="Shore" type="Node2D" parent="Shore" unique_id=1435588810]
+position = Vector2(256, 160)
+script = ExtResource("4_uo17m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Shore/Shore" unique_id=1079903335]
+position = Vector2(16, 48)
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_hf2yo")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Shore/Shore" unique_id=2102661374]
+position = Vector2(48, 80)
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_hf2yo")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Shore/Shore" unique_id=1238635654]
+position = Vector2(80, 112)
+rotation = -3.1415925
+sprite_frames = SubResource("SpriteFrames_hf2yo")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Shore/Shore" unique_id=2997443]
+position = Vector2(112, 144)
+rotation = -3.1415925
+sprite_frames = SubResource("SpriteFrames_hf2yo")
+
+[node name="ColorRect" type="ColorRect" parent="Shore/Shore" unique_id=244508505]
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 608.0
+scale = Vector2(0.6077446, 0.4125404)
+color = Color(0.114526816, 0.07526993, 0.0953889, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="WallsBorder" type="TileMapLayer" parent="." unique_id=729855965]
+tile_map_data = PackedByteArray("AAAIAAUAAAAEAAYAAAAIAAYAAAAEAAYAAAAJAAYAAAAEAAYAAAAKAAYAAAAEAAYAAAALAAYAAAAEAAYAAAAMAAYAAAAEAAYAAAAIAAcAAAAEAAYAAAAJAAcAAAAEAAYAAAAKAAcAAAAEAAYAAAALAAcAAAAEAAYAAAAMAAcAAAAEAAYAAAAIAAgAAAAEAAYAAAAJAAgAAAAEAAYAAAAKAAgAAAAEAAYAAAALAAgAAAAEAAYAAAAMAAgAAAAEAAYAAAAIAAkAAAAHAAMAAAAJAAkAAAAHAAMAAAAKAAkAAAAHAAMAAAAHAAYAAAAGAAIAAAAHAAkAAAAGAAMAAAAHAAgAAAAGAAIAAAAHAAcAAAAGAAIAAAALAAkAAAAHAAMAAAAHAAUAAAAGAAIAAAA=")
+tile_set = ExtResource("2_uo17m")
+
+[node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=726953547]
+tile_map_data = PackedByteArray("AAAIAAgAAAAHAAIAAAA=")
+tile_set = ExtResource("2_uo17m")
+
+[node name="WallsAndFloor2" type="TileMapLayer" parent="." unique_id=1643453818]
+z_index = 1
+tile_set = ExtResource("2_uo17m")
+
+[node name="Items" type="TileMapLayer" parent="." unique_id=610756417]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAIAAgAAwAAAAQAAAAJAAgAAwABAAQAAAA=")
+tile_set = ExtResource("2_uo17m")
+
+[node name="Start" type="Marker2D" parent="." unique_id=476233115]
+unique_name_in_owner = true
+position = Vector2(522, 213)
+
+[node name="BedSprite" type="AnimatedSprite2D" parent="." unique_id=1056818585]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(352, 192)
+sprite_frames = SubResource("SpriteFrames_c4x0u")
+frame_progress = 0.66389465
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BedSprite" unique_id=232097466]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedSprite/StaticBody2D" unique_id=1011773913]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_nrdpx")
+
+[node name="BoundaryLeft" type="Area2D" parent="." unique_id=1780500900]
+position = Vector2(0, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryLeft" unique_id=1968023825]
+shape = SubResource("RectangleShape2D_4nab5")
+
+[node name="BoundaryRight" type="Area2D" parent="." unique_id=1463335278]
+position = Vector2(640, 240)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryRight" unique_id=792694555]
+shape = SubResource("RectangleShape2D_hf2yo")
+
+[node name="BoundaryUp" type="Area2D" parent="." unique_id=2117894934]
+position = Vector2(320, 0)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryUp" unique_id=1709876622]
+shape = SubResource("RectangleShape2D_xoqqj")
+
+[node name="BoundaryDown" type="Area2D" parent="." unique_id=411668687]
+position = Vector2(320, 480)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryDown" unique_id=262689620]
+shape = SubResource("RectangleShape2D_c4x0u")

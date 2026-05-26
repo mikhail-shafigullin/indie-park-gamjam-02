@@ -7,6 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bew2mfk672gkf" path="res://assets/images/Mom_Bedroom_Drowned.png" id="5_0xbf0"]
 [ext_resource type="Script" uid="uid://c3qxvsq1ajtku" path="res://levels/bedRoom/ShoreAnimation.gd" id="6_fgqp5"]
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="6_snw41"]
+[ext_resource type="Texture2D" uid="uid://dmiy34w35rlbs" path="res://assets/sprites/Sprites_Boat.png" id="8_7cji5"]
+[ext_resource type="Script" uid="uid://cwtt3ux2e6nrc" path="res://levels/bedRoom/BedRoomBoat.gd" id="8_appov"]
+[ext_resource type="Script" uid="uid://dtw728gkdha6p" path="res://levels/bedRoom/BedRoomPostCard.gd" id="10_qq8ej"]
+[ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="10_y2kh1"]
+[ext_resource type="Script" uid="uid://yr0k3bbnjs8h" path="res://levels/bedRoom/BedRoomCertificate.gd" id="12_4secq"]
+[ext_resource type="Texture2D" uid="uid://bburs4x7mtkca" path="res://assets/tilesets/Tileset_Mother_Bedroom_Shore.png" id="13_hub06"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
 atlas = ExtResource("6_snw41")
@@ -377,7 +383,61 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_072nb"]
+atlas = ExtResource("8_7cji5")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqsaf"]
+atlas = ExtResource("8_7cji5")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2swj"]
+atlas = ExtResource("8_7cji5")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgqp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_072nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqsaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2swj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cji5"]
+size = Vector2(64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmv5n"]
+atlas = ExtResource("10_y2kh1")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2kh1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nffs2"]
+atlas = ExtResource("10_y2kh1")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq8ej"]
+size = Vector2(13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoy7g"]
+atlas = ExtResource("13_hub06")
+region = Rect2(18, 22, 22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v47u"]
+atlas = ExtResource("13_hub06")
+region = Rect2(30, 76, 10, 12)
+
 [node name="BedRoom" type="Node2D" unique_id=1708056244]
+y_sort_enabled = true
 script = ExtResource("1_goyxn")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2123379163]
@@ -396,6 +456,12 @@ tile_set = ExtResource("1_lq3hh")
 [node name="WallsAndFloor2" type="TileMapLayer" parent="." unique_id=889769391]
 z_index = 1
 tile_map_data = PackedByteArray("AAAIAAUAAAAHAAEAAAA=")
+tile_set = ExtResource("1_lq3hh")
+
+[node name="Items" type="TileMapLayer" parent="." unique_id=1072265829]
+z_index = 1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAKAAUAAwABAAAAAAAKAAYAAwABAAEAAAAIAAUAAwACAAIAAAAJAAUAAwADAAIAAAAMAAcAAwACAAEAAAAMAAUAAQAGAAQAAAAMAAYAAQAGAAUAAAA=")
 tile_set = ExtResource("1_lq3hh")
 
 [node name="Start" type="Marker2D" parent="." unique_id=232430641]
@@ -442,5 +508,80 @@ sprite_frames = SubResource("SpriteFrames_072nb")
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Shore" unique_id=1477557042]
 position = Vector2(112, 112)
 sprite_frames = SubResource("SpriteFrames_aovnq")
+
+[node name="BorderForShore" type="Node2D" parent="Shore" unique_id=489831352]
+position = Vector2(-16, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Shore/BorderForShore" unique_id=344609074]
+collision_layer = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shore/BorderForShore/StaticBody2D" unique_id=1022940304]
+polygon = PackedVector2Array(16, 16, 32, 16, 32, 32, 48, 32, 48, 48, 64, 48, 64, 64, 80, 64, 80, 80, 96, 80, 96, 96, 80, 96, 64, 96, 64, 80, 48, 80, 48, 64, 32, 64, 32, 48, 16, 48)
+
+[node name="Boat" type="Node2D" parent="." unique_id=2012453018]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(272, 240)
+script = ExtResource("8_appov")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boat" unique_id=98951973]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(32, 16)
+sprite_frames = SubResource("SpriteFrames_fgqp5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boat" unique_id=215529551]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boat/StaticBody2D" unique_id=1240057185]
+position = Vector2(32, 24)
+shape = SubResource("RectangleShape2D_7cji5")
+
+[node name="Postcard" type="Node2D" parent="." unique_id=1781693377]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(320, 224)
+script = ExtResource("10_qq8ej")
+
+[node name="Sprite2D" type="Sprite2D" parent="Postcard" unique_id=1363612140]
+position = Vector2(16, -48)
+texture = SubResource("AtlasTexture_gmv5n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Postcard" unique_id=1770550682]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Postcard/StaticBody2D" unique_id=792396637]
+position = Vector2(16, -48)
+shape = SubResource("RectangleShape2D_y2kh1")
+
+[node name="Certificate" type="Node2D" parent="." unique_id=472183661]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(384, 224)
+script = ExtResource("12_4secq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Certificate" unique_id=876319890]
+y_sort_enabled = true
+position = Vector2(16, 16)
+texture = SubResource("AtlasTexture_nffs2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Certificate" unique_id=545114809]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Certificate/StaticBody2D" unique_id=1424239594]
+position = Vector2(15.5, 8)
+shape = SubResource("RectangleShape2D_qq8ej")
+
+[node name="TiedPole" type="Node2D" parent="." unique_id=389401962]
+position = Vector2(335, 259)
+
+[node name="TiedPoleSprite" type="Sprite2D" parent="TiedPole" unique_id=220946187]
+position = Vector2(1, 0)
+texture = SubResource("AtlasTexture_qoy7g")
+
+[node name="UntiedPoleSprite" type="Sprite2D" parent="TiedPole" unique_id=990009973]
+visible = false
+position = Vector2(7, 1)
+texture = SubResource("AtlasTexture_3v47u")
 
 [connection signal="_object_used" from="Solve4" to="." method="_on_solve_4__object_used"]

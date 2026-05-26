@@ -436,6 +436,14 @@ region = Rect2(18, 22, 22, 14)
 atlas = ExtResource("13_hub06")
 region = Rect2(30, 76, 10, 12)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6stmu"]
+atlas = ExtResource("10_y2kh1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qva0"]
+atlas = ExtResource("10_y2kh1")
+region = Rect2(128, 0, 32, 32)
+
 [node name="BedRoom" type="Node2D" unique_id=1708056244]
 y_sort_enabled = true
 script = ExtResource("1_goyxn")
@@ -485,6 +493,7 @@ offset_bottom = 39.0
 text = "4"
 
 [node name="MomBedroomDrowned" type="Sprite2D" parent="." unique_id=1244473801]
+visible = false
 modulate = Color(1, 1, 1, 0.2784314)
 position = Vector2(256, 288)
 texture = ExtResource("5_0xbf0")
@@ -583,5 +592,15 @@ texture = SubResource("AtlasTexture_qoy7g")
 visible = false
 position = Vector2(7, 1)
 texture = SubResource("AtlasTexture_3v47u")
+
+[node name="Door" type="Node2D" parent="." unique_id=1271033622]
+position = Vector2(368, 176)
+
+[node name="ClosedDoorSprite" type="Sprite2D" parent="Door" unique_id=758955496]
+texture = SubResource("AtlasTexture_6stmu")
+
+[node name="OpenedDoorSprite" type="Sprite2D" parent="Door" unique_id=2008149174]
+visible = false
+texture = SubResource("AtlasTexture_6qva0")
 
 [connection signal="_object_used" from="Solve4" to="." method="_on_solve_4__object_used"]

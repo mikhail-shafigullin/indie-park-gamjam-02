@@ -7,6 +7,7 @@ extends Level
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_enters_room.connect(closeDoorFor3rdPuzzle);
+	MainEventBus.puzzle_3_solved.connect(_on_puzzle_finished)
 	pass # Replace with function body.
 
 
@@ -21,6 +22,8 @@ func closeDoorFor3rdPuzzle():
 
 
 func _on_solve_3__object_used() -> void:
-	puzzle3Button.disable();
 	MainEventBus.puzzle_3_solved.emit();
+
+func _on_puzzle_finished():
+	puzzle3Button.disable();
 	changeScene.enable()

@@ -1,3 +1,19 @@
 [REPLACE] I take a look in the menu of the camera
 # res://scenes/puzzles/bathroom/BathroomPhotocameraUI.tscn
 do PuzzleStates.startPuzzle("uid://df4n8jpmxjfi2")
+[end_timeline]
+label takePhoto
+[background arg="#ffffff77" fade="0.4" wait="true"]
+[background fade="0.4" wait="true"]
+[REPLACE] I hear that photopaper fall on the ground
+do PuzzleStates.finishPuzzle()
+[end_timeline]
+label correctPhoto
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo1.png" fade="0.5" wait="true"]
+[REPLACE] I see the normal photo
+[REPLACE] I also hear the click from the door.
+[end_timeline]
+label incorrectPhoto
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo2.png" fade="0.5" wait="true"]
+[REPLACE] I see corrupted photo
+[end_timeline]

@@ -279,6 +279,7 @@ collision_layer = 5
 shape = SubResource("RectangleShape2D_i5yoo")
 
 [node name="Photo" type="Node2D" parent="." unique_id=1912746216]
+visible = false
 position = Vector2(320, 240)
 script = ExtResource("14_eyp7q")
 

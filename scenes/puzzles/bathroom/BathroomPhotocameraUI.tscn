@@ -275,6 +275,7 @@ layout_mode = 2
 text = "photo-01.heif"
 
 [node name="photo02" type="Button" parent="Control/PhotosListMenu/ScrollContainer/VBoxContainer" unique_id=228703243]
+visible = false
 layout_mode = 2
 text = "photo-02.heif"
 

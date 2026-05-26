@@ -1,12 +1,14 @@
 extends Control
 
 const FADE_DURATION = 0.3
+const CORRECT_PASSWORD = "1234"
 
 @onready var commonMenu: Control = %CommonMenu
 @onready var passwordMenu: Control = %PasswordMenu
 @onready var photosListMenu: Control = %PhotosListMenu
 @onready var photoZoomMenu: Control = %PhotoZoomMenu
 @onready var blackRect: ColorRect = %BlackRect
+@onready var passwordInput: LineEdit = %PasswordMenu.get_node("ScrollContainer/VBoxContainer/HBoxContainer/PasswordInput")
 
 func _ready() -> void:
 	var commonVBox = %CommonMenu.get_node("ScrollContainer/VBoxContainer")
@@ -15,7 +17,7 @@ func _ready() -> void:
 	commonVBox.get_node("ExitButton").pressed.connect(onExitPressed)
 
 	var passwordVBox = %PasswordMenu.get_node("ScrollContainer/VBoxContainer")
-	passwordVBox.get_node("GalleryButton").pressed.connect(func(): fadeToMenu(photosListMenu))
+	passwordVBox.get_node("GalleryButton").pressed.connect(onPasswordEnterPressed)
 	%PasswordMenu.get_node("BackButton").pressed.connect(func(): fadeToMenu(%CommonMenu))
 
 	var photosVBox = %PhotosListMenu.get_node("ScrollContainer/VBoxContainer")
@@ -41,9 +43,18 @@ func hideAllMenus() -> void:
 	photosListMenu.visible = false
 	photoZoomMenu.visible = false
 
+func onPasswordEnterPressed() -> void:
+	if passwordInput.text == CORRECT_PASSWORD:
+		passwordInput.text = ""
+		passwordInput.placeholder_text = "password"
+		fadeToMenu(photosListMenu)
+	else:
+		passwordInput.text = ""
+		passwordInput.placeholder_text = "incorrect"
+
 func onTakeAPhotoPressed() -> void:
-	print("Photo taken")
-	PuzzleStates.finishPuzzle()
+	PuzzleStates.bathroomDollPuzzleLogic.checkPhoto();
+	Dialogic.start("BathroomPhotocameraUse", "takePhoto");
 
 func onExitPressed() -> void:
 	PuzzleStates.finishPuzzle()

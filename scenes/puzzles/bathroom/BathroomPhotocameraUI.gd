@@ -1,6 +1,49 @@
 extends Control
 
+const FADE_DURATION = 0.3
 
-# Called when the node enters the scene tree for the first time.
+@onready var commonMenu: Control = %CommonMenu
+@onready var passwordMenu: Control = %PasswordMenu
+@onready var photosListMenu: Control = %PhotosListMenu
+@onready var photoZoomMenu: Control = %PhotoZoomMenu
+@onready var blackRect: ColorRect = %BlackRect
+
 func _ready() -> void:
-	pass # Replace with function body.
+	var commonVBox = %CommonMenu.get_node("ScrollContainer/VBoxContainer")
+	commonVBox.get_node("TakeAPhotoButton").pressed.connect(onTakeAPhotoPressed)
+	commonVBox.get_node("GalleryButton").pressed.connect(func(): fadeToMenu(passwordMenu))
+	commonVBox.get_node("ExitButton").pressed.connect(onExitPressed)
+
+	var passwordVBox = %PasswordMenu.get_node("ScrollContainer/VBoxContainer")
+	passwordVBox.get_node("GalleryButton").pressed.connect(func(): fadeToMenu(photosListMenu))
+	%PasswordMenu.get_node("BackButton").pressed.connect(func(): fadeToMenu(%CommonMenu))
+
+	var photosVBox = %PhotosListMenu.get_node("ScrollContainer/VBoxContainer")
+	photosVBox.get_node("photo01").pressed.connect(func(): fadeToMenu(photoZoomMenu))
+	photosVBox.get_node("photo02").pressed.connect(func(): fadeToMenu(photoZoomMenu))
+	%PhotosListMenu.get_node("BackButton").pressed.connect(func(): fadeToMenu(%CommonMenu))
+
+	%PhotoZoomMenu.get_node("Control/BackButton").pressed.connect(func(): fadeToMenu(photosListMenu))
+
+func fadeToMenu(targetMenu: Control) -> void:
+	var tweenIn = create_tween()
+	tweenIn.tween_property(blackRect, "color:a", 1.0, FADE_DURATION)
+	tweenIn.finished.connect(func():
+		hideAllMenus()
+		targetMenu.visible = true
+		var tweenOut = create_tween()
+		tweenOut.tween_property(blackRect, "color:a", 0.0, FADE_DURATION)
+	, CONNECT_ONE_SHOT)
+
+func hideAllMenus() -> void:
+	commonMenu.visible = false
+	passwordMenu.visible = false
+	photosListMenu.visible = false
+	photoZoomMenu.visible = false
+
+func onTakeAPhotoPressed() -> void:
+	print("Photo taken")
+	PuzzleStates.finishPuzzle()
+
+func onExitPressed() -> void:
+	PuzzleStates.finishPuzzle()

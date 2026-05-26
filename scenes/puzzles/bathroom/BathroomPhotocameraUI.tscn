@@ -161,9 +161,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 14.0
-offset_top = 27.0
+offset_top = 17.0
 offset_right = -12.0
-offset_bottom = -13.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 vertical_scroll_mode = 0
@@ -194,6 +194,21 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Enter
 "
+
+[node name="BackButton" type="Button" parent="Control/PasswordMenu" unique_id=1717050116]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -41.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
 
 [node name="PhotosListMenu" type="Control" parent="Control" unique_id=1500708792]
 unique_name_in_owner = true
@@ -263,6 +278,21 @@ text = "photo-01.heif"
 layout_mode = 2
 text = "photo-02.heif"
 
+[node name="BackButton" type="Button" parent="Control/PhotosListMenu" unique_id=1344720311]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -41.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
+
 [node name="PhotoZoomMenu" type="Control" parent="Control" unique_id=467290647]
 unique_name_in_owner = true
 visible = false
@@ -292,7 +322,7 @@ texture = ExtResource("4_fed35")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="Control/PhotoZoomMenu/Control" unique_id=1129172478]
+[node name="BackButton" type="Button" parent="Control/PhotoZoomMenu/Control" unique_id=1129172478]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -306,6 +336,17 @@ offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Back"
+
+[node name="BlackRect" type="ColorRect" parent="Control" unique_id=993412087]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1708595979]
 layout_mode = 1

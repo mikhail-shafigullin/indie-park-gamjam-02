@@ -7,6 +7,7 @@ var bathroomLevel: Level;
 var bedroomLevel: Level;
 var darkRoomLevel: Level;
 var bedRoomSecondPart: Level;
+var bedRoomMomPerspective: Level;
 
 var currentLevel: Level;
 
@@ -20,6 +21,7 @@ func _ready() -> void:
 	bedroomLevel = load("uid://bd1q8hoffopye").instantiate();
 	darkRoomLevel = load("uid://b5m2kqanwq7st").instantiate();
 	bedRoomSecondPart = load("uid://b80gc8qdssvq0").instantiate();
+	bedRoomMomPerspective = load("uid://ccr5ynw2aoygw").instantiate();
 	
 
 	allLevels[0] = debugLevel;
@@ -28,4 +30,6 @@ func _ready() -> void:
 	allLevels[3] = bathroomLevel;
 	allLevels[4] = bedroomLevel;
 	allLevels[5] = darkRoomLevel;
+	allLevels[6] = bedRoomSecondPart;
+	allLevels[7] = bedRoomMomPerspective;
 	pass;

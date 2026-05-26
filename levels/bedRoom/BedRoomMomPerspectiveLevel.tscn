@@ -1,0 +1,79 @@
+[gd_scene format=4 uid="uid://ccr5ynw2aoygw"]
+
+[ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_hb4bc"]
+[ext_resource type="Script" uid="uid://dnuyjjo7qbdsf" path="res://levels/bedRoom/BedRoomMomPerspectiveLevel.gd" id="1_krbuc"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_j2os8"]
+[ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="3_krbuc"]
+[ext_resource type="Texture2D" uid="uid://bew2mfk672gkf" path="res://assets/images/Mom_Bedroom_Drowned.png" id="4_1gmys"]
+[ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="5_j2os8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krbuc"]
+atlas = ExtResource("5_j2os8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gmys"]
+atlas = ExtResource("5_j2os8")
+region = Rect2(128, 0, 32, 32)
+
+[node name="BedRoomMomPerspectiveLevel" type="Node2D" unique_id=667428233]
+script = ExtResource("1_krbuc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=859971892]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.114526816, 0.07526993, 0.0953889, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="WallsBorder" type="TileMapLayer" parent="." unique_id=616045499]
+tile_map_data = PackedByteArray("AAAIAAUAAAAEAAYAAAAJAAUAAAAEAAYAAAAKAAUAAAAEAAYAAAALAAUAAAAEAAYAAAAMAAUAAAAEAAYAAAANAAUAAAAIAAIAAAAJAAYAAAAEAAYAAAAKAAYAAAAEAAYAAAALAAYAAAAEAAYAAAAMAAYAAAAEAAYAAAANAAYAAAAIAAIAAAAJAAcAAAAEAAYAAAAKAAcAAAAEAAYAAAALAAcAAAAEAAYAAAAMAAcAAAAEAAYAAAANAAcAAAAIAAIAAAAMAAgAAAAEAAYAAAANAAgAAAAIAAIAAAAMAAkAAAAHAAMAAAANAAkAAAAIAAMAAAAHAAUAAAAGAAIAAAAHAAQAAAAGAAAAAAAIAAQAAAAHAAAAAAAJAAQAAAAHAAAAAAAKAAQAAAAHAAAAAAALAAQAAAAHAAAAAAAMAAQAAAAHAAAAAAANAAQAAAAIAAAAAAALAAkAAAAHAAMAAAAHAAYAAAAGAAIAAAAKAAkAAAAHAAMAAAAIAAYAAAAEAAYAAAAIAAcAAAAEAAYAAAAHAAcAAAAGAAIAAAAJAAgAAAAEAAYAAAAIAAgAAAAEAAYAAAAHAAgAAAAGAAIAAAAJAAkAAAAHAAMAAAAKAAgAAAAEAAYAAAALAAgAAAAEAAYAAAAIAAkAAAAHAAMAAAAHAAkAAAAGAAMAAAA=")
+tile_set = ExtResource("1_hb4bc")
+
+[node name="WallsAndFloor" type="TileMapLayer" parent="." unique_id=71006988]
+tile_map_data = PackedByteArray("AAAKAAYAAAAHAAIAAAALAAYAAAAHAAIAAAAMAAYAAAAHAAIAAAALAAcAAAAHAAIAAAAMAAcAAAAHAAIAAAAMAAgAAAAHAAIAAAAIAAUAAAAHAAEAAAAJAAUAAAAHAAEAAAAKAAUAAAAHAAEAAAALAAUAAAAHAAEAAAAMAAUAAAAHAAEAAAAIAAYAAAAHAAIAAAAJAAYAAAAHAAIAAAAJAAcAAAAHAAIAAAAIAAcAAAAHAAIAAAAKAAcAAAAHAAIAAAALAAgAAAAHAAIAAAAKAAgAAAAHAAIAAAAJAAgAAAAHAAIAAAAIAAgAAAAHAAIAAAA=")
+tile_set = ExtResource("1_hb4bc")
+
+[node name="WallsAndFloor2" type="TileMapLayer" parent="." unique_id=411129188]
+tile_map_data = PackedByteArray("AAAJAAYAAwACAAMAAAAJAAcAAwACAAQAAAAJAAgAAwACAAUAAAAKAAYAAwADAAMAAAAKAAcAAwADAAQAAAAKAAgAAwADAAUAAAALAAYAAwAEAAMAAAALAAcAAwAEAAQAAAALAAgAAwAEAAUAAAAIAAYAAwAAAAUAAAAIAAcAAwAAAAYAAAA=")
+tile_set = ExtResource("1_hb4bc")
+
+[node name="Items" type="TileMapLayer" parent="." unique_id=992178670]
+z_index = 1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAKAAUAAwABAAAAAAAKAAYAAwABAAEAAAAJAAUAAwACAAAAAAAMAAUAAQAGAAQAAAAMAAYAAQAGAAUAAAAIAAcAAwAAAAIAAAAIAAgAAwAAAAMAAAAJAAcAAwABAAIAAAAJAAgAAwABAAMAAAAIAAUAAwAAAAAAAAAMAAcAAwAAAAEAAAA=")
+tile_set = ExtResource("1_hb4bc")
+
+[node name="Start" type="Marker2D" parent="." unique_id=1787243983]
+unique_name_in_owner = true
+position = Vector2(288, 224)
+
+[node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("2_j2os8")]
+unique_name_in_owner = true
+position = Vector2(352, 176)
+levelId = 1
+markerName = "FromBedRoom"
+
+[node name="Solve4" parent="." unique_id=442146003 instance=ExtResource("3_krbuc")]
+unique_name_in_owner = true
+position = Vector2(400, 272)
+
+[node name="Label" type="Label" parent="Solve4" unique_id=214859205]
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "4"
+
+[node name="MomBedroomDrowned" type="Sprite2D" parent="." unique_id=1171718218]
+visible = false
+modulate = Color(1, 1, 1, 0.2784314)
+position = Vector2(256, 288)
+texture = ExtResource("4_1gmys")
+
+[node name="Door" type="Node2D" parent="." unique_id=193847729]
+position = Vector2(368, 176)
+
+[node name="ClosedDoorSprite" type="Sprite2D" parent="Door" unique_id=1581944732]
+texture = SubResource("AtlasTexture_krbuc")
+
+[node name="OpenedDoorSprite" type="Sprite2D" parent="Door" unique_id=1857096938]
+visible = false
+texture = SubResource("AtlasTexture_1gmys")

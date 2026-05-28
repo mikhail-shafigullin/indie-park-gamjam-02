@@ -1,0 +1,6 @@
+label CertificateTake
+[REPLACE] I took a certificate from the stand
+[end_timeline]
+label DrawingTake
+[REPLACE] I took a paper with my drawings from the stand
+[end_timeline]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d1m0mm3t6hey2"]
+
+[ext_resource type="Script" uid="uid://besptpq6gfygj" path="res://scenes/dialogues/DialogicFinalDoorBackground.gd" id="1_6d00b"]
+
+[node name="DialogicFinalDoorBackground" type="Control" unique_id=72538032]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6d00b")

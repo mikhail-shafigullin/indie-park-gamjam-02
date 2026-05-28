@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bb45366e151s7" path="res://levels/bedRoom/BedRoomSecondPart.gd" id="1_e80hd"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_uo17m"]
-[ext_resource type="Script" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
+[ext_resource type="Script" uid="uid://c3qxvsq1ajtku" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="5_4nab5"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="6_4nab5"]
+[ext_resource type="Script" uid="uid://cehcuumdjijsr" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
 atlas = ExtResource("5_4nab5")
@@ -154,6 +155,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrdpx"]
 size = Vector2(55, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uo17m"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nab5"]
 size = Vector2(32, 480)
 
@@ -244,6 +247,17 @@ collision_layer = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedSprite/StaticBody2D" unique_id=1011773913]
 position = Vector2(0.5, 5)
 shape = SubResource("RectangleShape2D_nrdpx")
+
+[node name="Manhole" type="Node2D" parent="." unique_id=634374890]
+position = Vector2(256, 256)
+script = ExtResource("6_hf2yo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Manhole" unique_id=481564190]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manhole/StaticBody2D" unique_id=2004589092]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_uo17m")
 
 [node name="BoundaryLeft" type="Area2D" parent="." unique_id=1780500900]
 position = Vector2(0, 240)

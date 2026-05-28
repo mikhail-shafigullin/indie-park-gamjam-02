@@ -5,6 +5,7 @@ extends Usable
 func _ready() -> void:
 	pass # Replace with function body.
 
+
 func useObject():
-	Dialogic.start("BedroomItemsUse", "CertificateTake")
+	LevelContainer.bedRoomMomPerspective.sendPlayerToMarker("Start");
 	pass;

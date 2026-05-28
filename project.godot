@@ -37,6 +37,7 @@ directories/dtl_directory={
 "BathroomPhotocameraUse": "res://dialogues/timelines/bathroom/BathroomPhotocameraUse.dtl",
 "BathroomToiletUse": "res://dialogues/timelines/bathroom/BathroomToiletUse.dtl",
 "BathroomWardrobeOpened": "res://dialogues/timelines/bathroom/BathroomWardrobeOpened.dtl",
+"BedroomItemsUse": "res://dialogues/timelines/bedroom/BedroomItemsUse.dtl",
 "DefaultMessages": "res://dialogues/timelines/DefaultMessages.dtl",
 "MCRoomCartridge1Examine": "res://dialogues/timelines/mcRoom/MCRoomCartridge1Examine.dtl",
 "MCRoomCartridgeOnFloor": "res://dialogues/timelines/mcRoom/MCRoomCartridgeOnFloor.dtl",

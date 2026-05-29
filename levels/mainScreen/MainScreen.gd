@@ -1,3 +1,4 @@
+class_name MainScreen
 extends Node2D
 
 @export_enum("Debug", "MainRoom", "McRoom", "Bathroom", "Bedroom") var levelId: int;
@@ -9,6 +10,7 @@ extends Node2D
 var currentLocation: Node2D;
 
 func _ready() -> void:
+	Global.main_screen = self;
 	var starterLevel: Level = LevelContainer.allLevels[levelId];
 	setLocation(starterLevel);
 	MainEventBus.send_player_to_marker.emit(starterLevel.getMarker("Start"))

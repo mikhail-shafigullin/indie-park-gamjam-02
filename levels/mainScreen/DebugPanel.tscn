@@ -85,6 +85,12 @@ layout_mode = 2
 focus_mode = 0
 text = "To Bed Room 3"
 
+[node name="EndTheGame" type="Button" parent="Control/HBoxContainer" unique_id=732847963]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "end the game"
+
 [connection signal="pressed" from="Control/HBoxContainer/ToDebugLevel" to="." method="_on_to_debug_level_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMainHall" to="." method="_on_to_main_hall_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToMCRoom" to="." method="_on_to_mc_room_pressed"]
@@ -93,3 +99,4 @@ text = "To Bed Room 3"
 [connection signal="pressed" from="Control/HBoxContainer/ToDarkRoom" to="." method="_on_to_dark_room_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBedRoomSecondPart" to="." method="_on_to_bed_room_second_part_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/ToBedRoomMomPerspective" to="." method="_on_to_bed_room_mom_perspective_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/EndTheGame" to="." method="_on_end_the_game_pressed"]

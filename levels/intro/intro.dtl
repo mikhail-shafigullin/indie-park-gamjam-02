@@ -1,1 +1,2 @@
 this is a test.
+do Global.intro_screen.start_the_game()

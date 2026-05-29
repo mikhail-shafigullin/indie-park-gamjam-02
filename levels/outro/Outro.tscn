@@ -1,3 +1,606 @@
 [gd_scene format=3 uid="uid://7reuemj3eauw"]
 
+[ext_resource type="Texture2D" uid="uid://cq6wbo8vrxdht" path="res://assets/cgs/CG_Puzzle4_Door.png" id="1_0webp"]
+[ext_resource type="Texture2D" uid="uid://k4booyp0bnlf" path="res://assets/cgs/CG_Puzzle4_ActualDoor.png" id="2_3kwhx"]
+[ext_resource type="Texture2D" uid="uid://yedwa0yc6xh7" path="res://assets/cgs/CG_Puzzle4_Mechanism1.png" id="2_7mpm2"]
+[ext_resource type="Texture2D" uid="uid://ut7r36ri2sgr" path="res://assets/cgs/CG_Puzzle4_Mechanism2.png" id="3_3kwhx"]
+[ext_resource type="Texture2D" uid="uid://ck8bf05pu577j" path="res://assets/cgs/CG_Puzzle4_Mechanism3.png" id="4_kmnrf"]
+[ext_resource type="Texture2D" uid="uid://q4bwkh2ft6oy" path="res://assets/cgs/CG_Puzzle4_Mechanism4.png" id="5_ppuo5"]
+[ext_resource type="Texture2D" uid="uid://b8lc23ykp8rw1" path="res://assets/cgs/CG_Puzzle4_Mechanism5.png" id="6_6upad"]
+[ext_resource type="Texture2D" uid="uid://wdjcr4hy8mm6" path="res://assets/cgs/CG_Puzzle4_Scales1.png" id="7_lbylr"]
+[ext_resource type="Texture2D" uid="uid://djetmpea5i31c" path="res://assets/cgs/CG_Puzzle4_Scales2.png" id="8_w2tki"]
+[ext_resource type="Texture2D" uid="uid://cgaff5beppeyf" path="res://assets/cgs/CG_Puzzle4_Scales3_Back.png" id="9_twstf"]
+[ext_resource type="Texture2D" uid="uid://dmhxiag8xr3sm" path="res://assets/cgs/CG_Puzzle4_Scales3_Drawing.png" id="10_u2b5p"]
+[ext_resource type="Texture2D" uid="uid://cyb36iqt8q7a3" path="res://assets/cgs/CG_Puzzle4_Scales3_Front.png" id="11_0iaxc"]
+[ext_resource type="Texture2D" uid="uid://dff1b7jwu62yy" path="res://assets/cgs/CG_Puzzle4_Scales4_Back.png" id="12_37bdo"]
+[ext_resource type="Texture2D" uid="uid://caadbnqgcch" path="res://assets/cgs/CG_Puzzle4_Scales4_Certificate.png" id="13_r4eau"]
+[ext_resource type="Texture2D" uid="uid://ikuq8ovb550a" path="res://assets/cgs/CG_Puzzle4_Scales4_Front.png" id="14_nm52w"]
+
+[sub_resource type="Animation" id="Animation_hbad1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MetalGears/CgPuzzle4Mechanism2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MetalGears/CgPuzzle4Mechanism3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MetalGears/CgPuzzle4Mechanism4:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scale/ScaleHands:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scale/ScaleHands:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scale/ScaleHands/CupR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scale/ScaleHands/CupR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(71, 5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scale/ScaleHands/CupL:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-73, 6)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scale/ScaleHands/CupL:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MetalGears/CgPuzzle4Mechanism2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(293, 179)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MetalGears/CgPuzzle4Mechanism3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(305, 249)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MetalGears/CgPuzzle4Mechanism4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(363, 289)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scale/CgPuzzle4Scales1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Scale/CgPuzzle4Scales1:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Scale:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MetalGears:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Door:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Door:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0er1q"]
+resource_name = "brake"
+length = 12.012541
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MetalGears/CgPuzzle4Mechanism2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.0333333, 12),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, -75.39822368615503]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MetalGears/CgPuzzle4Mechanism3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(4.0333333, 12),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, 45.23893421169302]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MetalGears/CgPuzzle4Mechanism4:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(4.0333333, 12),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, -75.39822368615503]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scale/ScaleHands:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.6666666, 1.9333333, 2.2333333, 3.0333335, 4.6, 4.733333, 5.0666666, 5.566667, 6.0916667, 6.3, 6.766667, 6.866667, 7.033334, 7.166667, 7.266667, 7.3666673, 7.433334, 7.5000005, 7.575, 7.6333337, 7.7000003, 7.766667, 7.9000006, 8, 8.166667, 8.366667, 8.5, 8.666667, 8.766666, 9.033334, 9.366667, 10.000001, 12.033334),
+"transitions": PackedFloat32Array(1, 3.8637466, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.684169066781777, -0.59491897, -0.6709698, -0.6604862, -0.6604862, -0.6478693, -0.6604862, -0.6478693, -0.6604862, -0.6457718232379019, -0.6604862, -0.63215953, -0.6874063, -0.6417541, -0.70825267, -0.6593594, -0.7194776, -0.6507063, -0.6478693, -0.69145274, -0.6139064, -0.6963501, -0.63412774, -0.6604862, -0.7123555, -0.6457718232379019, -0.6808248, -0.54413235, -0.6604862, -0.7793381, -1.2733989, -1.5345066, -0.72741777]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scale/ScaleHands:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.633333, 8.533334, 8.733334, 9.033334, 9.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(-4, -8), Vector2(-12, 19), Vector2(-61.17, 513.57)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scale/ScaleHands/CupR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2, 2.3666668, 3.8000002, 4.7000003, 5.4, 5.8, 5.9333334, 6.4666667, 6.6, 6.6666665, 7.466667, 8.733334, 9.033334, 9.233334, 9.466666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.47266454, 0.50817263, 0.58507514, 0.49015495, 0.49157682, 0.45705616, 0.5126864, 0.44755843, 0.4875547, 0.46259168, 0.53023326, 0.6283598, 0.30520356, -0.24475747, -1.5598791]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scale/ScaleHands/CupR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5.5666666, 6.5666666, 7.5333333, 7.8752017, 8.133333, 8.366667, 8.633333, 8.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(71, 5), Vector2(71, 5), Vector2(72, 6), Vector2(73, 4), Vector2(72, 6), Vector2(73, 4), Vector2(72, 6), Vector2(73, 4), Vector2(72, 6)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scale/ScaleHands/CupL:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 5, 5.2, 5.4, 5.6, 5.8333335, 6.0333333, 6.266667, 6.4666667, 6.666667, 6.866667, 7.066667, 7.266667, 7.4666667, 7.65, 7.8500004, 8.05, 8.166667, 8.366667, 8.55, 8.733334, 8.75, 9.066667, 9.633334, 10.333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-73, 6), Vector2(-73, 6), Vector2(-72.70687, 5.622029), Vector2(-73, 6), Vector2(-72.70687, 5.622029), Vector2(-73, 6), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-72.70687, 5.622029), Vector2(-74, 7), Vector2(-72.70687, 5.622029), Vector2(-72.4414, 2.0587232), Vector2(-74, 7), Vector2(-80.44745, 22.74221), Vector2(-93.04628, 45.906303), Vector2(-124.33091, 41.010017)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scale/ScaleHands/CupL:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.2333333, 3.0000002, 3.6000001, 5.5333333, 6.733333, 7.766667, 8.6, 9.500001, 11.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.58328366, 0.7033709, 0.58826995, 0.6876597252857655, 0.7330382858376184, 0.5920115, 0.65293366, -0.6222565, 0.64601654]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MetalGears/CgPuzzle4Mechanism2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 8.433333, 8.666667, 8.900001, 9.133333, 9.3, 9.733334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(293, 179), Vector2(293, 179), Vector2(274, 162), Vector2(237.00002, 176.00002), Vector2(215.00003, 268), Vector2(189.00002, 361), Vector2(188.99997, 621.00006)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MetalGears/CgPuzzle4Mechanism3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 8, 8.5, 9.066667, 9.533334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(305, 249), Vector2(305, 249), Vector2(291, 244.00002), Vector2(276, 337), Vector2(258, 561)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MetalGears/CgPuzzle4Mechanism4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 8, 9.566668, 9.966666),
+"transitions": PackedFloat32Array(1, 1, 1, 0.6372803),
+"update": 0,
+"values": [Vector2(363, 289), Vector2(363, 289), Vector2(356.99997, 290), Vector2(336, 529)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scale/CgPuzzle4Scales1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 8.466666, 8.566667, 8.7, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 2, 1.3195077),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(11, -1), Vector2(0, 0), Vector2(47, 463)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Scale/CgPuzzle4Scales1:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(8.8),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Scale:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MetalGears:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cxeh7"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_kmnrf"]
+resource_name = "open_door"
+length = 4.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scale:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MetalGears:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(25, -3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.855, 1.041)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3uv2"]
+_data = {
+&"RESET": SubResource("Animation_hbad1"),
+&"brake": SubResource("Animation_0er1q"),
+&"idle": SubResource("Animation_cxeh7"),
+&"open_door": SubResource("Animation_kmnrf")
+}
+
 [node name="Outro" type="Node2D" unique_id=758413269]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1987748004]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="BG" type="ColorRect" parent="CanvasLayer" unique_id=1023884759]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.855, 1.041)
+
+[node name="CgPuzzle4Door" type="Sprite2D" parent="." unique_id=731636611]
+texture = ExtResource("1_0webp")
+centered = false
+
+[node name="Door" type="Node2D" parent="." unique_id=1493670916]
+
+[node name="CgPuzzle4ActualDoor" type="Sprite2D" parent="Door" unique_id=1632217383]
+texture = ExtResource("2_3kwhx")
+centered = false
+
+[node name="CgPuzzle4Mechanism1" type="Sprite2D" parent="Door" unique_id=497899750]
+texture = ExtResource("2_7mpm2")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="CgPuzzle4Mechanism5" type="Sprite2D" parent="Door" unique_id=509682427]
+z_index = 1
+texture = ExtResource("6_6upad")
+centered = false
+
+[node name="MetalGears" type="Node2D" parent="." unique_id=660238316]
+
+[node name="CgPuzzle4Mechanism2" type="Sprite2D" parent="MetalGears" unique_id=308483204]
+position = Vector2(293, 179)
+texture = ExtResource("3_3kwhx")
+centered = false
+offset = Vector2(-293, -179)
+
+[node name="CgPuzzle4Mechanism3" type="Sprite2D" parent="MetalGears" unique_id=1120425322]
+position = Vector2(305, 249)
+texture = ExtResource("4_kmnrf")
+centered = false
+offset = Vector2(-305, -249)
+
+[node name="CgPuzzle4Mechanism4" type="Sprite2D" parent="MetalGears" unique_id=387596719]
+position = Vector2(363, 289)
+texture = ExtResource("5_ppuo5")
+centered = false
+offset = Vector2(-363, -289)
+
+[node name="Scale" type="Node2D" parent="." unique_id=1916106814]
+position = Vector2(321, 156)
+
+[node name="CgPuzzle4Scales1" type="Sprite2D" parent="Scale" unique_id=1900070798]
+texture = ExtResource("7_lbylr")
+centered = false
+offset = Vector2(-321, -158)
+
+[node name="ScaleHands" type="Node2D" parent="Scale" unique_id=252193439]
+
+[node name="CgPuzzle4Scales2" type="Sprite2D" parent="Scale/ScaleHands" unique_id=1544032526]
+position = Vector2(-321, -156)
+texture = ExtResource("8_w2tki")
+centered = false
+
+[node name="CupR" type="Node2D" parent="Scale/ScaleHands" unique_id=707040148]
+position = Vector2(71, 5)
+
+[node name="CgPuzzle4Scales3Back" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=498187238]
+position = Vector2(-392, -161)
+texture = ExtResource("9_twstf")
+centered = false
+
+[node name="CgPuzzle4Scales3Drawing" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=960204653]
+unique_name_in_owner = true
+position = Vector2(-392, -161)
+texture = ExtResource("10_u2b5p")
+centered = false
+
+[node name="CgPuzzle4Scales3Front" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=1419160224]
+position = Vector2(-392, -161)
+texture = ExtResource("11_0iaxc")
+centered = false
+
+[node name="CupL" type="Node2D" parent="Scale/ScaleHands" unique_id=1761769447]
+position = Vector2(-73, 6)
+
+[node name="CgPuzzle4Scales4Back" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=377674177]
+position = Vector2(-248, -162)
+texture = ExtResource("12_37bdo")
+centered = false
+
+[node name="CgPuzzle4Scales4Certificate" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=1141599235]
+unique_name_in_owner = true
+position = Vector2(-248, -162)
+texture = ExtResource("13_r4eau")
+centered = false
+
+[node name="CgPuzzle4Scales4Front" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=1234454132]
+position = Vector2(-248, -162)
+texture = ExtResource("14_nm52w")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1590559931]
+libraries/ = SubResource("AnimationLibrary_f3uv2")
+autoplay = &"brake"

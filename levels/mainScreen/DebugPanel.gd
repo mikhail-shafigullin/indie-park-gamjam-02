@@ -43,3 +43,7 @@ func _on_to_bed_room_second_part_pressed() -> void:
 func _on_to_bed_room_mom_perspective_pressed() -> void:
 	LevelContainer.bedRoomMomPerspective.sendPlayerToMarker("Start")
 	pass # Replace with function body.
+
+
+func _on_end_the_game_pressed() -> void:
+	Global.end_the_game()

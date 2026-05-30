@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://12aj63se3ohe" path="res://levels/mainHall/TriggerOnGrabable.tscn" id="11_0ykuf"]
 [ext_resource type="Script" uid="uid://belj4ndnrvq0n" path="res://levels/mainHall/Puzzle1Logic.gd" id="12_4th8c"]
 [ext_resource type="Shader" uid="uid://buud482qgs4p6" path="res://src/shaders/pixleateLight.gdshader" id="13_xjkph"]
+[ext_resource type="PackedScene" uid="uid://cu3d2l4i2b6l4" path="res://levels/mainHall/Mirror.tscn" id="14_sa234"]
 [ext_resource type="PackedScene" uid="uid://b0frjmj536fr2" path="res://scenes/usableObjects/Door.tscn" id="16_a6vpp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sa234"]
@@ -57,7 +58,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -109,6 +110,9 @@ _data = {
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
 script = ExtResource("1_l4nmg")
+
+[node name="Mirror" parent="." unique_id=1546064495 instance=ExtResource("14_sa234")]
+position = Vector2(208, 117)
 
 [node name="Lights" type="Node2D" parent="." unique_id=1636600307]
 visible = false
@@ -376,6 +380,7 @@ autoplay = &"fade_in"
 unique_name_in_owner = true
 
 [node name="fade" type="ColorRect" parent="FadeLayer" unique_id=1906631832]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

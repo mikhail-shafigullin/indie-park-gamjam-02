@@ -1,0 +1,4 @@
+mirror
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_MomRoom.png" fade="0.5"]
+[wait time="1.0" skippable="true"]
+Ann: -_-

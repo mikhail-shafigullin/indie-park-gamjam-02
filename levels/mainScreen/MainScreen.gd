@@ -18,6 +18,7 @@ func _ready() -> void:
 	MainEventBus.puzzle_layer_exit.connect(turnOffImageLayer)
 	MainEventBus.level_change.connect(setLocationWithFade);
 
+
 func setLocationWithFade(location: Level):
 	fadeInFadeOut(func(): setLocation(location));
 

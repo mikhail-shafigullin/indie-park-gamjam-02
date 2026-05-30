@@ -37,3 +37,6 @@ signal inventory_add_item(item: InventoryItem);
 signal inventory_remove_item(item: InventoryItem);
 signal inventory_item_used(item: InventoryItem);
 signal inventory_item_examined(item: InventoryItem);
+
+#screens
+signal request_rpg();

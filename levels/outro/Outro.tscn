@@ -237,7 +237,7 @@ tracks/17/keys = {
 
 [sub_resource type="Animation" id="Animation_0er1q"]
 resource_name = "brake"
-length = 12.012541
+length = 12.366667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -429,6 +429,20 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationPlayer")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(11.966666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"open_door", -1, 1.0, false],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_cxeh7"]

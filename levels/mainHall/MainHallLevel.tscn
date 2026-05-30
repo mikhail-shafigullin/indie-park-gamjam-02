@@ -45,6 +45,67 @@ load_path = "res://.godot/imported/Tileset_Bathroom.png-c2faf56b8b5b4c0d4e5c2afc
 atlas = SubResource("CompressedTexture2D_8u7bu")
 region = Rect2(128, 192, 32, 32)
 
+[sub_resource type="Animation" id="Animation_xjkph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer/fade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer/fade:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sa234"]
+resource_name = "fade_in"
+length = 4.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer/fade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer/fade:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.56666666, 4),
+"transitions": PackedFloat32Array(1.2311441, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8u7bu"]
+_data = {
+&"RESET": SubResource("Animation_xjkph"),
+&"fade_in": SubResource("Animation_sa234")
+}
+
 [node name="MainHallLevel" type="Node2D" unique_id=914091687]
 y_sort_enabled = true
 script = ExtResource("1_l4nmg")
@@ -305,6 +366,22 @@ texture = SubResource("AtlasTexture_4p6ln")
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1628009499]
 visible = false
 color = Color(0.9960825, 0.8903244, 0.8668222, 1)
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=455755627]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_8u7bu")
+autoplay = &"fade_in"
+
+[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=2100702992]
+unique_name_in_owner = true
+
+[node name="fade" type="ColorRect" parent="FadeLayer" unique_id=1906631832]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="_object_used" from="Solve11" to="." method="_on_solve_11__object_used"]
 [connection signal="_object_used" from="Solve12" to="." method="_on_solve_12__object_used"]

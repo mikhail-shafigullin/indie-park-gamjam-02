@@ -230,3 +230,16 @@ func changeSpriteOnBoatState():
 		boatSprite.visible = false;
 	else:
 		boatSprite.visible = true;
+
+func kill() -> void:
+	set_process(false)
+	controlsEnabled = false
+	sprite.play("wakeup", 0)
+
+func wakeup() -> void:
+	MainEventBus.request_rpg.emit()
+	set_process(false)
+	controlsEnabled = false
+	sprite.play("wakeup")
+	await sprite.animation_finished
+	set_process(true)

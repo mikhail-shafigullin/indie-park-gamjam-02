@@ -11,3 +11,6 @@ func _ready() -> void:
 func start_the_game() -> void:
 	get_parent().add_child(game_res.instantiate())
 	queue_free()
+
+func sleep() -> void:
+	%Anim.play("sleep")

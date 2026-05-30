@@ -1,0 +1,5 @@
+do Global.player.kill()
+clear the scree!
+[wait time="0.5" skippable="true"]
+do Global.player.wakeup()
+testing 1 2 3

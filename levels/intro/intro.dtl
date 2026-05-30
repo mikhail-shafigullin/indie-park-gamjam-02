@@ -1,2 +1,4 @@
 this is a test.
+do Global.intro_screen.sleep()
+test test
 do Global.intro_screen.start_the_game()

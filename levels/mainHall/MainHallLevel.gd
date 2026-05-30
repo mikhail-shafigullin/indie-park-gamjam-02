@@ -13,12 +13,16 @@ extends Level
 @onready var blueDoor: ApartmentDoor = %BlueDoor
 @onready var redDoor: ApartmentDoor = %RedDoor
 
+@onready var anim: AnimationPlayer = %Anim
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_enters_room.connect(giveAccessToPuzzles);
 	MainEventBus.puzzle_1_1_solved.connect(openMcRoom);
 	MainEventBus.puzzle_1_2_solved.connect(openBathroom);
 	MainEventBus.puzzle_1_3_solved.connect(openBedroom)
+	MainEventBus.request_rpg.connect(clear_black);
+	play_intro()
 	pass;
 
 func giveAccessToPuzzles():
@@ -30,6 +34,9 @@ func giveAccessToPuzzles():
 	if(PuzzleStates.puzzle4Solved):
 		changeSceneToBedRoom.disable();
 		changeSceneToDebugRoom.enable();
+
+func play_intro():
+	Dialogic.start("MainHallWakeUp")
 		
 func openMcRoom():
 	Dialogic.start('MainHallPuzzleSolved');
@@ -57,3 +64,7 @@ func _on_solve_12__object_used() -> void:
 
 func _on_solve_13__object_used() -> void:
 	MainEventBus.puzzle_1_3_solved.emit();
+	
+	
+func clear_black() -> void:
+	%FadeLayer.visible = false

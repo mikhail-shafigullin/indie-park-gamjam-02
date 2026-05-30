@@ -1,6 +1,7 @@
 label mirrorUseWithNewspaperClip
 I look into the mirror in the bathroom.
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_Bathroom.png" fade="1.0" wait="true"]
+[wait_input]
 Despite everything, it's still you.
 ...
 Near the sink, I find a newspaper clipping.

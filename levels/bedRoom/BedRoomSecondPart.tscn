@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bb45366e151s7" path="res://levels/bedRoom/BedRoomSecondPart.gd" id="1_e80hd"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_uo17m"]
-[ext_resource type="Script" uid="uid://c3qxvsq1ajtku" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
+[ext_resource type="Script" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="5_4nab5"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="6_4nab5"]
-[ext_resource type="Script" uid="uid://cehcuumdjijsr" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
+[ext_resource type="Script" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
 atlas = ExtResource("5_4nab5")
@@ -260,6 +260,7 @@ position = Vector2(16, 16)
 shape = SubResource("RectangleShape2D_uo17m")
 
 [node name="BoundaryLeft" type="Area2D" parent="." unique_id=1780500900]
+visible = false
 position = Vector2(0, 240)
 collision_layer = 0
 collision_mask = 17
@@ -268,6 +269,7 @@ collision_mask = 17
 shape = SubResource("RectangleShape2D_4nab5")
 
 [node name="BoundaryRight" type="Area2D" parent="." unique_id=1463335278]
+visible = false
 position = Vector2(640, 240)
 collision_layer = 0
 collision_mask = 17
@@ -276,6 +278,7 @@ collision_mask = 17
 shape = SubResource("RectangleShape2D_hf2yo")
 
 [node name="BoundaryUp" type="Area2D" parent="." unique_id=2117894934]
+visible = false
 position = Vector2(320, 0)
 collision_layer = 0
 collision_mask = 17
@@ -284,9 +287,15 @@ collision_mask = 17
 shape = SubResource("RectangleShape2D_xoqqj")
 
 [node name="BoundaryDown" type="Area2D" parent="." unique_id=411668687]
+visible = false
 position = Vector2(320, 480)
 collision_layer = 0
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryDown" unique_id=262689620]
 shape = SubResource("RectangleShape2D_c4x0u")
+
+[connection signal="body_entered" from="BoundaryLeft" to="." method="_on_boundary_left_body_entered"]
+[connection signal="body_entered" from="BoundaryRight" to="." method="_on_boundary_right_body_entered"]
+[connection signal="body_entered" from="BoundaryUp" to="." method="_on_boundary_up_body_entered"]
+[connection signal="body_entered" from="BoundaryDown" to="." method="_on_boundary_down_body_entered"]

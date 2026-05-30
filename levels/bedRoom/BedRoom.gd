@@ -12,17 +12,6 @@ func closeDoorFor4thPuzzle() -> void:
 		changeScene.disable()
 
 func onStepCorrect() -> void:
-	isRespawning = false
-	LevelContainer.darkRoomLevel.sendPlayerToMarker("Start")
-
-func onFirstMistake() -> void:
-	sendPlayerToMarker("Start")
-
-func onSecondMistake() -> void:
-	sendPlayerToMarker("Start")
-
-func onPuzzleSolved() -> void:
-	isRespawning = false
 	LevelContainer.darkRoomLevel.sendPlayerToMarker("Start")
 
 func _on_solve_4__object_used() -> void:

@@ -4,8 +4,7 @@ extends Resource
 enum Direction { LEFT, RIGHT, DOWN, UP }
 
 signal stepCorrect
-signal firstMistake
-signal secondMistake
+signal onMistake
 signal puzzleSolved
 
 var correctSequence: Array[Direction] = [
@@ -15,28 +14,23 @@ var correctSequence: Array[Direction] = [
 	Direction.UP
 ]
 
-var currentStep: int = 0
-var errorCount: int = 0
+var fullSequence: Array[Direction] = []
 
 func tryDirection(dir: Direction) -> void:
-	if currentStep >= correctSequence.size():
+	fullSequence.append(dir)
+	print("currentSquence", fullSequence);
+	var step := fullSequence.size() - 1
+	if step >= correctSequence.size() or dir != correctSequence[step]:
+		print("Mistake:", correctSequence, fullSequence)
+		onMistake.emit()
+		reset()
 		return
-	if dir == correctSequence[currentStep]:
-		currentStep += 1
-		if currentStep >= correctSequence.size():
-			puzzleSolved.emit()
-			reset()
-		else:
-			stepCorrect.emit()
+	if fullSequence == correctSequence:
+		puzzleSolved.emit()
+		reset()
 	else:
-		currentStep = 0
-		errorCount += 1
-		if errorCount >= 2:
-			secondMistake.emit()
-			reset()
-		else:
-			firstMistake.emit()
+		print("Correct:", correctSequence, fullSequence)
+		stepCorrect.emit()
 
 func reset() -> void:
-	currentStep = 0
-	errorCount = 0
+	fullSequence.clear()

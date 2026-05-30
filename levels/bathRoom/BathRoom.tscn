@@ -2,18 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bx8sw1txdsijj" path="res://levels/bathRoom/BathRoom.gd" id="1_iget1"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_nmwft"]
-[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_nfqjp"]
 [ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="5_2s1kr"]
-[ext_resource type="Script" uid="uid://dpufe2my61qn2" path="res://levels/bathRoom/BathRoomWardrobeUsable.gd" id="5_mvhf6"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathRoomWardrobeUsable.gd" id="5_mvhf6"]
 [ext_resource type="Texture2D" uid="uid://snhbxbvg0hjv" path="res://assets/images/Bathroom_Sample.png" id="5_t2crg"]
-[ext_resource type="Script" uid="uid://reqih6bmfo3x" path="res://levels/bathRoom/BathRoomChair.gd" id="5_urg14"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathRoomChair.gd" id="5_urg14"]
 [ext_resource type="Texture2D" uid="uid://cogak1qu1ah2s" path="res://assets/tilesets/Tileset_Bathroom.png" id="6_ads21"]
-[ext_resource type="Script" uid="uid://c1t6su8v7r188" path="res://levels/bathRoom/BathRoomClothesUsable.gd" id="10_dqsc6"]
-[ext_resource type="Script" uid="uid://b5ss4gmtnf14i" path="res://levels/bathRoom/BathRoomBathtubUsable.gd" id="11_p7qul"]
-[ext_resource type="Script" uid="uid://dpr6qvthnigp0" path="res://levels/bathRoom/BathRoomToiletUsable.gd" id="12_i5yoo"]
-[ext_resource type="Script" uid="uid://cmlrrm5qnnxj1" path="res://levels/bathRoom/BathroomPhotocamera.gd" id="13_q0jil"]
-[ext_resource type="Script" uid="uid://b5r1vhwet6oui" path="res://levels/bathRoom/BathroomPhoto.gd" id="14_eyp7q"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathRoomClothesUsable.gd" id="10_dqsc6"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathRoomBathtubUsable.gd" id="11_p7qul"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathRoomToiletUsable.gd" id="12_i5yoo"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathroomPhotocamera.gd" id="13_q0jil"]
+[ext_resource type="Script" path="res://levels/bathRoom/BathroomPhoto.gd" id="14_eyp7q"]
+[ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="15_2wxl4"]
+[ext_resource type="Script" uid="uid://7yvr2ccqxw1q" path="res://levels/bathRoom/BathRoomMirror.gd" id="15_tv30r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7qul"]
 atlas = ExtResource("6_ads21")
@@ -90,6 +92,13 @@ region = Rect2(160, 96, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0jil"]
 size = Vector2(17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b7a5"]
+atlas = ExtResource("15_2wxl4")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ubve"]
+size = Vector2(20, 26)
 
 [node name="BathRoom" type="Node2D" unique_id=643836024]
 script = ExtResource("1_iget1")
@@ -293,5 +302,20 @@ collision_layer = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Photo/StaticBody2D" unique_id=1483920046]
 position = Vector2(26.5, 25)
 shape = SubResource("RectangleShape2D_q0jil")
+
+[node name="Mirror" type="Node2D" parent="." unique_id=1821727372]
+position = Vector2(288, 144)
+script = ExtResource("15_tv30r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mirror" unique_id=338214824]
+position = Vector2(16, 0)
+texture = SubResource("AtlasTexture_3b7a5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mirror" unique_id=121248750]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/StaticBody2D" unique_id=5031446]
+position = Vector2(16, 3)
+shape = SubResource("RectangleShape2D_0ubve")
 
 [connection signal="_object_used" from="Solve3" to="." method="_on_solve_3__object_used"]

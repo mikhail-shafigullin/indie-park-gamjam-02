@@ -2,7 +2,7 @@ class_name BathRoomDollPuzzleLogic
 extends Resource
 
 var currentDollState: Array[int] = [0, 0, 0, 0];
-var correctDollState: Array[int] = [1, 2, 3, 0];
+var correctDollState: Array[int] = [1, 3, 0, 1];
 signal takeCorrectPhoto;
 signal takeIncorrectPhoto;
 

@@ -1,0 +1,27 @@
+label mirrorUseWithNewspaperClip
+I look into the mirror in the bathroom.
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_Bathroom.png" fade="1.0" wait="true"]
+Despite everything, it's still you.
+...
+Near the sink, I find a newspaper clipping.
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="1.0" wait="true"]
+[i][b]2004-03-05\: SMALL-TOWN GIRL WINS PEACE PRIZE[/b][/i]
+[i]Our community is celebrating today as one of our own has been awarded the International Peace Prize.[/i]
+[i]In a brief interview, her proud mother recalled her unstoppable spirit\:[/i]
+[i]"Whenever things got tough, she never backed down."[/i]
+[i]"She would just clench her teeth and move forward, looking ahead with wide, clear eyes."[/i]
+I add the newspaper clipping in my inventory
+[end_timeline]
+label newspaperNoteExamine
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="1.0" wait="true"]
+[i][b]2004-03-05\: SMALL-TOWN GIRL WINS PEACE PRIZE[/b][/i]
+[i]Our community is celebrating today as one of our own has been awarded the International Peace Prize.[/i]
+[i]In a brief interview, her proud mother recalled her unstoppable spirit\:[/i]
+[i]"Whenever things got tough, she never backed down."[/i]
+[i]"She would just clench her teeth and move forward, looking ahead with wide, clear eyes."[/i]
+[end_timeline]
+label mirrorUseWithoutNewspaperClip
+I look into the mirror in the bathroom.
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_Bathroom.png" fade="1.0" wait="true"]
+Despite everything, it's still you.
+[end_timeline]

@@ -1,7 +1,7 @@
 extends Control
 
 const FADE_DURATION = 0.3
-const CORRECT_PASSWORD = "1234"
+const CORRECT_PASSWORD = "20040305"
 
 @onready var commonMenu: Control = %CommonMenu
 @onready var passwordMenu: Control = %PasswordMenu

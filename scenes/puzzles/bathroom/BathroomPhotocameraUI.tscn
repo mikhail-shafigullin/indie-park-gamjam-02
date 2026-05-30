@@ -187,7 +187,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer" unique_id=1635445314]
 layout_mode = 2
-text = "Hint:"
+text = "Hint: the date you truly shone"
 horizontal_alignment = 1
 
 [node name="GalleryButton" type="Button" parent="Control/PasswordMenu/ScrollContainer/VBoxContainer" unique_id=975289099]

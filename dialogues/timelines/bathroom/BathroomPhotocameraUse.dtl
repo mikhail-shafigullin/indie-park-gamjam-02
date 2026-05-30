@@ -1,19 +1,23 @@
-[REPLACE] I take a look in the menu of the camera
+I step behind the camera and look at the menu on the screen.
 # res://scenes/puzzles/bathroom/BathroomPhotocameraUI.tscn
 do PuzzleStates.startPuzzle("uid://df4n8jpmxjfi2")
 [end_timeline]
 label takePhoto
 [background arg="#ffffff77" fade="0.4" wait="true"]
 [background fade="0.4" wait="true"]
-[REPLACE] I hear that photopaper fall on the ground
+The camera flash blinds me for a moment
+A developed photo slides out of the camera
 do PuzzleStates.finishPuzzle()
 [end_timeline]
 label correctPhoto
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo1.png" fade="0.5" wait="true"]
-[REPLACE] I see the normal photo
-[REPLACE] I also hear the click from the door.
+I pick up the photo
+In the photo...[input] It's my sister
+[i]Photo added to inventory[/i]
+As I take the photo, I hear a sound at the door. It looks like it's open now
 [end_timeline]
 label incorrectPhoto
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo2.png" fade="0.5" wait="true"]
-[REPLACE] I see corrupted photo
+I pick up the photo
+It looks like the photo is ruined; there is nothing recognizable on it
 [end_timeline]

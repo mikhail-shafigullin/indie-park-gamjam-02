@@ -1,22 +1,23 @@
 label placeDoll
-[REPLACE] I am placing the mannequin on the chair
+I seat the mannequin on the chair in front of the camera.
+Instead of a head, the mannequin has some sort of threaded hole.
 [signal arg="Bathroom_DollPlacedOnChair"]
 [end_timeline]
 
 label placeHead
-[REPLACE] I am placing the strange cylinder on the neck of the doll.
+I screw the strange cylinder into the mannequin where its head should be.
 [signal arg="Bathroom_HeadPlacedOnChair"]
 [end_timeline]
 
 label placeClothes
-[REPLACE] I am dressing the mannequin with cloths from the cabinet
+I lay out the clothes next to the mannequin. Now I can dress it...
 [signal arg="Bathroom_ClothesPlacedOnChair"]
 [end_timeline]
 label chairUseWithoutDoll
-[REPLACE] The chair stands suspiciously in front of the camera.
+The chair stands suspiciously in the middle of the bathroom, right in front of the camera.
 [end_timeline]
 label chairUseWithDoll
-[REPLACE] The chair with placed mannequin stands suspiciously in front of the camera.
+The mannequin sits suspiciously in the middle of the bathroom, right in front of the camera.
 [end_timeline]
 label chairUseWithPuzzle
 # res://scenes/puzzles/bathroom/BathroomDollDressing.tscn

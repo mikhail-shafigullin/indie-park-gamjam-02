@@ -1,5 +1,6 @@
-[REPLACE] Clothes are scattered on the ground
+A pile of women's clothes fell out of the closet. It's now scattered on the floor.
 [background arg="#000000ff" fade="1.0" wait="true"]
 ...
 [signal arg="Bathroom_ClothesOnTheGround"]
+I pick it up and add it to my inventory.
 Pile of clothes added to inventory.

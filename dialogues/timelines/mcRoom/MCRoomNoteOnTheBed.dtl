@@ -1,6 +1,20 @@
-[REPLACE] On the bed I am seeing diary
+My childhood diary is lying right there on the bed.
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="0.5" wait="true"]
-[REPLACE] Hint for TV Puzzle
+When I open it, I realize there's only one single page left inside
+...
+[b]"My Favorite Games."[/b]
+[b][i]Elemental Shift[/i][/b]\
+[i][font_size=14]Oh, I used to play this game every single day the second I got home from school! The scope of the story is just massive, and the characters are absolutely incredible. Honestly, I still dream about waking up in that world[/font_size][/i]
+[b][i]Beacon of Light[/i][/b]\
+[i][font_size=14]Everyone was giving this game nines and tens across the board. That's the only reason I bought it. Talk about the biggest disappointment of my life[/font_size][/i]
+[b][i]Beacon of Light[/i][/b]\
+[i][font_size=14]Whoa, where did this cartridge even come from? I think I got it bundled together with [b]Beacon of Light[/b]. So, yeah, I might have gotten two games for the price of one, but all I really got was double the disappointment.[/font_size][/i]
+[b][i]Orange[/i][/b]\
+[i][font_size=14]I never actually finished this one. It looks like the most harmless, innocent game in the world, but in reality...[input] I feel like my whole life was upended because of it![/font_size][/i]
+[b][i]Orange[/i][/b]\
+[i][font_size=14]I never did finish this game. It looks like the most harmless thing in the world, but honestly...[input] I feel like it completely ruined my life![/font_size][/i]
+[b][i]Sweet Memories[/i][/b]\
+[i][font_size=14]My sister and I played through this one together. When it first came out, it was just too brutal to figure out on your own... But now?[input] Now I absolutely adore it.[/font_size][/i]
 [background arg="#000000ff" fade="1.0" wait="true"]
 ...
 [signal arg="MCRoom_DeleteNoteFromFloor"]

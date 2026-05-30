@@ -13,7 +13,7 @@ func useObject():
 		PuzzleStates.mcRoomTVPuzzleLogic.initPuzzle();
 		used = true;
 	if(puzzleIsSolved):
-		Dialogic.start('MCRoomTVPuzzleAlreadySolved');
+		Dialogic.start('DefaultMessages', 'itemIsAlreadyUsed');
 	else:
 		Dialogic.start('MCRoomTVUseWithoutCartridge');
 

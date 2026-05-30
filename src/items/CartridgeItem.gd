@@ -42,7 +42,7 @@ func use(usedOnItem: Usable) -> void:
 	if(usedOnItem and usedOnItem.name == "McRoomTV"):
 		Dialogic.start('MCRoomTVUseWithCartridge');
 	else:
-		Dialogic.start('MCRoomCartridgeUseNoItem');
+		Dialogic.start('DefaultMessages', "inventoryItemNoUse");
 
 func examine() -> void:
 	Dialogic.VAR.set_variable("mcRoom.cartridgeType", cartridgeGenre)

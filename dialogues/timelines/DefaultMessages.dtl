@@ -1,3 +1,6 @@
 label inventoryItemNoUse
-[REPLACE] There is nothing to use this item on.
+I can't figure out how to use this.
+[end_timeline]
+label itemIsAlreadyUsed
+I don't see the point in doing anything with this.
 [end_timeline]

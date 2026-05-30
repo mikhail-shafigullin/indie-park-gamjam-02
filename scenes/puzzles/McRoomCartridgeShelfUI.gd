@@ -10,6 +10,9 @@ var focusedSlotIndex: int = 0
 
 @onready var slotGrid: GridContainer = %SlotGrid
 
+var dialogicSlot: ShelfSlot
+var dialogicCartridgeSlot: CartridgeItem;
+
 func _ready() -> void:
 	COLS = slotGrid.columns;
 	for child in slotGrid.get_children():
@@ -21,8 +24,11 @@ func _ready() -> void:
 			slots.append(child)
 	focusedSlotIndex = 0;
 	slots[0].grab_focus()
+	Dialogic.signal_event.connect(replaceSlot);
 
 func _input(event: InputEvent) -> void:
+	if(Dialogic.current_timeline):
+		return;
 	if slots.is_empty():
 		return
 	if event.is_action_pressed("move_right"):
@@ -30,12 +36,6 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("move_left"):
 		moveFocus(-1, 0)
-		get_viewport().set_input_as_handled()
-	elif event.is_action_pressed("move_down"):
-		moveFocus(0, 1)
-		get_viewport().set_input_as_handled()
-	elif event.is_action_pressed("move_up"):
-		moveFocus(0, -1)
 		get_viewport().set_input_as_handled()
 
 func onSlotFocusEntered(idx: int) -> void:
@@ -53,14 +53,19 @@ func moveFocus(dx: int, dy: int) -> void:
 
 func onSlotActivated(slot: ShelfSlot) -> void:
 	var cartridgeInSlot: CartridgeItem = PuzzleStates.mcRoomTVPuzzleLogic.getCartridgeInSlot(slot.slotIndex);
+	dialogicSlot = slot;
+	dialogicCartridgeSlot = cartridgeInSlot;
 	if(cartridgeInSlot):
 		Dialogic.VAR.set_variable("mcRoom.cartridgeType", cartridgeInSlot.cartridgeGenre);
 		Dialogic.VAR.set_variable("mcRoom.isCartridgeInserted", true);
-		PuzzleStates.mcRoomTVPuzzleLogic.removeCartridgeFromSlot(slot.slotIndex);
-		MainEventBus.inventory_add_item.emit(cartridgeInSlot);
 	else:
 		Dialogic.VAR.set_variable("mcRoom.isCartridgeInserted", false);
-	
 	Dialogic.start("MCRoomTVPuzzleExtractCartridge");
 	slotSelected.emit(slot.slotIndex)
+
+func replaceSlot(arg: String):
+	if(arg == "McRoom_ReplaceCartridgeInSlot"):
+		PuzzleStates.mcRoomTVPuzzleLogic.removeCartridgeFromSlot(dialogicSlot.slotIndex);
+		MainEventBus.inventory_add_item.emit(dialogicCartridgeSlot);
+
 	

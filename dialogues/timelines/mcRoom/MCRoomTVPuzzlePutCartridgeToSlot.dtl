@@ -1,9 +1,9 @@
 if {mcRoom.isCartridgeInserted} == true:
 	label haveInsertedCartridge
-	[REPLACE] Inside the case we already have a cartridge
+	There’s already a cartridge in the case. I put the case back on the shelf.
 	[end_timeline]
 else:
-	[REPLACE] I am inserting the cartridge inside the case
+	I put the cartridge into the case and put the case back on the shelf.
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxClosed.png" fade="0.5" wait="true"]
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_CartridgeBoxEmpty.png" fade="0.5" wait="true"]
 	if {mcRoom.cartridgeType} == 0.0:

@@ -61,4 +61,5 @@ func checkPuzzleSolved():
 func triggerPuzzleSolved():
 	Dialogic.timeline_ended.disconnect(checkPuzzleSolved)
 	Dialogic.start('MCRoomTVPuzzleSolved');
+	MainEventBus.inventory_add_item.emit(MCRoomPhoto.new());
 	MainEventBus.puzzle_2_solved.emit()

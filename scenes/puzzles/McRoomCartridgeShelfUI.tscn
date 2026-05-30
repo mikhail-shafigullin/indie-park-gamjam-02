@@ -45,21 +45,23 @@ custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot0" index="0" unique_id=1122093224]
-text = "[font_size=40]Puzzle Label[/font_size]"
+text = "[font_size=36
+]Sweet memories[/font_size]"
 
 [node name="Slot1" parent="SlotGrid" unique_id=315857502 instance=ExtResource("3_2otvp")]
 custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot1" index="0" unique_id=1122093224]
-text = "[font_size=40]Fighting Label[/font_size]"
+text = "[font_size=40]Step ahead[/font_size]"
 
 [node name="Slot2" parent="SlotGrid" unique_id=218543445 instance=ExtResource("3_2otvp")]
 custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot2" index="0" unique_id=1122093224]
-text = "[font_size=40]Roleplay Label
+text = "[font_size=36
+]Elemental Shift
 [/font_size]"
 
 [node name="Slot3" parent="SlotGrid" unique_id=1865008285 instance=ExtResource("3_2otvp")]
@@ -67,21 +69,23 @@ custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot3" index="0" unique_id=1122093224]
-text = "[font_size=35]Platformer Label[/font_size]"
+text = "[font_size=40]Orange[/font_size]"
 
 [node name="Slot4" parent="SlotGrid" unique_id=340282545 instance=ExtResource("3_2otvp")]
 custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot4" index="0" unique_id=1122093224]
-text = "[font_size=40]Racing Label[/font_size]"
+text = "[font_size=35
+
+]Soaring in the sky[/font_size]"
 
 [node name="Slot5" parent="SlotGrid" unique_id=786347299 instance=ExtResource("3_2otvp")]
 custom_minimum_size = Vector2(73, 354)
 layout_mode = 2
 
 [node name="RichTextLabel" parent="SlotGrid/Slot5" index="0" unique_id=1122093224]
-text = "[font_size=35]Adventure Label[/font_size]"
+text = "[font_size=35]Beacon of light[/font_size]"
 
 [editable path="SlotGrid/Slot0"]
 [editable path="SlotGrid/Slot1"]

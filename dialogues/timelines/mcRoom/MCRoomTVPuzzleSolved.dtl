@@ -1,3 +1,13 @@
-[REPLACE] Puzzle is solved
-# 123123
+...
+Something clicked at the door; it looks like it's open now.
+...
+And...
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle1-2.png" fade="1.0" wait="true"]
+A photograph fell out of the shelf
+I add the photograph to my inventory.
 do PuzzleStates.finishPuzzle()
+[end_timeline]
+label photoExamine
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle1-2.png" fade="1.0" wait="true"]
+...
+[end_timeline]

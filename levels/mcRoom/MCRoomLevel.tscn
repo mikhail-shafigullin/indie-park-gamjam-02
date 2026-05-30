@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bvi6paecs0402" path="res://levels/mcRoom/McRoomLevel.gd" id="1_2kbn8"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="2_4kd21"]
 [ext_resource type="Texture2D" uid="uid://colg2gfkwhem2" path="res://assets/images/MC_Bedroom_Sample.png" id="3_08wpr"]
-[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_4kd21"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_08wpr"]
 [ext_resource type="PackedScene" uid="uid://xnttreoh0vbs" path="res://levels/mcRoom/McRoomCartridge.tscn" id="6_55q5b"]
 [ext_resource type="Texture2D" uid="uid://bn5ofbuw3fqo" path="res://assets/tilesets/Tileset_MC_Bedroom.png" id="7_bul60"]
 [ext_resource type="Script" uid="uid://c0j0uqb0xg8al" path="res://levels/mcRoom/MCRoomTV.gd" id="8_bucqu"]
-[ext_resource type="Script" uid="uid://cktwlhtde4il3" path="res://levels/mcRoom/TvPuzzleHintNote.gd" id="9_e20gh"]
+[ext_resource type="Script" path="res://levels/mcRoom/TvPuzzleHintNote.gd" id="9_e20gh"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="9_kkt2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bucqu"]
@@ -54,6 +54,7 @@ y_sort_enabled = true
 script = ExtResource("1_2kbn8")
 
 [node name="McBedroomSample" type="Sprite2D" parent="." unique_id=2110201947]
+visible = false
 modulate = Color(1, 1, 1, 0.11372549)
 z_index = 1
 position = Vector2(336, 224)

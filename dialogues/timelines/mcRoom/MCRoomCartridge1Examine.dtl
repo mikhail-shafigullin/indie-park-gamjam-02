@@ -2,24 +2,24 @@
 if {mcRoom.cartridgeType} == 0.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge1.png" fade="0.5" wait="true"]
 	...
-	[REPLACE] Fighting cartridge
+	The cartridge features a character caught mid-action in a fighting pose.
 elif {mcRoom.cartridgeType} == 1.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge2.png" fade="0.5" wait="true"]
 	...
-	[REPLACE] Racing cartridge
+	The cartridge cover features some kind of red car.
 elif {mcRoom.cartridgeType} == 2.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge3.png" fade="0.5" wait="true"]
 	...
-	[REPLACE] Adventure cartridge
+	The cartridge shows a man holding a torch.
 elif {mcRoom.cartridgeType} == 3.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge4.png" fade="0.0"]
 	...
-	[REPLACE] Platformer cartridge
+	The cartridge has a picture of a cute little fox and some random icons.
 elif {mcRoom.cartridgeType} == 4.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge5.png" fade="0.5" wait="true"]
 	...
-	[REPLACE] Puzzle cartridge
+	The cartridge shows a young guy against a backdrop of falling puzzle pieces.
 elif {mcRoom.cartridgeType} == 5.0:
 	[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Cartridge6.png" fade="0.5" wait="true"]
 	...
-	[REPLACE] Roleplay cartridge
+	A cartridge featuring an anime-style character with green hair.

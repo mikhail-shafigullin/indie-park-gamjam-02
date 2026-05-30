@@ -295,6 +295,10 @@ collision_mask = 17
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoundaryDown" unique_id=262689620]
 shape = SubResource("RectangleShape2D_c4x0u")
 
+[node name="ManholeMarker" type="Marker2D" parent="." unique_id=550089762]
+unique_name_in_owner = true
+position = Vector2(256, 224)
+
 [connection signal="body_entered" from="BoundaryLeft" to="." method="_on_boundary_left_body_entered"]
 [connection signal="body_entered" from="BoundaryRight" to="." method="_on_boundary_right_body_entered"]
 [connection signal="body_entered" from="BoundaryUp" to="." method="_on_boundary_up_body_entered"]

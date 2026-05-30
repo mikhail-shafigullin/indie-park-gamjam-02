@@ -5,7 +5,7 @@ I look into the mirror in the bathroom.
 Despite everything, it's still you.
 ...
 Near the sink, I find a newspaper clipping.
-[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Notebook.png" fade="1.0" wait="true"]
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/images/CG_NewspaperClipping.png" fade="1.0" wait="true"]
 [i][b]2004-03-05\: SMALL-TOWN GIRL WINS PEACE PRIZE[/b][/i]
 [i]Our community is celebrating today as one of our own has been awarded the International Peace Prize.[/i]
 [i]In a brief interview, her proud mother recalled her unstoppable spirit\:[/i]

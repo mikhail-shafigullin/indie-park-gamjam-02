@@ -45,9 +45,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="HSeparator2" type="HSeparator" parent="InventoryPanel/VBoxContainer" unique_id=802987711]
+visible = false
 layout_mode = 2
 
 [node name="DescriptionPanel" type="Panel" parent="InventoryPanel/VBoxContainer" unique_id=2002804528]
+visible = false
 custom_minimum_size = Vector2(0, 130)
 layout_mode = 2
 

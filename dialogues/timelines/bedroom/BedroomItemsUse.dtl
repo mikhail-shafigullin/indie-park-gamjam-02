@@ -1,6 +1,28 @@
 label CertificateTake
-[REPLACE] I took a certificate from the stand
+There is a museum display stand in the center of the room in front of me
+On the stand is my sister's certificate, stating that she received the Peace Prize.
+...
+[signal arg="Bedroom_cerfiticateTake"]
+I take the certificate from the stand into my inventory.
+[end_timeline]
+label CertificateUse
+This is my sister’s Peace Prize certificate.
+Neatly framed, flawless, and heavy with accomplishments I could only dream of.
+No matter what I ever build or achieve, it will always be eclipsed by her shadow.
+It’s hard not to feel small when your sibling is officially recognized as a savior of humanity.
 [end_timeline]
 label DrawingTake
-[REPLACE] I took a paper with my drawings from the stand
+There are photos of me and my daughters on the table.
+I open the drawer and see an old drawing by Ann.
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle4_Drawing.png" fade="1.0" wait="true"]
+[wait_input]
+I take the drawing into my inventory.
+[end_timeline]
+label DrawingUse
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle4_Drawing.png" fade="1.0" wait="true"]
+A drawing I made when I was a kid.
+It’s honestly embarrassing to look at.
+Mom kept it, but it’s a painful reminder that nothing I do will ever measure up to my sister.
+No matter how much sentiment I pump into this piece of paper, it could never [b]weigh as much as her[/b] success.
+[wait_input]
 [end_timeline]

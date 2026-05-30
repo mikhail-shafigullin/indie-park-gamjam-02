@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="6_snw41"]
 [ext_resource type="Texture2D" uid="uid://dmiy34w35rlbs" path="res://assets/sprites/Sprites_Boat.png" id="8_7cji5"]
 [ext_resource type="Script" uid="uid://cwtt3ux2e6nrc" path="res://levels/bedRoom/BedRoomBoat.gd" id="8_appov"]
-[ext_resource type="Script" path="res://levels/bedRoom/BedRoomPostCard.gd" id="10_qq8ej"]
+[ext_resource type="Script" uid="uid://dtw728gkdha6p" path="res://levels/bedRoom/BedRoomPostCard.gd" id="10_qq8ej"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="10_y2kh1"]
 [ext_resource type="Script" uid="uid://yr0k3bbnjs8h" path="res://levels/bedRoom/BedRoomCertificate.gd" id="12_4secq"]
 [ext_resource type="Texture2D" uid="uid://bburs4x7mtkca" path="res://assets/tilesets/Tileset_Mother_Bedroom_Shore.png" id="13_hub06"]
@@ -420,13 +420,14 @@ atlas = ExtResource("10_y2kh1")
 region = Rect2(128, 32, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2kh1"]
+size = Vector2(28, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nffs2"]
 atlas = ExtResource("10_y2kh1")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qq8ej"]
-size = Vector2(13, 16)
+size = Vector2(17, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qoy7g"]
 atlas = ExtResource("13_hub06")
@@ -572,7 +573,7 @@ texture = SubResource("AtlasTexture_gmv5n")
 collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Postcard/StaticBody2D" unique_id=792396637]
-position = Vector2(16, -48)
+position = Vector2(16, -40.5)
 shape = SubResource("RectangleShape2D_y2kh1")
 
 [node name="Certificate" type="Node2D" parent="." unique_id=472183661]
@@ -590,7 +591,7 @@ texture = SubResource("AtlasTexture_nffs2")
 collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Certificate/StaticBody2D" unique_id=1424239594]
-position = Vector2(15.5, 8)
+position = Vector2(15.5, 16)
 shape = SubResource("RectangleShape2D_qq8ej")
 
 [node name="TiedPole" type="Node2D" parent="." unique_id=389401962]

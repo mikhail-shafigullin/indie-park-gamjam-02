@@ -15,4 +15,25 @@ On the back of the postcard, there are warm-up instructions for hands
 [i]5. Once more, extend your thumb and squeeze your index finger[/i]
 [i]6. Rotate your wrist 180 degrees[/i]
 [i]7. Rotate your hand 90 degrees clockwise[/i]
+[wait_input]
+[signal arg="Bedroom_postcardTake"]
+I take the postcard and put it in the inventory
+[end_timeline]
+label withoutPostcard
+I look into the mirror
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_MomRoom.png" fade="1.0" wait="true"]
+[wait_input]
+Despite everything, it's still you.
+[end_timeline]
+label postcardItem
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle4_Postcard.png" fade="1.0" wait="true"]
+On the back of the postcard, there are warm-up instructions for hands
+[i][b]Let’s warm up our hands[/b][/i]
+[i]1. Take a look at your right hand[/i]
+[i]2. Clench all your fingers into a fist except your thumb[/i]
+[i]3. Now squeeze your thumb, but extend your index finger[/i]
+[i]4. Rotate your hand 90 degrees counter-clockwise[/i]
+[i]5. Once more, extend your thumb and squeeze your index finger[/i]
+[i]6. Rotate your wrist 180 degrees[/i]
+[i]7. Rotate your hand 90 degrees clockwise[/i]
 [end_timeline]

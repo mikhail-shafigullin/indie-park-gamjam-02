@@ -7,4 +7,4 @@ func _ready() -> void:
 
 
 func useObject():
-	LevelContainer.bedRoomSecondPart.sendPlayerToMarker("Start");
+	LevelContainer.bedRoomSecondPart.sendPlayerToMarker("ManholeMarker");

@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dh5gbsp5exvfm"]
 
+[ext_resource type="FontFile" uid="uid://bs8jowgvj3ukd" path="res://assets/fonts/CrimsonText-Regular.ttf" id="1_8r622"]
 [ext_resource type="Script" uid="uid://cq3t5ahunfixg" path="res://levels/mainScreen/InventoryUI.gd" id="1_invui"]
+
+[sub_resource type="Theme" id="Theme_vnrh7"]
+default_font = ExtResource("1_8r622")
 
 [node name="InventoryUI" type="Control" unique_id=1123379205]
 layout_mode = 3
@@ -8,6 +12,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 mouse_filter = 2
+theme = SubResource("Theme_vnrh7")
 script = ExtResource("1_invui")
 
 [node name="InventoryPanel" type="Panel" parent="." unique_id=170883857]

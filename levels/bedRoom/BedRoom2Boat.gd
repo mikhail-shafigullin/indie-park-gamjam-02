@@ -1,7 +1,6 @@
 extends Usable
 
 @onready var animatedSprite: AnimatedSprite2D = $AnimatedSprite2D;
-@onready var teleportMarker: Marker2D = $"../Marker2D"
 @onready var tiedPoleSprite: Sprite2D = $TiedPole/TiedPoleSprite;
 @onready var untiedPoleSprite: Sprite2D = $TiedPole/UntiedPoleSprite;
 
@@ -10,24 +9,10 @@ var isVisible: bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animatedSprite.play()
-	MainEventBus.level_change.connect(onLevelChange)
 	pass # Replace with function body.
 
-
 func useObject():
-	Dialogic.signal_event.connect(onDialogicEvent, CONNECT_ONE_SHOT);
 	Dialogic.start("BedroomBoatEvents", "boatUsed")
-
-func onLevelChange(level: Level):
-	if(level.name == "BedRoom"):
-		Global.player.changeSpriteOnBoatStateTo(false)
-		showBoat();
-
-func onDialogicEvent(arg: String):
-	if arg == "Bedroom_BoatMoveoutFromShore":
-		MainEventBus.send_player_to_marker.emit(teleportMarker);
-		hideBoat();
-		Global.player.changeSpriteOnBoatStateTo(true)
 
 func hideBoat():
 	isVisible = false;

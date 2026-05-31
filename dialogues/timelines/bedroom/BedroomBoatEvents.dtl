@@ -1,0 +1,7 @@
+label boatUsed
+The boat is moored in the center of the bedroom.
+[background arg="#000000ff" fade="1.0" wait="true"]
+I climb into the boat and push off from the "shore."
+[signal arg="Bedroom_BoatMoveoutFromShore"]
+[background fade="1.0" wait="true"]
+[end_timeline]

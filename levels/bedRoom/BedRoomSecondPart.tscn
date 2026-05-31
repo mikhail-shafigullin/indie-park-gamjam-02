@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="5_4nab5"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="6_4nab5"]
 [ext_resource type="Script" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
+[ext_resource type="Script" uid="uid://c5pmcu0dqnh7l" path="res://levels/bedRoom/BedRoom2Boat.gd" id="7_c4x0u"]
+[ext_resource type="Texture2D" uid="uid://dmiy34w35rlbs" path="res://assets/sprites/Sprites_Boat.png" id="9_m7wqe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgqp5"]
 atlas = ExtResource("5_4nab5")
@@ -169,6 +171,38 @@ size = Vector2(640, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4x0u"]
 size = Vector2(640, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_072nb"]
+atlas = ExtResource("9_m7wqe")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqsaf"]
+atlas = ExtResource("9_m7wqe")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2swj"]
+atlas = ExtResource("9_m7wqe")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xg7lk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_072nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqsaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2swj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqc6y"]
+size = Vector2(64, 16)
+
 [node name="BedRoomSecondPart" type="Node2D" unique_id=1970677901]
 y_sort_enabled = true
 script = ExtResource("1_e80hd")
@@ -298,6 +332,25 @@ shape = SubResource("RectangleShape2D_c4x0u")
 [node name="ManholeMarker" type="Marker2D" parent="." unique_id=550089762]
 unique_name_in_owner = true
 position = Vector2(256, 224)
+
+[node name="Boat" type="Node2D" parent="." unique_id=1860418135]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(320, 240)
+script = ExtResource("7_c4x0u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boat" unique_id=1821027150]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(32, 16)
+sprite_frames = SubResource("SpriteFrames_xg7lk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boat" unique_id=628924307]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boat/StaticBody2D" unique_id=1945631329]
+position = Vector2(32, 24)
+shape = SubResource("RectangleShape2D_vqc6y")
 
 [connection signal="body_entered" from="BoundaryLeft" to="." method="_on_boundary_left_body_entered"]
 [connection signal="body_entered" from="BoundaryRight" to="." method="_on_boundary_right_body_entered"]

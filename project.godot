@@ -38,6 +38,7 @@ directories/dtl_directory={
 "BathroomPhotocameraUse": "res://dialogues/timelines/bathroom/BathroomPhotocameraUse.dtl",
 "BathroomToiletUse": "res://dialogues/timelines/bathroom/BathroomToiletUse.dtl",
 "BathroomWardrobeOpened": "res://dialogues/timelines/bathroom/BathroomWardrobeOpened.dtl",
+"BedroomBoatEvents": "res://dialogues/timelines/bedroom/BedroomBoatEvents.dtl",
 "BedroomItemsUse": "res://dialogues/timelines/bedroom/BedroomItemsUse.dtl",
 "BedroomMirror": "res://dialogues/timelines/bedroom/BedroomMirror.dtl",
 "DefaultMessages": "res://dialogues/timelines/DefaultMessages.dtl",

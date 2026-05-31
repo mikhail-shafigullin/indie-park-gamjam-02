@@ -228,9 +228,12 @@ func changeCurrentSprite():
 
 func changeSpriteOnBoatState():
 	if(boatSprite.visible):
-		boatSprite.visible = false;
+		changeSpriteOnBoatStateTo(false)
 	else:
-		boatSprite.visible = true;
+		changeSpriteOnBoatStateTo(true)
+
+func changeSpriteOnBoatStateTo(isVisible: bool):
+	boatSprite.visible = isVisible
 
 func kill() -> void:
 	set_process(false)

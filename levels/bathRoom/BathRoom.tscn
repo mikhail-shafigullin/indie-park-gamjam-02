@@ -17,6 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="15_2wxl4"]
 [ext_resource type="Script" uid="uid://7yvr2ccqxw1q" path="res://levels/bathRoom/BathRoomMirror.gd" id="15_tv30r"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ubve"]
+atlas = ExtResource("6_ads21")
+region = Rect2(128, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w4ga"]
+atlas = ExtResource("6_ads21")
+region = Rect2(160, 192, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7qul"]
 atlas = ExtResource("6_ads21")
 region = Rect2(96, 0, 32, 64)
@@ -137,13 +145,23 @@ position = Vector2(288, 192)
 
 [node name="ChangeScene" parent="." unique_id=62105247 instance=ExtResource("2_iget1")]
 unique_name_in_owner = true
-position = Vector2(240, 224)
+position = Vector2(256, 224)
 rotation = 1.5707964
 levelId = 1
 markerName = "FromBathRoom"
 
+[node name="DoorClosed" type="Sprite2D" parent="." unique_id=2106220044]
+position = Vector2(240, 240)
+texture = SubResource("AtlasTexture_0ubve")
+
+[node name="DoorOpened" type="Sprite2D" parent="." unique_id=1250860638]
+visible = false
+position = Vector2(240, 240)
+texture = SubResource("AtlasTexture_0w4ga")
+
 [node name="Solve3" parent="." unique_id=442146003 instance=ExtResource("4_nfqjp")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(400, 272)
 
 [node name="Label" type="Label" parent="Solve3" unique_id=261272467]
@@ -206,6 +224,7 @@ position = Vector2(16, 17.5)
 shape = SubResource("RectangleShape2D_ads21")
 
 [node name="BathroomSample" type="Sprite2D" parent="." unique_id=10391586]
+visible = false
 modulate = Color(1, 1, 1, 0.14117648)
 position = Vector2(320, 208)
 texture = ExtResource("5_t2crg")

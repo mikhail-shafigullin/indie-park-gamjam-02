@@ -1,11 +1,14 @@
 label CertificateTake
 There is a museum display stand in the center of the room in front of me
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Certificate.png" fade="1.0" wait="true"]
 On the stand is my sister's certificate, stating that she received the Peace Prize.
-...
+[wait_input]
 [signal arg="Bedroom_cerfiticateTake"]
 I take the certificate from the stand into my inventory.
 [end_timeline]
 label CertificateUse
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Certificate.png" fade="1.0" wait="true"]
+[wait_input]
 This is my sister’s Peace Prize certificate.
 Neatly framed, flawless, and heavy with accomplishments I could only dream of.
 No matter what I ever build or achieve, it will always be eclipsed by her shadow.
@@ -17,6 +20,8 @@ I open the drawer and see an old drawing by Ann.
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle4_Drawing.png" fade="1.0" wait="true"]
 [wait_input]
 I take the drawing into my inventory.
+[background fade="1.0" wait="true"]
+I can also hear the faint, distant echo of a door swinging open.
 [end_timeline]
 label DrawingUse
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle4_Drawing.png" fade="1.0" wait="true"]

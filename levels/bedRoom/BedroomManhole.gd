@@ -8,4 +8,5 @@ func _ready() -> void:
 
 func useObject():
 	LevelContainer.bedRoomMomPerspective.sendPlayerToMarker("Start");
+	Global.player.changeSpriteToMom(true);
 	pass;

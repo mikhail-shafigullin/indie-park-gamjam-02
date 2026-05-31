@@ -248,6 +248,17 @@ func _onBoatFrameChanged() -> void:
 			pixelOffset = 0.0;
 		currentSprite.position.y = 16.0 + pixelOffset;
 
+func changeSpriteToMom(isMom: bool):
+	if(isMom):
+		currentSprite = motherSprite;
+		motherSprite.visible = true;
+		sprite.visible = false;
+	else: 
+		currentSprite = sprite;
+		motherSprite.visible = false;
+		sprite.visible = true;
+	
+
 func kill() -> void:
 	set_process(false)
 	controlsEnabled = false

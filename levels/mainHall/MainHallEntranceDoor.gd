@@ -1,4 +1,7 @@
 extends Usable
 
 func useObject():
-	Dialogic.start("MainHallEntranceDoor", "doorUseWithoutItems")
+	if(PuzzleStates.puzzle4Solved):
+		Dialogic.start("MainHallEntranceDoor", "doorOutro")
+	else:
+		Dialogic.start("MainHallEntranceDoor", "doorUseWithoutItems")

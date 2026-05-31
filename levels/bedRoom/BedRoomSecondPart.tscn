@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://levels/bedRoom/ShoreAnimation.gd" id="4_uo17m"]
 [ext_resource type="Texture2D" uid="uid://dvkikdool0hhe" path="res://assets/tilesets/Tileset_Waves.png" id="5_4nab5"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="6_4nab5"]
-[ext_resource type="Script" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
+[ext_resource type="Script" uid="uid://cehcuumdjijsr" path="res://levels/bedRoom/BedroomManhole.gd" id="6_hf2yo"]
 [ext_resource type="Script" uid="uid://c5pmcu0dqnh7l" path="res://levels/bedRoom/BedRoom2Boat.gd" id="7_c4x0u"]
 [ext_resource type="Texture2D" uid="uid://dmiy34w35rlbs" path="res://assets/sprites/Sprites_Boat.png" id="9_m7wqe"]
 

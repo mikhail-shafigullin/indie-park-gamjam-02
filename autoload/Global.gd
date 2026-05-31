@@ -1,6 +1,8 @@
 extends Node
 
 const outro_res := preload("uid://7reuemj3eauw")
+#res://levels/gameOver/GameOverCreditsLevel.tscn
+const gameOverCreditsLevel := preload("uid://cwh7qpfciv0v1");
 
 var player: PlayerController;
 
@@ -13,6 +15,5 @@ var intro_screen: IntroScreen;
 var outro_screen;
 
 func end_the_game():
-	main_screen.queue_free()
-	outro_screen = outro_res.instantiate()
-	get_parent().add_child(outro_screen)
+	var level = gameOverCreditsLevel.instantiate();
+	main_screen.setLocation(level);

@@ -497,6 +497,7 @@ markerName = "FromBedRoom"
 
 [node name="Solve4" parent="." unique_id=442146003 instance=ExtResource("4_suvdt")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(400, 272)
 
 [node name="Label" type="Label" parent="Solve4" unique_id=2111653130]

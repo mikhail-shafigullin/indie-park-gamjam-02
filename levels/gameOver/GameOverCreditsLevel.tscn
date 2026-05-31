@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cwh7qpfciv0v1"]
+
+[ext_resource type="Script" uid="uid://bcqryqjbtsbi3" path="res://levels/gameOver/GameOverCreditsLevel.gd" id="1_mis6d"]
+[ext_resource type="Texture2D" uid="uid://b2fii280tcwtb" path="res://assets/cgs/CG_Credits.png" id="2_bp6in"]
+
+[node name="GameOverCreditsLevel" type="Node2D" unique_id=826721370]
+script = ExtResource("1_mis6d")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1118409094]
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.114526816, 0.07526993, 0.0953889, 1)
+
+[node name="Control" type="Control" parent="ColorRect" unique_id=1243579732]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Control" unique_id=877291802]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 32.0
+offset_right = 120.0
+offset_bottom = 72.0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Control" unique_id=1439931681]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bp6in")
+expand_mode = 3
+stretch_mode = 4

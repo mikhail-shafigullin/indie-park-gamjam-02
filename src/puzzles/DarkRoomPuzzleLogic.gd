@@ -9,9 +9,11 @@ signal puzzleSolved
 
 var correctSequence: Array[Direction] = [
 	Direction.LEFT,
-	Direction.RIGHT,
+	Direction.UP,
+	Direction.LEFT,
 	Direction.DOWN,
-	Direction.UP
+	Direction.UP,
+	Direction.RIGHT,
 ]
 
 var fullSequence: Array[Direction] = []

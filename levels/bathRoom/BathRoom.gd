@@ -3,6 +3,8 @@ extends Level
 @onready var starterMarker: Marker2D = %Start;
 @onready var puzzle3Button: Usable = %Solve3;
 @onready var changeScene: Usable = %ChangeScene;
+@onready var openedDoor: Sprite2D = $DoorOpened;
+@onready var closedDoor: Sprite2D = $DoorClosed;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,3 +29,5 @@ func _on_solve_3__object_used() -> void:
 func _on_puzzle_finished():
 	puzzle3Button.disable();
 	changeScene.enable()
+	closedDoor.visible = false;
+	openedDoor.visible = true;

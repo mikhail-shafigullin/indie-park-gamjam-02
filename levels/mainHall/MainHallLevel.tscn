@@ -217,6 +217,7 @@ position = Vector2(448, 224)
 
 [node name="Solve11" parent="." unique_id=442146003 instance=ExtResource("5_3upwg")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(208, 336)
 
 [node name="Label" type="Label" parent="Solve11" unique_id=333503807]
@@ -227,6 +228,7 @@ text = "1.1"
 
 [node name="Solve12" parent="." unique_id=1467598435 instance=ExtResource("5_3upwg")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(256, 336)
 isDisable = true
 
@@ -238,6 +240,7 @@ text = "1.2"
 
 [node name="Solve13" parent="." unique_id=1097764661 instance=ExtResource("5_3upwg")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(304, 336)
 isDisable = true
 

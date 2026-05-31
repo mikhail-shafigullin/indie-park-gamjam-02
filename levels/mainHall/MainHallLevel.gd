@@ -34,6 +34,7 @@ func giveAccessToPuzzles():
 		changeSceneToBedRoom.disable();
 
 func play_intro():
+	#Dialogic.start("MainHallEnding")
 	Dialogic.start("MainHallWakeUp")
 		
 func openMcRoom():

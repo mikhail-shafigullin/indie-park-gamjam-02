@@ -1,3 +1,9 @@
 [background arg="#ffffffff" fade="0.0"]
 [background arg="#000000ff" fade="2.0" wait="true"]
-123
+[i]"Finally, some fresh air."[/i]
+[background scene="res://scenes/dialogues/GameOverBackground.tscn" arg="walk" fade="1.0" wait="true"]
+[i]"It’s been so long since I’ve been outside."[/i]
+[signal arg="GameOver_Attack"]
+[wait time="2.0"]
+The last thing I feel is a pair of arms wrapping around me, dragging me backward...
+do Global.end_the_game()

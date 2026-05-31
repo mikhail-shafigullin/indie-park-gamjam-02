@@ -23,6 +23,7 @@ func closeDoorFor2ndPuzzle():
 func openTheDoorWhenPuzzleIsSolved() -> void:
 	puzzle2Button.disable();
 	changeScene.enable()
+	$DoorOpened.visible = true
 
 func _on_solve_2__object_used() -> void:
 	MainEventBus.puzzle_2_solved.emit();

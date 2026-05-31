@@ -9,4 +9,4 @@ func use(usedOnItem: Usable) -> void:
 	examine();
 
 func examine():
-	Dialogic.start("BedroomMirror", "postcardItem");
+	Dialogic.start("BedroomItemsUse", "CertificateUse");

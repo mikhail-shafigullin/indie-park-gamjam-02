@@ -8,3 +8,4 @@ func _ready() -> void:
 
 func useObject():
 	LevelContainer.bedRoomSecondPart.sendPlayerToMarker("ManholeMarker");
+	Global.player.changeSpriteToMom(false);

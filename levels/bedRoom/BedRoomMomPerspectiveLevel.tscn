@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dnuyjjo7qbdsf" path="res://levels/bedRoom/BedRoomMomPerspectiveLevel.gd" id="1_krbuc"]
 [ext_resource type="Texture2D" uid="uid://bew2mfk672gkf" path="res://assets/images/Mom_Bedroom_Drowned.png" id="4_1gmys"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="5_j2os8"]
-[ext_resource type="Script" path="res://levels/bedRoom/BedRoomMomStand.gd" id="5_krbuc"]
+[ext_resource type="Script" uid="uid://78hmvwgy5res" path="res://levels/bedRoom/BedRoomMomStand.gd" id="5_krbuc"]
 [ext_resource type="Script" uid="uid://budfvaovwmgfw" path="res://levels/bedRoom/BedRoomMomManholeExit.gd" id="6_krbuc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krbuc"]

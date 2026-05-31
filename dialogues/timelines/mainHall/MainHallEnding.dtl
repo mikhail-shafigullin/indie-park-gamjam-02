@@ -1,0 +1,3 @@
+[background arg="#ffffffff" fade="0.0"]
+[background arg="#000000ff" fade="2.0" wait="true"]
+123

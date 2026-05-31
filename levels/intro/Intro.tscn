@@ -36,7 +36,23 @@ tracks/0/path = NodePath("CanvasLayer/TextureRect:material:shader_parameter/burs
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.13333334, 2.3666666),
+"times": PackedFloat32Array(0.13333334, 3.3),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, 0.2000000095]
+}
+
+[sub_resource type="Animation" id="Animation_chvk1"]
+resource_name = "sleep_2"
+length = 3.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TextureRect:material:shader_parameter/burst_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 3.3),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -45,7 +61,8 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_51ka6"]
 _data = {
 &"RESET": SubResource("Animation_51ka6"),
-&"sleep": SubResource("Animation_pvns4")
+&"sleep": SubResource("Animation_pvns4"),
+&"sleep_2": SubResource("Animation_chvk1")
 }
 
 [node name="Intro" type="Node2D" unique_id=271782913]

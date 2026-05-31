@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://huyvm2sn6c2g"]
+[gd_scene format=3 uid="uid://de7ynwu7rx4sf"]
 
 [ext_resource type="Script" uid="uid://bucwckpi33hlg" path="res://scenes/usableObjects/ChangeSceneUsable.gd" id="1_qpejf"]
 
@@ -10,6 +10,7 @@ script = ExtResource("1_qpejf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=552369937]
 unique_name_in_owner = true
+visible = false
 offset_right = 32.0
 offset_bottom = 16.0
 

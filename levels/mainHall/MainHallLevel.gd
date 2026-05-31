@@ -7,7 +7,6 @@ extends Level
 @onready var changeSceneToMcRoom: Usable = %ChangeSceneToMcRoom
 @onready var changeSceneToBedRoom: Usable = %ChangeSceneToBedRoom
 @onready var changeSceneToBathRoom: Usable = %ChangeSceneToBathRoom
-@onready var changeSceneToDebugRoom: Usable = %ChangeSceneToDebugRoom
 
 @onready var purpleDoor: ApartmentDoor = %PurpleDoor
 @onready var blueDoor: ApartmentDoor = %BlueDoor
@@ -33,7 +32,6 @@ func giveAccessToPuzzles():
 		solve13Button.enable();
 	if(PuzzleStates.puzzle4Solved):
 		changeSceneToBedRoom.disable();
-		changeSceneToDebugRoom.enable();
 
 func play_intro():
 	Dialogic.start("MainHallWakeUp")

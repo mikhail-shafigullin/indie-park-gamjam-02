@@ -1,4 +1,16 @@
-this is a test.
+[background arg="#000000ff" fade="0.0"]
+[wait time="1.0"]
+[i]"Finally, some fresh air."[/i]
+[background fade="2.0" wait="true"]
+[i]"It’s been so long since I’ve been outside."[/i]
+The wind brushes against my skin as I walk peacefully along the quiet sidewalk.
+[wait_input]
+...
+But then, I begin to catch a sweet scent.
 do Global.intro_screen.sleep()
-test test
+The smell makes my head spin, and I can feel my vision blurring out incredibly fast.
+The last thing I feel is a pair of arms wrapping around me, dragging me backward...
+[background arg="#000000ff" fade="2.0" wait="true"]
+And my consciousness fades into complete darkness.
+...
 do Global.intro_screen.start_the_game()

@@ -150,10 +150,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_w8cvs")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gij6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8cvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gij6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8cvs")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_rng05")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r517o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rng05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r517o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rng05")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y0ntn")
@@ -547,8 +568,6 @@ y_sort_enabled = true
 position = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_jak6m")
 animation = &"wakeup"
-frame = 5
-frame_progress = 1.0
 speed_scale = 2.0
 
 [node name="MotherAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1458095386]

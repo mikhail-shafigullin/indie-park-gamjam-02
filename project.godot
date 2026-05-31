@@ -55,6 +55,8 @@ directories/dtl_directory={
 "MCRoomTVUseWithoutCartridge": "res://dialogues/timelines/mcRoom/MCRoomTVUseWithoutCartridge.dtl",
 "MainHallCabinetPhoto": "res://dialogues/timelines/mainHall/MainHallCabinetPhoto.dtl",
 "MainHallDoorClosed": "res://dialogues/timelines/mainHall/MainHallDoorClosed.dtl",
+"MainHallEnding": "res://dialogues/timelines/mainHall/MainHallEnding.dtl",
+"MainHallEntranceDoor": "res://dialogues/timelines/mainHall/MainHallEntranceDoor.dtl",
 "MainHallMirror": "res://dialogues/timelines/mainHall/MainHallMirror.dtl",
 "MainHallPuzzleSolved": "res://dialogues/timelines/mainHall/MainHallPuzzleSolved.dtl",
 "MainHallWakeUp": "res://dialogues/timelines/mainHall/MainHallWakeUp.dtl",

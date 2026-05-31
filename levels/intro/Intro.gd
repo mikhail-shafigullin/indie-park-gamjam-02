@@ -1,6 +1,7 @@
 class_name IntroScreen
 extends Node2D
 
+#res://levels/mainScreen/MainScreen.tscn
 const game_res := preload("uid://dfq6e4l7o4y8o")
 
 func _ready() -> void:

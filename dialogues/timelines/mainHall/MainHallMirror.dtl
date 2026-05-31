@@ -1,4 +1,5 @@
-mirror
-[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_MainHall.png" fade="0.5"]
-[wait time="1.0" skippable="true"]
-Ann: -_-
+I look at myself in the mirror.
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CGs_Mirror_MainHall.png" fade="1.0" wait="true"]
+[wait_input]
+Why am I in this apartment again
+I just don't get it

@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://7reuemj3eauw"]
 
-[ext_resource type="Texture2D" uid="uid://cq6wbo8vrxdht" path="res://assets/cgs/CG_Puzzle4_Door.png" id="1_0webp"]
-[ext_resource type="Texture2D" uid="uid://k4booyp0bnlf" path="res://assets/cgs/CG_Puzzle4_ActualDoor.png" id="2_3kwhx"]
-[ext_resource type="Texture2D" uid="uid://yedwa0yc6xh7" path="res://assets/cgs/CG_Puzzle4_Mechanism1.png" id="2_7mpm2"]
-[ext_resource type="Texture2D" uid="uid://ut7r36ri2sgr" path="res://assets/cgs/CG_Puzzle4_Mechanism2.png" id="3_3kwhx"]
-[ext_resource type="Texture2D" uid="uid://ck8bf05pu577j" path="res://assets/cgs/CG_Puzzle4_Mechanism3.png" id="4_kmnrf"]
-[ext_resource type="Texture2D" uid="uid://q4bwkh2ft6oy" path="res://assets/cgs/CG_Puzzle4_Mechanism4.png" id="5_ppuo5"]
-[ext_resource type="Texture2D" uid="uid://b8lc23ykp8rw1" path="res://assets/cgs/CG_Puzzle4_Mechanism5.png" id="6_6upad"]
-[ext_resource type="Texture2D" uid="uid://wdjcr4hy8mm6" path="res://assets/cgs/CG_Puzzle4_Scales1.png" id="7_lbylr"]
-[ext_resource type="Texture2D" uid="uid://djetmpea5i31c" path="res://assets/cgs/CG_Puzzle4_Scales2.png" id="8_w2tki"]
-[ext_resource type="Texture2D" uid="uid://cgaff5beppeyf" path="res://assets/cgs/CG_Puzzle4_Scales3_Back.png" id="9_twstf"]
-[ext_resource type="Texture2D" uid="uid://dmhxiag8xr3sm" path="res://assets/cgs/CG_Puzzle4_Scales3_Drawing.png" id="10_u2b5p"]
-[ext_resource type="Texture2D" uid="uid://cyb36iqt8q7a3" path="res://assets/cgs/CG_Puzzle4_Scales3_Front.png" id="11_0iaxc"]
-[ext_resource type="Texture2D" uid="uid://dff1b7jwu62yy" path="res://assets/cgs/CG_Puzzle4_Scales4_Back.png" id="12_37bdo"]
-[ext_resource type="Texture2D" uid="uid://caadbnqgcch" path="res://assets/cgs/CG_Puzzle4_Scales4_Certificate.png" id="13_r4eau"]
-[ext_resource type="Texture2D" uid="uid://ikuq8ovb550a" path="res://assets/cgs/CG_Puzzle4_Scales4_Front.png" id="14_nm52w"]
+[ext_resource type="Script" uid="uid://drun5vixhu2gb" path="res://levels/outro/MainHallEntranceDoor.gd" id="1_idqxh"]
+[ext_resource type="Texture2D" uid="uid://cq6wbo8vrxdht" path="res://assets/cgs/CG_Puzzle4_Door.png" id="2_uabtv"]
+[ext_resource type="Texture2D" uid="uid://k4booyp0bnlf" path="res://assets/cgs/CG_Puzzle4_ActualDoor.png" id="3_53xa4"]
+[ext_resource type="Texture2D" uid="uid://yedwa0yc6xh7" path="res://assets/cgs/CG_Puzzle4_Mechanism1.png" id="4_hcmaq"]
+[ext_resource type="Texture2D" uid="uid://b8lc23ykp8rw1" path="res://assets/cgs/CG_Puzzle4_Mechanism5.png" id="5_bdbi0"]
+[ext_resource type="Texture2D" uid="uid://ut7r36ri2sgr" path="res://assets/cgs/CG_Puzzle4_Mechanism2.png" id="6_823lp"]
+[ext_resource type="Texture2D" uid="uid://btvmu4k2nwm7r" path="res://assets/cgs/CG_Puzzle4_Doorknob.png" id="6_uabtv"]
+[ext_resource type="Texture2D" uid="uid://ck8bf05pu577j" path="res://assets/cgs/CG_Puzzle4_Mechanism3.png" id="7_qxy5v"]
+[ext_resource type="Texture2D" uid="uid://q4bwkh2ft6oy" path="res://assets/cgs/CG_Puzzle4_Mechanism4.png" id="8_o0uu0"]
+[ext_resource type="Texture2D" uid="uid://wdjcr4hy8mm6" path="res://assets/cgs/CG_Puzzle4_Scales1.png" id="9_pki1u"]
+[ext_resource type="Texture2D" uid="uid://djetmpea5i31c" path="res://assets/cgs/CG_Puzzle4_Scales2.png" id="10_bftpt"]
+[ext_resource type="Texture2D" uid="uid://cgaff5beppeyf" path="res://assets/cgs/CG_Puzzle4_Scales3_Back.png" id="11_rmr3k"]
+[ext_resource type="Texture2D" uid="uid://dmhxiag8xr3sm" path="res://assets/cgs/CG_Puzzle4_Scales3_Drawing.png" id="12_nxyjw"]
+[ext_resource type="Texture2D" uid="uid://cyb36iqt8q7a3" path="res://assets/cgs/CG_Puzzle4_Scales3_Front.png" id="13_lmirn"]
+[ext_resource type="Texture2D" uid="uid://dff1b7jwu62yy" path="res://assets/cgs/CG_Puzzle4_Scales4_Back.png" id="14_yqr0r"]
+[ext_resource type="Texture2D" uid="uid://caadbnqgcch" path="res://assets/cgs/CG_Puzzle4_Scales4_Certificate.png" id="15_q6iw7"]
+[ext_resource type="Texture2D" uid="uid://ikuq8ovb550a" path="res://assets/cgs/CG_Puzzle4_Scales4_Front.png" id="16_evba4"]
 
 [sub_resource type="Animation" id="Animation_hbad1"]
 length = 0.001
@@ -508,7 +510,8 @@ _data = {
 &"open_door": SubResource("Animation_kmnrf")
 }
 
-[node name="Outro" type="Node2D" unique_id=758413269]
+[node name="MainHallEntranceDoor" type="Node2D" unique_id=758413269]
+script = ExtResource("1_idqxh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1987748004]
 layer = -1
@@ -523,42 +526,47 @@ grow_vertical = 2
 scale = Vector2(0.855, 1.041)
 
 [node name="CgPuzzle4Door" type="Sprite2D" parent="." unique_id=731636611]
-texture = ExtResource("1_0webp")
+texture = ExtResource("2_uabtv")
 centered = false
 
 [node name="Door" type="Node2D" parent="." unique_id=1493670916]
 
 [node name="CgPuzzle4ActualDoor" type="Sprite2D" parent="Door" unique_id=1632217383]
-texture = ExtResource("2_3kwhx")
+texture = ExtResource("3_53xa4")
 centered = false
 
 [node name="CgPuzzle4Mechanism1" type="Sprite2D" parent="Door" unique_id=497899750]
-texture = ExtResource("2_7mpm2")
+texture = ExtResource("4_hcmaq")
 centered = false
 metadata/_edit_lock_ = true
 
 [node name="CgPuzzle4Mechanism5" type="Sprite2D" parent="Door" unique_id=509682427]
 z_index = 1
-texture = ExtResource("6_6upad")
+texture = ExtResource("5_bdbi0")
+centered = false
+
+[node name="CgPuzzle4Mechanism6" type="Sprite2D" parent="Door" unique_id=1367123943]
+z_index = 1
+texture = ExtResource("6_uabtv")
 centered = false
 
 [node name="MetalGears" type="Node2D" parent="." unique_id=660238316]
 
 [node name="CgPuzzle4Mechanism2" type="Sprite2D" parent="MetalGears" unique_id=308483204]
 position = Vector2(293, 179)
-texture = ExtResource("3_3kwhx")
+texture = ExtResource("6_823lp")
 centered = false
 offset = Vector2(-293, -179)
 
 [node name="CgPuzzle4Mechanism3" type="Sprite2D" parent="MetalGears" unique_id=1120425322]
 position = Vector2(305, 249)
-texture = ExtResource("4_kmnrf")
+texture = ExtResource("7_qxy5v")
 centered = false
 offset = Vector2(-305, -249)
 
 [node name="CgPuzzle4Mechanism4" type="Sprite2D" parent="MetalGears" unique_id=387596719]
 position = Vector2(363, 289)
-texture = ExtResource("5_ppuo5")
+texture = ExtResource("8_o0uu0")
 centered = false
 offset = Vector2(-363, -289)
 
@@ -566,7 +574,7 @@ offset = Vector2(-363, -289)
 position = Vector2(321, 156)
 
 [node name="CgPuzzle4Scales1" type="Sprite2D" parent="Scale" unique_id=1900070798]
-texture = ExtResource("7_lbylr")
+texture = ExtResource("9_pki1u")
 centered = false
 offset = Vector2(-321, -158)
 
@@ -574,7 +582,7 @@ offset = Vector2(-321, -158)
 
 [node name="CgPuzzle4Scales2" type="Sprite2D" parent="Scale/ScaleHands" unique_id=1544032526]
 position = Vector2(-321, -156)
-texture = ExtResource("8_w2tki")
+texture = ExtResource("10_bftpt")
 centered = false
 
 [node name="CupR" type="Node2D" parent="Scale/ScaleHands" unique_id=707040148]
@@ -582,18 +590,19 @@ position = Vector2(71, 5)
 
 [node name="CgPuzzle4Scales3Back" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=498187238]
 position = Vector2(-392, -161)
-texture = ExtResource("9_twstf")
+texture = ExtResource("11_rmr3k")
 centered = false
 
 [node name="CgPuzzle4Scales3Drawing" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=960204653]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-392, -161)
-texture = ExtResource("10_u2b5p")
+texture = ExtResource("12_nxyjw")
 centered = false
 
 [node name="CgPuzzle4Scales3Front" type="Sprite2D" parent="Scale/ScaleHands/CupR" unique_id=1419160224]
 position = Vector2(-392, -161)
-texture = ExtResource("11_0iaxc")
+texture = ExtResource("13_lmirn")
 centered = false
 
 [node name="CupL" type="Node2D" parent="Scale/ScaleHands" unique_id=1761769447]
@@ -601,20 +610,21 @@ position = Vector2(-73, 6)
 
 [node name="CgPuzzle4Scales4Back" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=377674177]
 position = Vector2(-248, -162)
-texture = ExtResource("12_37bdo")
+texture = ExtResource("14_yqr0r")
 centered = false
 
 [node name="CgPuzzle4Scales4Certificate" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=1141599235]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-248, -162)
-texture = ExtResource("13_r4eau")
+texture = ExtResource("15_q6iw7")
 centered = false
 
 [node name="CgPuzzle4Scales4Front" type="Sprite2D" parent="Scale/ScaleHands/CupL" unique_id=1234454132]
 position = Vector2(-248, -162)
-texture = ExtResource("14_nm52w")
+texture = ExtResource("16_evba4")
 centered = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1590559931]
 libraries/ = SubResource("AnimationLibrary_f3uv2")
-autoplay = &"brake"
+autoplay = &"RESET"

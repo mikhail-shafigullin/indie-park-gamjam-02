@@ -1,0 +1,22 @@
+label doorUseWithoutItems
+[background arg="#000000ff" fade="1.0" wait="true"]
+[background scene="res://levels/outro/MainHallEntranceDoor.tscn" arg="WITHOUT_ITEMS" fade="1.0" wait="true"]
+This is the front door, but... [input]There is a large scale hanging on it.
+This scale wasn't here before...
+I try to jiggle the handle, but the door won't budge.
+The scale doesn't move either, no matter how much force I apply.
+[wait_input]
+What should I do now? How do I get out of here?
+[end_timeline]
+label doorUseDrawing
+[end_timeline]
+label doorUseCertificate
+[end_timeline]
+label doorOutro
+[background scene="res://levels/outro/MainHallEntranceDoor.tscn" arg="WITH_ITEMS" fade="0.0" wait="true"]
+[signal arg="MainHall_entranceDoorFinishTheGame"]
+[wait time="12.0"]
+[background arg="#ffffffff" fade="1.0" wait="true"]
+[wait_input]
+jump MainHallEnding/
+[end_timeline]

@@ -1,5 +1,14 @@
 do Global.player.kill()
-clear the scree!
-[wait time="0.5" skippable="true"]
+The hard texture of the laminate floor on my cheek
+[background fade="2.0" wait="true"]
+I slowly open my eyes
 do Global.player.wakeup()
-testing 1 2 3
+[wait time="0.5" skippable="true"]
+And get to my feet.
+This is...[input] the apartment where I live.
+How did I get here?
+...
+I need to look around.
+[end_timeline]
+do Global.player.wakeup()
+[end_timeline]

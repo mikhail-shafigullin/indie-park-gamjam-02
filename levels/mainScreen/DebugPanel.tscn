@@ -19,6 +19,7 @@ mainHallLevel = ExtResource("3_ipa54")
 mcRoom = ExtResource("4_ipa54")
 
 [node name="Control" type="Control" parent="." unique_id=87020445]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0

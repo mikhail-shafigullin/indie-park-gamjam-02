@@ -23,6 +23,8 @@ LevelContainer="*uid://dv7g5tcevfqyn"
 PuzzleStates="*res://autoload/PuzzleStates.gd"
 Dialogic="*uid://ds2q0uclmolvu"
 Global="*uid://cpgxeuwd2s0bx"
+Analytics="*uid://bbt6jf8icf28r"
+AnalyticsWrapper="*uid://b80maxgmwiucw"
 
 [dialogic]
 
@@ -124,7 +126,7 @@ naming/scene_name_casing=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/google_analytics/plugin.cfg")
 
 [input]
 

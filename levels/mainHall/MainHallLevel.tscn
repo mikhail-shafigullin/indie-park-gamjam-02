@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://62hdx3shcaav" path="res://levels/mainHall/MainHallLevel.gd" id="1_l4nmg"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_ssc33"]
-[ext_resource type="PackedScene" uid="uid://huyvm2sn6c2g" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
+[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="4_00q4d"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="5_3upwg"]
 [ext_resource type="PackedScene" uid="uid://dw52tthlbp2rp" path="res://levels/mainHall/ClosedCabinet.tscn" id="6_e54g3"]
 [ext_resource type="PackedScene" uid="uid://ciso2avldnxis" path="res://levels/mainHall/BookCabinet.tscn" id="7_43xrf"]

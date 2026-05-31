@@ -4,17 +4,18 @@ extends Node
 @export var triggersPuzzle2: Array[TriggerOnGrabable]
 @export var triggersPuzzle3: Array[TriggerOnGrabable]
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MainEventBus.grabable_object_is_placed_on_trigger.connect(placeObjectOnTrigger)
 	pass # Replace with function body.
 
 func placeObjectOnTrigger(trigger: TriggerOnGrabable, grabable: Node2D):
-	if(allTriggersResolved(triggersPuzzle1)):
+	if(allTriggersResolved(triggersPuzzle1) and !PuzzleStates.puzzle11Solved):
 		resolvePuzzle1();
-	if(allTriggersResolved(triggersPuzzle2)):
+	if(allTriggersResolved(triggersPuzzle2) and PuzzleStates.puzzle11Solved and !PuzzleStates.puzzle12Solved):
 		resolvePuzzle2();
-	if(allTriggersResolved(triggersPuzzle3)):
+	if(allTriggersResolved(triggersPuzzle3) and PuzzleStates.puzzle12Solved and !PuzzleStates.puzzle13Solved):
 		resolvePuzzle3();
 	pass;
 

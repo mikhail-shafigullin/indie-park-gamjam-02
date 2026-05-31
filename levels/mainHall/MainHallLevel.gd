@@ -29,7 +29,7 @@ func giveAccessToPuzzles():
 	if(PuzzleStates.puzzle2Solved and !PuzzleStates.puzzle12Solved):
 		solve12Button.enable();
 	if(PuzzleStates.puzzle3Solved and !PuzzleStates.puzzle13Solved):
-		changeSceneToBathRoom.disable();
+		#changeSceneToBathRoom.disable();
 		solve13Button.enable();
 	if(PuzzleStates.puzzle4Solved):
 		changeSceneToBedRoom.disable();

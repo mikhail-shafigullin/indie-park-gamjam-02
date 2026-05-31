@@ -190,9 +190,10 @@ func grabObject(collider: Node) -> void:
 func releaseObject() -> void:
 	var releasedObject := grabbedObject
 	grabbedComponent.onRelease()
-	remove_collision_exception_with(grabbedBody)
+	grabExtraCollision.disabled = true
 	grabExtraCollision.queue_free()
 	grabExtraCollision = null
+	remove_collision_exception_with(grabbedBody)
 	grabbedBody = null
 	grabbedObject = null
 	grabbedComponent = null

@@ -12,7 +12,7 @@ do PuzzleStates.finishPuzzle()
 label correctPhoto
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo1.png" fade="0.5" wait="true"]
 I pick up the photo
-In the photo...[input] It's my sister
+On the photo...[input] It's my sister
 [i]Photo added to inventory[/i]
 As I take the photo, I hear a sound at the door. It looks like it's open now
 [end_timeline]
@@ -20,4 +20,8 @@ label incorrectPhoto
 [background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo2.png" fade="0.5" wait="true"]
 I pick up the photo
 It looks like the photo is ruined; there is nothing recognizable on it
+[end_timeline]
+label photoExamine
+[background scene="res://scenes/dialogues/DialogicBackgroundScene.tscn" arg="res://assets/cgs/CG_Puzzle3_Photo1.png" fade="0.5" wait="true"]
+This is a photo of my sister.
 [end_timeline]

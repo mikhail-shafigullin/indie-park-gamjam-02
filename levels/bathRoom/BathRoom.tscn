@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bx8sw1txdsijj" path="res://levels/bathRoom/BathRoom.gd" id="1_iget1"]
 [ext_resource type="TileSet" uid="uid://dv86yntj3ru1n" path="res://assets/tilesets/mainTileSet.tres" id="1_nmwft"]
-[ext_resource type="PackedScene" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
+[ext_resource type="PackedScene" uid="uid://de7ynwu7rx4sf" path="res://scenes/usableObjects/ChangeScene.tscn" id="2_iget1"]
 [ext_resource type="PackedScene" uid="uid://d2axem21knae2" path="res://scenes/usableObjects/DebugPuzzleSolver.tscn" id="4_nfqjp"]
 [ext_resource type="Texture2D" uid="uid://b5daahgovribh" path="res://assets/tilesets/Tileset_Main_Hall.png" id="5_2s1kr"]
 [ext_resource type="Script" path="res://levels/bathRoom/BathRoomWardrobeUsable.gd" id="5_mvhf6"]
@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://levels/bathRoom/BathRoomBathtubUsable.gd" id="11_p7qul"]
 [ext_resource type="Script" path="res://levels/bathRoom/BathRoomToiletUsable.gd" id="12_i5yoo"]
 [ext_resource type="Script" path="res://levels/bathRoom/BathroomPhotocamera.gd" id="13_q0jil"]
-[ext_resource type="Script" path="res://levels/bathRoom/BathroomPhoto.gd" id="14_eyp7q"]
+[ext_resource type="Script" uid="uid://b5r1vhwet6oui" path="res://levels/bathRoom/BathroomPhoto.gd" id="14_eyp7q"]
 [ext_resource type="Texture2D" uid="uid://lnvnfbtjfo5x" path="res://assets/tilesets/Tileset_Mother_Bedroom.png" id="15_2wxl4"]
 [ext_resource type="Script" uid="uid://7yvr2ccqxw1q" path="res://levels/bathRoom/BathRoomMirror.gd" id="15_tv30r"]
 

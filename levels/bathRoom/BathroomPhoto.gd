@@ -13,6 +13,7 @@ func _ready() -> void:
 func useObject():
 	if(isPhotoCorrect):
 		Dialogic.start("BathroomPhotocameraUse", "correctPhoto");
+		MainEventBus.inventory_add_item.emit(BathroomPhoto.new())
 		MainEventBus.puzzle_3_solved.emit();
 	else:
 		Dialogic.start("BathroomPhotocameraUse", "incorrectPhoto");

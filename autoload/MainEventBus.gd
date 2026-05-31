@@ -6,6 +6,7 @@ signal level_change(level: Level);
 
 signal usable_object_is_hovered(usable_object: Node2D);
 signal usable_object_is_unhovered(usable_object: Node2D);
+signal usable_object_used(usable_object: Node2D);
 
 signal grabable_object_is_hovered(grabable_object: Node2D);
 signal grabable_object_is_unhovered(grabable_object: Node2D);

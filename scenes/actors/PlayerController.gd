@@ -214,6 +214,7 @@ func rotateObject() -> void:
 func useObject(collider: Node2D) -> void:
 	var usableObject: Usable = collider.get_parent()
 	usableObject.useObjectWithSignal()
+	MainEventBus.usable_object_used.emit(usableObject);
 	
 func teleportToMarker(marker: Marker2D):
 	reparent(marker.get_parent())

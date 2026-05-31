@@ -25,6 +25,7 @@ func _ready() -> void:
 	focusedSlotIndex = 0;
 	slots[0].grab_focus()
 	Dialogic.signal_event.connect(replaceSlot);
+	MainEventBus.puzzle_layer_hidden.connect(func(): queue_free())
 
 func _input(event: InputEvent) -> void:
 	if(Dialogic.current_timeline):

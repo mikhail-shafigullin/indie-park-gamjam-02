@@ -1,8 +1,6 @@
 extends Usable
 
 @onready var animatedSprite: AnimatedSprite2D = $AnimatedSprite2D;
-@onready var tiedPoleSprite: Sprite2D = $TiedPole/TiedPoleSprite;
-@onready var untiedPoleSprite: Sprite2D = $TiedPole/UntiedPoleSprite;
 
 var isVisible: bool = true
 
@@ -12,16 +10,19 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func useObject():
-	Dialogic.start("BedroomBoatEvents", "boatUsed")
+	if(not Dialogic.signal_event.is_connected(onDialogicEvent)):
+		Dialogic.signal_event.connect(onDialogicEvent, CONNECT_ONE_SHOT);
+	Dialogic.start("BedroomBoatEvents", "boatBedroom2Used")
+
+func onDialogicEvent(arg: String):
+	if arg == "Bedroom_BoatMoveBackToTheBedroom":
+		LevelContainer.bedroomLevel.sendPlayerToMarker("Start")
+		Global.player.changeSpriteOnBoatStateTo(false)
 
 func hideBoat():
 	isVisible = false;
 	animatedSprite.visible = false;
-	tiedPoleSprite.visible = false;
-	untiedPoleSprite.visible = true;
 	
 func showBoat():
 	isVisible = true;
 	animatedSprite.visible = true;
-	tiedPoleSprite.visible = true;
-	untiedPoleSprite.visible = false;

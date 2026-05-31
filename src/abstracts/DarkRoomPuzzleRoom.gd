@@ -61,4 +61,5 @@ func onMistake() -> void:
 
 func onPuzzleSolved() -> void:
 	MainEventBus.puzzle_4_solved.emit();
+	Global.player.changeSpriteOnBoatStateTo(false);
 	LevelContainer.bedRoomSecondPart.sendPlayerToMarker("Start")

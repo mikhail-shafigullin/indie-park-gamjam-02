@@ -621,7 +621,7 @@ position = Vector2(208, 288)
 
 [node name="Restore" type="StaticBody2D" parent="." unique_id=399021095]
 position = Vector2(256, 272)
-collision_layer = 5
+collision_layer = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Restore" unique_id=1844354300]
 position = Vector2(0, -32)

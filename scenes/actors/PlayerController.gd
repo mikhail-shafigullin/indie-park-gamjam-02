@@ -42,7 +42,8 @@ func _ready() -> void:
 	MainEventBus.inventory_closed.connect(enableControls);
 	
 	currentSprite = sprite;
-	
+	boatSprite.frame_changed.connect(_onBoatFrameChanged)
+
 	Global.player = self;
 
 func disableControls() -> void:
@@ -234,6 +235,18 @@ func changeSpriteOnBoatState():
 
 func changeSpriteOnBoatStateTo(isVisible: bool):
 	boatSprite.visible = isVisible
+	if not isVisible:
+		currentSprite.position.y = 16.0
+
+var pixelOffset = 0;
+
+func _onBoatFrameChanged() -> void:
+	if boatSprite.visible:
+		if(pixelOffset == 0):
+			pixelOffset = 1.0;
+		else:
+			pixelOffset = 0.0;
+		currentSprite.position.y = 16.0 + pixelOffset;
 
 func kill() -> void:
 	set_process(false)

@@ -5,3 +5,11 @@ I climb into the boat and push off from the "shore."
 [signal arg="Bedroom_BoatMoveoutFromShore"]
 [background fade="1.0" wait="true"]
 [end_timeline]
+label boatBedroom2Used
+The boat is moored to the shore.
+Sail back to the bedroom?
+- Yes
+	[signal arg="Bedroom_BoatMoveBackToTheBedroom"]
+- No
+	[end_timeline]
+[end_timeline]

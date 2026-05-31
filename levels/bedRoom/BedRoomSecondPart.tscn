@@ -266,7 +266,7 @@ tile_set = ExtResource("2_uo17m")
 
 [node name="Start" type="Marker2D" parent="." unique_id=476233115]
 unique_name_in_owner = true
-position = Vector2(522, 213)
+position = Vector2(288, 240)
 
 [node name="BedSprite" type="AnimatedSprite2D" parent="." unique_id=1056818585]
 z_index = 1
@@ -334,7 +334,6 @@ unique_name_in_owner = true
 position = Vector2(256, 224)
 
 [node name="Boat" type="Node2D" parent="." unique_id=1860418135]
-z_index = 1
 y_sort_enabled = true
 position = Vector2(320, 240)
 script = ExtResource("7_c4x0u")
@@ -351,6 +350,12 @@ collision_layer = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boat/StaticBody2D" unique_id=1945631329]
 position = Vector2(32, 24)
 shape = SubResource("RectangleShape2D_vqc6y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=539450583]
+collision_layer = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=709986280]
+polygon = PackedVector2Array(256, 176, 320, 224, 384, 288, 400, 288, 400, 272, 352, 224, 272, 160, 256, 160)
 
 [connection signal="body_entered" from="BoundaryLeft" to="." method="_on_boundary_left_body_entered"]
 [connection signal="body_entered" from="BoundaryRight" to="." method="_on_boundary_right_body_entered"]

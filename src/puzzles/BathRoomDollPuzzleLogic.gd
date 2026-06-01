@@ -16,15 +16,19 @@ func _process(delta: float) -> void:
 	pass
 
 func setBody(index: int):
+	print("sdfs", currentDollState, correctDollState)
 	currentDollState[0] = index;
 
 func setMouth(index: int):
+	print("sdfs", currentDollState, correctDollState)
 	currentDollState[1] = index;
 
 func setEyes(index: int):
+	print("sdfs", currentDollState, correctDollState)
 	currentDollState[2] = index;
 
 func setHair(index: int):
+	print("sdfs", currentDollState, correctDollState)
 	currentDollState[3] = index;
 
 func checkPhoto():

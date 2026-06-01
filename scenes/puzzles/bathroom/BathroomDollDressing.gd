@@ -42,22 +42,18 @@ func setPuzzle(initialDollState: Array[int]):
 func chooseBody(isRight: bool):
 	var nextIndex = bodiesIndex+1 if isRight else bodiesIndex-1;
 	chooseBodyByIndex(nextIndex);
-	PuzzleStates.bathroomDollPuzzleLogic.setBody(nextIndex);
 
 func chooseHair(isRight: bool):
 	var nextIndex = hairsIndex+1 if isRight else hairsIndex-1;
 	chooseHairByIndex(nextIndex)
-	PuzzleStates.bathroomDollPuzzleLogic.setHair(nextIndex);
 
 func chooseEyes(isRight: bool):
 	var nextIndex = eyesIndex+1 if isRight else eyesIndex-1;
 	chooseEyesByIndex(nextIndex);
-	PuzzleStates.bathroomDollPuzzleLogic.setEyes(nextIndex);
 
 func chooseMouth(isRight: bool):
 	var nextIndex = mouthsIndex+1 if isRight else mouthsIndex-1;
 	chooseMouthByIndex(nextIndex)
-	PuzzleStates.bathroomDollPuzzleLogic.setMouth(nextIndex);
 
 func chooseBodyByIndex(index):
 	var currentBody = bodiesList[bodiesIndex];
@@ -71,6 +67,7 @@ func chooseBodyByIndex(index):
 	var nextBody = bodiesList[bodiesIndex];
 	if(nextBody != null):
 		nextBody.visible = true;
+	PuzzleStates.bathroomDollPuzzleLogic.setBody(bodiesIndex);
 
 func chooseHairByIndex(nextIndex):
 	var currentBody = hairsList[hairsIndex];

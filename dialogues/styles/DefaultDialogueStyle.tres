@@ -36,8 +36,8 @@ overrides = {
 "bold_italics_font": "\"res://assets/fonts/CrimsonText-BoldItalic.ttf\"",
 "box_animation_in": "0",
 "box_animation_out": "0",
-"italics_font": "\"res://assets/fonts/CrimsonText-Italic.ttf\"",
-"normal_font": "\"res://assets/fonts/CrimsonText-Regular.ttf\""
+"italics_font": "\"res://assets/fonts/CrimsonText-SemiBoldItalic.ttf\"",
+"normal_font": "\"res://assets/fonts/CrimsonText-SemiBold.ttf\""
 }
 
 [sub_resource type="Resource" id="Resource_1eiap"]
